@@ -282,11 +282,10 @@ input::placeholder { color: #5b616b; }
 
 .yt-badge {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  bottom: 6px;
+  right: 6px;
+  width: 22.75px;
+  height: 15.17px;
   pointer-events: none;
 }
 

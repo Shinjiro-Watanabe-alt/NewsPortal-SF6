@@ -60,7 +60,7 @@ DN.isYouTubeArticle = function isYouTubeArticle(it) {
 };
 
 // サムネ中央に重ねる再生アイコン(赤い角丸四角+三角)。YouTubeリンクの記事のみ表示。
-DN.YT_BADGE_HTML = '<svg class="yt-badge" viewBox="0 0 70 70" width="70" height="70" aria-hidden="true">'
+DN.YT_BADGE_HTML = '<svg class="yt-badge" viewBox="0 0 70 70" preserveAspectRatio="none" aria-hidden="true">'
   + '<rect x="2" y="2" width="66" height="66" rx="15" fill="#FF0000"/>'
   + '<polygon points="27,20 27,50 52,35" fill="#fff"/>'
   + '</svg>';
