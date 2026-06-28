@@ -55,8 +55,12 @@ DN.isYouTubeUrl = function isYouTubeUrl(url) {
 
 // Googleニュース検索経由の記事はsource_urlが中継リンクで判別できないため、
 // 配信元ラベル(「本文 - YouTube」形式から抽出されたsource)もYouTube判定に使う。
+// source=t.co(X投稿)はt.coの先がYouTubeとは確定できないため、本文にYouTube
+// 記載がある場合のみYouTube扱いにする。
 DN.isYouTubeArticle = function isYouTubeArticle(it) {
-  return DN.isYouTubeUrl(it.source_url) || it.source === 'YouTube';
+  if (DN.isYouTubeUrl(it.source_url) || it.source === 'YouTube') return true;
+  if (it.source === 't.co' && /YouTube/i.test(it.title + ' ' + (it.summary || ''))) return true;
+  return false;
 };
 
 // サムネ中央に重ねる再生アイコン(赤い角丸四角+三角)。YouTubeリンクの記事のみ表示。
