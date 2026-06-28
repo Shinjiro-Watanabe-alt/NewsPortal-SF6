@@ -53,6 +53,12 @@ DN.isYouTubeUrl = function isYouTubeUrl(url) {
   return /(?:youtube\.com|youtu\.be)/i.test(url || '');
 };
 
+// Googleニュース検索経由の記事はsource_urlが中継リンクで判別できないため、
+// 配信元ラベル(「本文 - YouTube」形式から抽出されたsource)もYouTube判定に使う。
+DN.isYouTubeArticle = function isYouTubeArticle(it) {
+  return DN.isYouTubeUrl(it.source_url) || it.source === 'YouTube';
+};
+
 // サムネ中央に重ねる再生アイコン(赤い角丸四角+三角)。YouTubeリンクの記事のみ表示。
 DN.YT_BADGE_HTML = '<svg class="yt-badge" viewBox="0 0 70 70" width="70" height="70" aria-hidden="true">'
   + '<rect x="2" y="2" width="66" height="66" rx="15" fill="#FF0000"/>'

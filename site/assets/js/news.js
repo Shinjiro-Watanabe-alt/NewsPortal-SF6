@@ -38,7 +38,7 @@
       catLabel: meta.label,
       catColor: meta.color,
       thumbBg: DN.thumbBg(it.cat),
-      isYouTube: DN.isYouTubeUrl(it.source_url),
+      isYouTube: DN.isYouTubeArticle(it),
     });
   }
 
