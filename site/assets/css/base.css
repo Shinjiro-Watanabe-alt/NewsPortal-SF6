@@ -197,9 +197,9 @@ input::placeholder { color: #5b616b; }
   padding: 20px 0 4px;
 }
 .featured .thumb {
-  flex: 1 1 320px;
+  flex: 1 1 160px;
   min-width: 0;
-  height: 230px;
+  height: 115px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -240,7 +240,8 @@ input::placeholder { color: #5b616b; }
   padding-top: 14px;
 }
 .new-card .thumb {
-  height: 128px;
+  width: 50%;
+  height: 64px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
