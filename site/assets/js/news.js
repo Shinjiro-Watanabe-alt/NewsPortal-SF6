@@ -38,6 +38,7 @@
       catLabel: meta.label,
       catColor: meta.color,
       thumbBg: DN.thumbBg(it.cat),
+      isYouTube: DN.isYouTubeUrl(it.source_url),
     });
   }
 
@@ -101,6 +102,7 @@
     return `
       <a class="featured-link" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener" style="display:flex;gap:20px;flex-wrap:wrap;text-decoration:none;">
         <div class="thumb" style="${thumbStyle(it)}">
+          ${it.isYouTube ? DN.YT_BADGE_HTML : ''}
           <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
         </div>
         <div class="body">
@@ -118,6 +120,7 @@
     return `
       <a class="new-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
         <div class="thumb" style="${thumbStyle(it)}">
+          ${it.isYouTube ? DN.YT_BADGE_HTML : ''}
           <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
         </div>
         <div class="meta">
@@ -178,7 +181,7 @@
     const showExcerpt = !!it.summary;
     return `
       <a class="list-item" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}"></div>
+        <div class="thumb" style="${thumbStyle(it)}">${it.isYouTube ? DN.YT_BADGE_HTML : ''}</div>
         <div class="body">
           <div class="meta">
             <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>

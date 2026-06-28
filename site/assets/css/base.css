@@ -280,6 +280,16 @@ input::placeholder { color: #5b616b; }
   text-decoration: none;
 }
 
+.yt-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+}
+
 /* ===== Trending ===== */
 .trend-grid {
   display: grid;
@@ -350,7 +360,7 @@ input::placeholder { color: #5b616b; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-decoration: none;
 }
-.list-item .thumb { flex: 0 0 104px; height: 78px; border-radius: 4px; }
+.list-item .thumb { flex: 0 0 104px; height: 78px; border-radius: 4px; position: relative; overflow: hidden; }
 .list-item .body { flex: 1; min-width: 0; }
 .list-item .meta { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
 .list-item .meta .cat { font: 700 10px 'Noto Sans JP', sans-serif; }

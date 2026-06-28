@@ -48,3 +48,13 @@ DN.thumbBg = function thumbBg(catKey) {
   if (m.thumb) return `url('${DN.IMG_BASE}${m.thumb}') center/cover no-repeat, #14161a`;
   return `repeating-linear-gradient(135deg, ${DN.hexA(m.color, 0.24)} 0 8px, ${DN.hexA(m.color, 0.07)} 8px 16px)`;
 };
+
+DN.isYouTubeUrl = function isYouTubeUrl(url) {
+  return /(?:youtube\.com|youtu\.be)/i.test(url || '');
+};
+
+// サムネ中央に重ねる再生アイコン(赤い角丸四角+三角)。YouTubeリンクの記事のみ表示。
+DN.YT_BADGE_HTML = '<svg class="yt-badge" viewBox="0 0 70 70" width="70" height="70" aria-hidden="true">'
+  + '<rect x="2" y="2" width="66" height="66" rx="15" fill="#FF0000"/>'
+  + '<polygon points="27,20 27,50 52,35" fill="#fff"/>'
+  + '</svg>';
