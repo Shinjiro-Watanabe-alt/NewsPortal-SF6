@@ -1,0 +1,49 @@
+name: Collect SF6 News
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '20 */3 * * *'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: collect-sf6-news
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run collector
+        run: python3 collector/collect.py
+
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/data/articles.json site/data/ranks.json site/data/meta.json site/data/sources.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "SF6ニュースデータを更新"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        run: gh workflow run deploy-pages.yml --ref ${{ github.ref_name }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

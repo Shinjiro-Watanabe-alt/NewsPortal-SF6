@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>データソース管理 ・ SF6 NEWS PORTAL</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Saira+Condensed:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<div data-include="partials/masthead.html"></div>
+
+<main id="main" class="wrap">
+
+  <section class="sec" style="padding-top:26px;">
+    <div class="sec-title">データソース管理 ／ SOURCE REGISTRY</div>
+    <p class="sources-intro">
+      各参照元の取得方式・状態の一覧。RSSを最優先に、無いものは更新検知／スクレイピングで補完します。
+      この設定（<code>collector/sources.json</code>）を単一の情報源（single source of truth）として運用します。
+    </p>
+
+    <div class="stat-cards" id="statCards"></div>
+
+    <div class="source-grid" id="sourceGrid"></div>
+
+    <div class="compliance-box">
+      <strong>運用ルール</strong> ： 各サイトの robots.txt・利用規約・取得間隔を順守。一覧は全文転載せず「タイトル＋要約＋元リンク」に留める（著作権配慮）。サムネは元サイトのOGP画像のホットリンク可否を確認し、カテゴリ別の固定画像で代替する方針とする。
+    </div>
+
+    <div class="arch-note">
+      取得アーキテクチャ ： 定期バッチ（GitHub Actions cron）→ RSS／検索RSSパーサ → 正規化 → カテゴリ自動分類 → 重複排除 → JSON保存 → 静的フロント配信。急上昇ワードは直近の記事タイトルを走査して頻度集計。
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/include.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/sources.js"></script>
+</body>
+</html>

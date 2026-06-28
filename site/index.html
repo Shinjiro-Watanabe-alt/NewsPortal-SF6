@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SF6 NEWS PORTAL ・ ストリートファイター6＆レバーレス情報まとめ</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Saira+Condensed:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<div data-include="partials/masthead.html"></div>
+
+<main id="main" class="wrap">
+
+  <div class="search-wrap">
+    <div class="search-row">
+      <span class="ic">⌕</span>
+      <input id="searchInput" type="text" placeholder="キーワードで検索（キャラ名・大会名・用語など）">
+      <button id="clearSearchBtn" class="clear-btn" type="button" hidden aria-label="検索をクリア">✕</button>
+    </div>
+    <div id="trendFilter" class="trend-filter" hidden>
+      <span class="tag">#<span id="trendFilterWord"></span>で絞り込み中</span>
+      <span class="desc">急上昇ワードから絞り込み</span>
+      <button id="trendClearBtn" type="button">解除 ✕</button>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="sec-title">新着ニュース ／ NEW ARRIVALS</div>
+    <div class="cat-tabs" id="catTabs"></div>
+    <div id="newArrivals"></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-title">急上昇ワード ／ TRENDING RANKING</div>
+    <div class="trend-grid" id="trendGrid"></div>
+  </section>
+
+  <section class="sec">
+    <div class="list-head">
+      <div class="label">ニュース一覧 ／ ALL NEWS <span class="count"><span id="listCount">0</span>件</span></div>
+      <div class="sort-controls">
+        <button id="sortNewBtn" type="button" class="on">新着順</button>
+        <span class="sep">|</span>
+        <button id="sortOldBtn" type="button">古い順</button>
+      </div>
+    </div>
+    <div class="list-grid" id="newsList"></div>
+    <div class="pagination">
+      <button id="prevPageBtn" type="button">前へ</button>
+      <span class="info" id="pageInfo">1 / 1</span>
+      <button id="nextPageBtn" type="button">次へ</button>
+    </div>
+  </section>
+
+  <div class="foot-note">
+    SF6 NEWS PORTAL for OITA PLAYERS ・ 個人利用の情報集約プロトタイプ<br>
+    ※ 記事は各参照元のRSS／検索結果から自動収集したものです。タイトル・要約・元リンクのみを掲載し、本文の転載は行いません。
+  </div>
+
+</main>
+
+<script src="assets/js/include.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/news.js"></script>
+</body>
+</html>
