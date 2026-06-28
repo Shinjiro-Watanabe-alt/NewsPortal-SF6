@@ -44,6 +44,6 @@ DN.hexA = function hexA(hex, a) {
 
 DN.thumbBg = function thumbBg(catKey) {
   const m = DN.catMeta(catKey);
-  if (m.thumb) return `url("${DN.IMG_BASE}${m.thumb}") center/cover no-repeat, #14161a`;
+  if (m.thumb) return `url('${DN.IMG_BASE}${m.thumb}') center/cover no-repeat, #14161a`;
   return `repeating-linear-gradient(135deg, ${DN.hexA(m.color, 0.24)} 0 8px, ${DN.hexA(m.color, 0.07)} 8px 16px)`;
 };
