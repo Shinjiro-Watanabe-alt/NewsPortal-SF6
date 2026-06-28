@@ -18,7 +18,8 @@ DN.esc = function esc(s) {
 };
 
 // 7カテゴリのラベル・カラー・カテゴリ別サムネイル画像。記事に実画像は無いので
-// サムネは常にこのカテゴリ別画像(IMG_BASE配下)、画像未設定(その他)は色付きパターンで表示する。
+// サムネは常にこのカテゴリ別画像(IMG_BASE配下)で表示する。thumbが未設定の場合のみ
+// 色付きパターンにフォールバックする。
 DN.IMG_BASE = 'assets/img/';
 
 DN.CATEGORY_META = {
@@ -28,7 +29,7 @@ DN.CATEGORY_META = {
   eve: { label: '大会・イベント', color: '#D8A93F', thumb: 'event_thumb_clean.png' },
   goods: { label: 'グッズ・アパレル', color: '#C77DBB', thumb: 'goods_thumb_clean.png' },
   ent: { label: 'エンタメ', color: '#E0894A', thumb: 'entame_thumb_clean.png' },
-  etc: { label: 'その他', color: '#9AA0AA', thumb: null },
+  etc: { label: 'その他', color: '#9AA0AA', thumb: 'misc_thumb_clean.png' },
 };
 
 DN.CATEGORY_ORDER = ['all', 'kyo', 'koy', 'dev', 'eve', 'goods', 'ent', 'etc'];
