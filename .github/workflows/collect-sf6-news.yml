@@ -1,3 +1,4 @@
+# SF6関連ニュースを定期収集するワークフロー
 name: Collect SF6 News
 
 on:
