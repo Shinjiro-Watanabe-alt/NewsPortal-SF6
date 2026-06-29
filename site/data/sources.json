@@ -124,5 +124,14 @@
     "status": "active",
     "endpoint": "https://news.google.com/rss/search?q=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+site%3Acapcom.co.jp+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。"
+  },
+  {
+    "name": "検索: note.com SF6キャラ攻略",
+    "url": "https://news.google.com/",
+    "cat": "koy",
+    "method": "search",
+    "status": "active",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%82%AD%E3%83%A3%E3%83%A9%E6%94%BB%E7%95%A5+OR+%E5%AF%BE%E7%AD%96%29+site%3Anote.com+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "note": "note.comのプレイヤーによる個人考察・キャラ攻略記事をGoogleニュース検索RSS経由で収集。"
   }
 ]
