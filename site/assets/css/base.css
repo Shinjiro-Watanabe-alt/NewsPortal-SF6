@@ -323,43 +323,34 @@ input::placeholder { color: #5b616b; }
 /* ===== X post results ===== */
 .x-post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 0 32px;
   padding: 14px 0 4px;
 }
 .x-post-card {
   display: flex;
-  flex-direction: column;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-decoration: none;
 }
 .x-post-card .thumb {
-  width: 100%;
-  height: 90px;
-  border-radius: 5px;
+  flex: 0 0 104px;
+  height: 78px;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 10px;
 }
-.x-post-card .badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  color: #0a0b0d;
-  font: 700 10px 'Noto Sans JP', sans-serif;
-  padding: 2px 8px;
-  border-radius: 3px;
-}
-.x-post-card .time {
-  font: 600 10px 'Roboto Mono', monospace;
-  color: #E8412E;
-  margin-bottom: 6px;
-}
+.x-post-card .body { flex: 1; min-width: 0; }
+.x-post-card .meta { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.x-post-card .meta .cat { font: 700 10px 'Noto Sans JP', sans-serif; }
+.x-post-card .meta .time { font: 500 9px 'Roboto Mono', monospace; color: #7c818b; }
 .x-post-card .message {
   font: 500 13px/1.6 'Noto Sans JP', sans-serif;
   color: #cfd2d8;
   white-space: pre-line;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

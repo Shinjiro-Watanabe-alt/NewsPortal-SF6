@@ -188,11 +188,14 @@
   function xPostCardHtml(it) {
     return `
       <a class="x-post-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}">
-          <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
+        <div class="thumb" style="${thumbStyle(it)}"></div>
+        <div class="body">
+          <div class="meta">
+            <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>
+            <span class="time">${DN.esc(it.full)}</span>
+          </div>
+          <div class="message">${DN.esc(it.message)}</div>
         </div>
-        <div class="time">${DN.esc(it.full)}</div>
-        <div class="message">${DN.esc(it.message)}</div>
       </a>`;
   }
 
