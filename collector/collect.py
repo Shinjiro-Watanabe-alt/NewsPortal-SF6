@@ -184,6 +184,77 @@ def classify_category(text: str, fallback: str) -> str:
     return fallback
 
 
+# X(旧Twitter)投稿の検索結果ファイル(collector/x_<日付>.md)のパーサ。
+# このファイルはGrok側が手動で都度生成しcollectorフォルダに追加する運用のため、
+# collect.pyの自動収集対象ではない。投稿者名は個人情報のため一切読み取らず、
+# URL・日時・本文のみを抽出してsite/data/x_posts.jsonへ変換する。
+#
+# 期待するファイル形式:
+#   ### Post 1
+#   - Date: 2026-06-29 21:30
+#   - URL: https://x.com/<account>/status/<id>
+#   - Content: 投稿本文(複数行可)
+#
+# 「Date」は省略可(省略時は実行時刻扱い)。「URL」「Content」は必須で、
+# 欠けている投稿ブロックは取り込まない。Authorフィールドが含まれていても無視する。
+X_POST_BLOCK_RE = re.compile(r"^###\s*Post\s*\d+", re.MULTILINE)
+X_POST_FIELD_RE = re.compile(r"^-\s*([A-Za-z]+)\s*:\s*(.*)$")
+
+
+def parse_x_post_block(block: str):
+    fields = {}
+    content_lines = []
+    in_content = False
+    for line in block.splitlines():
+        if in_content:
+            content_lines.append(line)
+            continue
+        m = X_POST_FIELD_RE.match(line.strip())
+        if not m:
+            continue
+        key, value = m.group(1).lower(), m.group(2)
+        if key == "content":
+            in_content = True
+            if value:
+                content_lines.append(value)
+            continue
+        fields[key] = value.strip()
+    return fields, "\n".join(content_lines).strip()
+
+
+def parse_x_post_date(raw: str):
+    if not raw:
+        return None
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(raw.strip(), fmt).replace(tzinfo=JST)
+        except ValueError:
+            continue
+    return None
+
+
+def collect_x_posts(now: datetime):
+    results = []
+    for path in sorted(BASE_DIR.glob("x_*.md")):
+        text = path.read_text(encoding="utf-8")
+        starts = [m.start() for m in X_POST_BLOCK_RE.finditer(text)] + [len(text)]
+        for i in range(len(starts) - 1):
+            fields, content = parse_x_post_block(text[starts[i]:starts[i + 1]])
+            url = fields.get("url", "").strip()
+            if not url or not content:
+                continue
+            dt = parse_x_post_date(fields.get("date", "")) or now
+            results.append({
+                "id": make_id(url),
+                "cat": classify_category(content, "etc"),
+                "message": content,
+                "source_url": url,
+                "time": dt.isoformat(),
+                "collected": True,
+            })
+    return results
+
+
 def collect_one_source(source: dict, now: datetime):
     results = []
     source_type = source.get("type", "feed")
@@ -396,12 +467,25 @@ def main():
     previous_ranks = load_json("ranks.json", [])
     ranks = build_ranks(articles_by_id, previous_ranks)
 
+    # X投稿(collector/x_<日付>.md)はGrok側が手動で追加するファイルだが、
+    # 元ファイルが後で整理・削除されても一覧表示は引き継ぎたいのでarticlesと同様に
+    # 既存のsite/data/x_posts.jsonとマージしてから保存する
+    existing_x_posts = load_json("x_posts.json", [])
+    carried_x_posts = {p["id"]: p for p in existing_x_posts if p.get("collected")}
+    x_posts_by_id = dict(carried_x_posts)
+    for post in collect_x_posts(now):
+        x_posts_by_id[post["id"]] = post
+    x_post_ids = sorted(x_posts_by_id, key=lambda k: x_posts_by_id[k]["time"], reverse=True)[:MAX_ARTICLES]
+    x_posts = [x_posts_by_id[pid] for pid in x_post_ids]
+
     save_json("articles.json", articles)
     save_json("ranks.json", ranks)
     save_json("meta.json", {"updated_at": now.isoformat(), "total_count": len(articles)})
     save_json("sources.json", build_sources_view(sources))
+    save_json("x_posts.json", x_posts)
 
     print(f"収集完了: 新規 {new_count} 件 / 合計 {len(articles)} 件 ({now.isoformat()})")
+    print(f"X投稿: 合計 {len(x_posts)} 件")
 
 
 if __name__ == "__main__":

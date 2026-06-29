@@ -10,6 +10,7 @@
   const state = { q: '', cat: 'all', trend: null, char: null, sort: 'new', page: 1 };
   let ARTICLES = [];
   let RANKS = [];
+  let X_POSTS = [];
 
   function relTime(d) {
     const min = Math.floor((Date.now() - d.getTime()) / 60000);
@@ -39,6 +40,18 @@
       catColor: meta.color,
       thumbBg: DN.thumbBg(it.cat),
       isYouTube: DN.isYouTubeArticle(it),
+    });
+  }
+
+  function decorateXPost(it) {
+    const d = new Date(it.time);
+    const meta = DN.catMeta(it.cat);
+    return Object.assign({}, it, {
+      ts: d.getTime(),
+      full: fullTime(d),
+      catLabel: meta.label,
+      catColor: meta.color,
+      thumbBg: DN.thumbBg(it.cat),
     });
   }
 
@@ -172,6 +185,25 @@
       <div class="new-grid">${rest.map(newCardHtml).join('')}</div>`;
   }
 
+  function xPostCardHtml(it) {
+    return `
+      <a class="x-post-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
+        <div class="thumb" style="${thumbStyle(it)}">
+          <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
+        </div>
+        <div class="time">${DN.esc(it.full)}</div>
+        <div class="message">${DN.esc(it.message)}</div>
+      </a>`;
+  }
+
+  function renderXPosts() {
+    const section = document.getElementById('xPostsSection');
+    const root = document.getElementById('xPostsGrid');
+    if (!section || !root) return;
+    section.hidden = X_POSTS.length === 0;
+    root.innerHTML = X_POSTS.slice().sort((a, b) => b.ts - a.ts).map(xPostCardHtml).join('');
+  }
+
   function renderTrendGrid() {
     const root = document.getElementById('trendGrid');
     if (!root) return;
@@ -259,6 +291,7 @@
 
   function renderAll() {
     renderNewArrivals();
+    renderXPosts();
     renderTrendGrid();
     renderNewsList();
     renderSortControls();
@@ -334,6 +367,12 @@
       console.error('[news] failed to load data', err);
       ARTICLES = [];
       RANKS = [];
+    }
+    try {
+      X_POSTS = (await DN.fetchJSON('x_posts.json')).map(decorateXPost);
+    } catch (err) {
+      console.error('[news] failed to load x_posts', err);
+      X_POSTS = [];
     }
     renderCatTabs();
     renderCharTabs();
