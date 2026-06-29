@@ -38,6 +38,14 @@ DN.catMeta = function catMeta(key) {
   return DN.CATEGORY_META[key] || DN.CATEGORY_META.etc;
 };
 
+// キャラクター別フィルター用の名前一覧。collector/collect.pyのCATEGORY_RULES(koy)・
+// RANK_BASE_KEYWORDSのキャラ名リストと同じ並びにしている。新キャラ参戦時はここにも追加する。
+DN.CHARACTERS = [
+  'リュウ', 'ルーク', '春麗', 'ガイル', 'ジュリ', 'ザンギエフ', 'ケン', '豪鬼',
+  'ブランカ', 'ダルシム', 'キャミィ', 'ジェイミー', 'エド', 'アキ', 'ラシード',
+  'ベガ', 'テリー', 'マノン', 'マリーザ', 'リリー', 'キンバリー', 'ディージェイ',
+];
+
 DN.hexA = function hexA(hex, a) {
   const n = parseInt(hex.slice(1), 16);
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;

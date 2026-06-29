@@ -204,12 +204,8 @@ def collect_one_source(source: dict, now: datetime):
         if source_type == "search":
             # 検索RSSはGoogleニュースの仲介リンクなので「本文 - 配信元」を分離する
             title, source_label = split_title_source(raw_title, source.get("default_source_label", source["name"]))
-            # 検索クエリのカテゴリはあくまで「どのクエリで見つかったか」でしかなく、
-            # 記事内容と無関係な場合があるため、キーワード不一致時のフォールバックには使わない
-            fallback_category = "etc"
         else:
             title, source_label = raw_title, source["default_source_label"]
-            fallback_category = source.get("category", "etc")
 
         haystack = title + " " + desc
         if not KEYWORD_RE.search(haystack):
@@ -217,9 +213,12 @@ def collect_one_source(source: dict, now: datetime):
 
         dt = parse_date(date_raw) or now
 
+        # ソースのcategoryは「どの検索クエリ/キーワードフィードで見つかったか」を
+        # 表すだけで、記事内容と無関係な場合がある(はてなブックマークのキーワード
+        # ページ等も同様)。キーワード不一致時のフォールバックには使わず常に"etc"にする。
         results.append({
             "id": make_id(normalize_title_for_dedup(title)),
-            "cat": classify_category(haystack, fallback_category),
+            "cat": classify_category(haystack, "etc"),
             "title": title,
             "summary": (desc[:120] + "…") if len(desc) > 120 else desc,
             "source": source_label,

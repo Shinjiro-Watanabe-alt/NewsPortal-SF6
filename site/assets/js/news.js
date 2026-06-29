@@ -7,7 +7,7 @@
   const PAGE_SIZE = 8;
   const NEW_COUNT = 6;
 
-  const state = { q: '', cat: 'all', trend: null, sort: 'new', page: 1 };
+  const state = { q: '', cat: 'all', trend: null, char: null, sort: 'new', page: 1 };
   let ARTICLES = [];
   let RANKS = [];
 
@@ -54,8 +54,14 @@
     return hay.includes(trend);
   }
 
+  function matchesCharacter(it, char) {
+    if (!char) return true;
+    const hay = it.title + ' ' + (it.summary || '');
+    return hay.includes(char);
+  }
+
   function baseFiltered() {
-    return ARTICLES.filter((it) => matchesQuery(it, state.q) && matchesTrend(it, state.trend));
+    return ARTICLES.filter((it) => matchesQuery(it, state.q) && matchesTrend(it, state.trend) && matchesCharacter(it, state.char));
   }
 
   function newSection() {
@@ -94,6 +100,25 @@
         state.cat = btn.getAttribute('data-cat');
         renderNewArrivals();
         renderCatTabs();
+      });
+    });
+  }
+
+  function renderCharTabs() {
+    const root = document.getElementById('charTabs');
+    if (!root) return;
+    root.innerHTML = ['all', ...DN.CHARACTERS].map((name) => {
+      const label = name === 'all' ? '全キャラクター' : name;
+      const on = (name === 'all' ? state.char === null : state.char === name) ? ' on' : '';
+      return `<button type="button" data-char="${DN.esc(name)}" class="${on.trim()}">${DN.esc(label)}</button>`;
+    }).join('');
+    root.querySelectorAll('button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const v = btn.getAttribute('data-char');
+        state.char = v === 'all' ? null : v;
+        state.page = 1;
+        renderAll();
+        renderCharTabs();
       });
     });
   }
@@ -310,6 +335,7 @@
       RANKS = [];
     }
     renderCatTabs();
+    renderCharTabs();
     wireControls();
     renderAll();
   }
