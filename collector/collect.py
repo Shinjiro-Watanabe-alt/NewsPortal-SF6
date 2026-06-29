@@ -186,40 +186,45 @@ def classify_category(text: str, fallback: str) -> str:
 
 # X(旧Twitter)投稿の検索結果ファイル(collector/x_<日付>.md)のパーサ。
 # このファイルはGrok側が手動で都度生成しcollectorフォルダに追加する運用のため、
-# collect.pyの自動収集対象ではない。投稿者名は個人情報のため一切読み取らず、
+# collect.pyの自動収集対象ではない。投稿者名(ハンドル名)は一切読み取らず、
 # URL・日時・本文のみを抽出してsite/data/x_posts.jsonへ変換する。
 #
-# 期待するファイル形式:
+# 想定するファイル形式(Postブロック単位、フィールド名は日本語/英語のどちらでも可):
 #   ### Post 1
-#   - Date: 2026-06-29 21:30
-#   - URL: https://x.com/<account>/status/<id>
-#   - Content: 投稿本文(複数行可)
+#   更新日時: 2026-06-29 12:00      (Date: の表記も可。省略時は実行時刻扱い)
+#   投稿メッセージ: 投稿本文(複数行可)  (Content: の表記も可。必須)
+#   画像URL: (今回のスコープ外のため未使用)
+#   投稿URL: https://x.com/...      (URL: の表記も可。必須)
 #
-# 「Date」は省略可(省略時は実行時刻扱い)。「URL」「Content」は必須で、
-# 欠けている投稿ブロックは取り込まない。Authorフィールドが含まれていても無視する。
+# 「投稿URL」「投稿メッセージ」が欠けているブロックは取り込まない。
+# Author相当の項目が含まれていても、対応するキーを定義していないため無視される。
 X_POST_BLOCK_RE = re.compile(r"^###\s*Post\s*\d+", re.MULTILINE)
-X_POST_FIELD_RE = re.compile(r"^-\s*([A-Za-z]+)\s*:\s*(.*)$")
+X_POST_FIELD_RE = re.compile(r"^(更新日時|投稿メッセージ|画像URL|投稿URL|Date|URL|Content)\s*[:：]\s*(.*)$")
+X_POST_DATE_KEYS = ("更新日時", "Date")
+X_POST_URL_KEYS = ("投稿URL", "URL")
+X_POST_CONTENT_KEYS = ("投稿メッセージ", "Content")
 
 
 def parse_x_post_block(block: str):
+    """フィールド名:値の行が複数並ぶブロックを解析する。値は次のフィールド行が
+    現れるまでの続く行を連結するため、本文(投稿メッセージ)が複数行でも対応できる"""
     fields = {}
-    content_lines = []
-    in_content = False
+    current_key = None
     for line in block.splitlines():
-        if in_content:
-            content_lines.append(line)
-            continue
         m = X_POST_FIELD_RE.match(line.strip())
-        if not m:
-            continue
-        key, value = m.group(1).lower(), m.group(2)
-        if key == "content":
-            in_content = True
-            if value:
-                content_lines.append(value)
-            continue
-        fields[key] = value.strip()
-    return fields, "\n".join(content_lines).strip()
+        if m:
+            current_key = m.group(1)
+            fields[current_key] = [m.group(2)] if m.group(2) else []
+        elif current_key is not None and line.strip():
+            fields[current_key].append(line.strip())
+
+    def pick(keys):
+        for key in keys:
+            if key in fields:
+                return "\n".join(fields[key]).strip()
+        return ""
+
+    return pick(X_POST_URL_KEYS), pick(X_POST_CONTENT_KEYS), pick(X_POST_DATE_KEYS)
 
 
 def parse_x_post_date(raw: str):
@@ -239,11 +244,10 @@ def collect_x_posts(now: datetime):
         text = path.read_text(encoding="utf-8")
         starts = [m.start() for m in X_POST_BLOCK_RE.finditer(text)] + [len(text)]
         for i in range(len(starts) - 1):
-            fields, content = parse_x_post_block(text[starts[i]:starts[i + 1]])
-            url = fields.get("url", "").strip()
+            url, content, date_raw = parse_x_post_block(text[starts[i]:starts[i + 1]])
             if not url or not content:
                 continue
-            dt = parse_x_post_date(fields.get("date", "")) or now
+            dt = parse_x_post_date(date_raw) or now
             results.append({
                 "id": make_id(url),
                 "cat": classify_category(content, "etc"),
