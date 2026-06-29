@@ -137,52 +137,13 @@
     });
   }
 
-  function featuredHtml(it) {
-    return `
-      <a class="featured-link" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener" style="display:flex;gap:20px;flex-wrap:wrap;text-decoration:none;">
-        <div class="thumb" style="${thumbStyle(it)}">
-          ${it.isYouTube ? DN.YT_BADGE_HTML : ''}
-          <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
-        </div>
-        <div class="body">
-          <div class="meta">
-            <span class="time">${DN.esc(it.rel)}</span>
-            <span class="src">${DN.esc(it.source)}</span>
-          </div>
-          <div class="title">${DN.esc(it.title)}</div>
-          <div class="excerpt">${DN.esc(it.summary || '')}</div>
-        </div>
-      </a>`;
-  }
-
-  function newCardHtml(it) {
-    return `
-      <a class="new-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}">
-          ${it.isYouTube ? DN.YT_BADGE_HTML : ''}
-          <span class="badge" style="background:${it.catColor}">${DN.esc(it.catLabel)}</span>
-        </div>
-        <div class="meta">
-          <span class="time">${DN.esc(it.rel)}</span>
-          <span class="src">${DN.esc(it.source)}</span>
-        </div>
-        <div class="title">${DN.esc(it.title)}</div>
-        <div class="excerpt">${DN.esc(it.summary || '')}</div>
-      </a>`;
-  }
-
   function renderNewArrivals() {
     const root = document.getElementById('newArrivals');
     if (!root) return;
     const items = newSection();
-    if (items.length === 0) {
-      root.innerHTML = '<div class="empty-note">該当する記事がありません。</div>';
-      return;
-    }
-    const [first, ...rest] = items;
-    root.innerHTML = `
-      <div class="featured">${featuredHtml(first)}</div>
-      <div class="new-grid">${rest.map(newCardHtml).join('')}</div>`;
+    root.innerHTML = items.length
+      ? `<div class="list-grid">${items.map(listItemHtml).join('')}</div>`
+      : '<div class="empty-note">該当する記事がありません。</div>';
   }
 
   function xPostCardHtml(it) {
