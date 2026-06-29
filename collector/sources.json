@@ -13,5 +13,6 @@
   { "type": "search", "name": "検索: SF6 エンタメ",             "query": "(ストリートファイター6 OR SF6) (アニメ OR 配信 OR YouTube OR 実況 OR コラボ) when:1d", "category": "ent",   "method": "search", "status": "active", "note": "アニメ・配信・コラボ等のエンタメ関連ニュースを収集。" },
   { "type": "search", "name": "検索: SF6 アップデート・パッチ", "query": "(ストリートファイター6 OR SF6) (アップデート OR パッチ OR バランス調整 OR Ver.) when:3d", "category": "kyo",   "method": "search", "status": "active", "note": "バージョンアップ・バランス調整関連のニュースを収集。" },
   { "type": "search", "name": "検索: 大分 格闘ゲーム",         "query": "大分 (格闘ゲーム OR ストリートファイター OR ゲームセンター) when:7d", "category": "eve",   "method": "search", "status": "active", "note": "大分県内の格闘ゲームコミュニティ・店舗イベント情報を収集。" },
-  { "type": "search", "name": "検索: カプコン公式 SF6情報",    "query": "ストリートファイター6 site:capcom.co.jp when:3d", "category": "etc",   "method": "search", "status": "active", "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。" }
+  { "type": "search", "name": "検索: カプコン公式 SF6情報",    "query": "ストリートファイター6 site:capcom.co.jp when:3d", "category": "etc",   "method": "search", "status": "active", "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。" },
+  { "type": "search", "name": "検索: note.com SF6キャラ攻略",  "query": "(ストリートファイター6 OR SF6) (攻略 OR コンボ OR 立ち回り OR キャラ攻略 OR 対策) site:note.com when:7d", "category": "koy",   "method": "search", "status": "active", "note": "note.comのプレイヤーによる個人考察・キャラ攻略記事をGoogleニュース検索RSS経由で収集。" }
 ]
