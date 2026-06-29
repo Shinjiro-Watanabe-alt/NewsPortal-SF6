@@ -193,6 +193,14 @@ input::placeholder { color: #5b616b; }
   margin-bottom: 12px;
 }
 
+#newArrivalsSection,
+#xPostsSection {
+  border-radius: 14px;
+  padding: 24px 24px 28px;
+}
+#newArrivalsSection { background: #333322; }
+#xPostsSection { background: #222222; }
+
 /* ===== New arrivals: category tabs ===== */
 .cat-tabs {
   display: flex;
