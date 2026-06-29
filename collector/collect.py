@@ -27,7 +27,7 @@ SOURCES_FILE = BASE_DIR / "sources.json"
 
 JST = timezone(timedelta(hours=9))
 
-MAX_ARTICLES = 1000
+MAX_ARTICLES = 3000
 FETCH_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; NewsPortalSF6-Collector/1.0)"
 
