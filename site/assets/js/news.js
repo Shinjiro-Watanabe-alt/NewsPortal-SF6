@@ -110,7 +110,8 @@
     root.innerHTML = ['all', ...DN.CHARACTERS].map((name) => {
       const label = name === 'all' ? '全キャラクター' : name;
       const on = (name === 'all' ? state.char === null : state.char === name) ? ' on' : '';
-      return `<button type="button" data-char="${DN.esc(name)}" class="${on.trim()}">${DN.esc(label)}</button>`;
+      const ico = name === 'all' ? '' : `<span class="char-ico" style="background:${DN.CHARACTER_COLOR[name]}">${DN.CHAR_SILHOUETTE_SVG}</span>`;
+      return `<button type="button" data-char="${DN.esc(name)}" class="${on.trim()}">${ico}${DN.esc(label)}</button>`;
     }).join('');
     root.querySelectorAll('button').forEach((btn) => {
       btn.addEventListener('click', () => {

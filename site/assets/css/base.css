@@ -161,6 +161,9 @@ input::placeholder { color: #5b616b; }
 }
 .char-tabs { display: flex; flex-wrap: wrap; gap: 7px; }
 .char-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #9097a1;
@@ -170,6 +173,16 @@ input::placeholder { color: #5b616b; }
   padding: 4px 12px;
 }
 .char-tabs button.on { color: #0a0b0d; background: #E8412E; border-color: #E8412E; }
+.char-ico {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.char-ico-svg { width: 7px; height: 7px; }
 
 /* ===== Section heading ===== */
 .sec { padding: 30px 0 0; }
