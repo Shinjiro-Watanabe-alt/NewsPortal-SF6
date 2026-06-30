@@ -1,11 +1,16 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 17,
-    "arrow": "up"
+    "score": 19,
+    "arrow": "flat"
   },
   {
     "keyword": "EVO2026",
+    "score": 6,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "リュウ",
     "score": 5,
     "arrow": "up"
   },
@@ -15,12 +20,22 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
+    "keyword": "キャミィ",
     "score": 4,
     "arrow": "up"
   },
   {
+    "keyword": "ベガ",
+    "score": 4,
+    "arrow": "flat"
+  },
+  {
     "keyword": "マリーザ",
+    "score": 4,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "ジュリ",
     "score": 3,
     "arrow": "up"
   },
@@ -30,23 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "キャミィ",
-    "score": 2,
-    "arrow": "flat"
-  },
-  {
     "keyword": "ザンギエフ",
     "score": 2,
-    "arrow": "up"
-  },
-  {
-    "keyword": "ジュリ",
-    "score": 2,
-    "arrow": "up"
-  },
-  {
-    "keyword": "リュウ",
-    "score": 2,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
