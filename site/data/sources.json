@@ -126,12 +126,30 @@
     "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。"
   },
   {
-    "name": "検索: note.com SF6キャラ攻略",
-    "url": "https://news.google.com/",
+    "name": "note検索: ストリートファイター6",
+    "url": "https://note.com/",
     "cat": "koy",
-    "method": "search",
-    "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%82%AD%E3%83%A3%E3%83%A9%E6%94%BB%E7%95%A5+OR+%E5%AF%BE%E7%AD%96%29+site%3Anote.com+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-    "note": "note.comのプレイヤーによる個人考察・キャラ攻略記事をGoogleニュース検索RSS経由で収集。"
+    "method": "note-api",
+    "status": "check",
+    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&size=20&start=0",
+    "note": "note.com公式の検索APIを直接呼び出し、直近に限らず最大5ページ(100件)を毎回遡って取得する。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。"
+  },
+  {
+    "name": "note検索: SF6",
+    "url": "https://note.com/",
+    "cat": "koy",
+    "method": "note-api",
+    "status": "check",
+    "endpoint": "https://note.com/api/v3/searches?context=note&q=SF6&size=20&start=0",
+    "note": "同上。略称表記での検索カバレッジを補う。"
+  },
+  {
+    "name": "note検索: レバーレス",
+    "url": "https://note.com/",
+    "cat": "dev",
+    "method": "note-api",
+    "status": "check",
+    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9&size=20&start=0",
+    "note": "同上。レバーレスコントローラー関連のnote記事を収集。"
   }
 ]
