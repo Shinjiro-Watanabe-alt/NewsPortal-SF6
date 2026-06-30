@@ -156,6 +156,7 @@ def parse_date(raw: str):
     fmts = [
         "%a, %d %b %Y %H:%M:%S %z",
         "%a, %d %b %Y %H:%M:%S %Z",
+        "%Y-%m-%dT%H:%M:%S.%f%z",
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%d %H:%M:%S",
         "%Y-%m-%d",
@@ -349,9 +350,6 @@ def collect_note_posts(source: dict, now: datetime):
         if not contents:
             break
 
-        if page == 0:
-            print(f"[debug] {source['name']}: sample item keys = {json.dumps(contents[0], ensure_ascii=False)[:500]}", file=sys.stderr)
-
         for item in contents:
             title = strip_html(item.get("name", ""))
             excerpt = strip_html(item.get("excerpt", ""))
@@ -364,7 +362,7 @@ def collect_note_posts(source: dict, now: datetime):
             if not KEYWORD_RE.search(haystack):
                 continue  # SF6・レバーレスに無関係な記事は除外
 
-            dt = parse_date(item.get("publishAt", "")) or now
+            dt = parse_date(item.get("publish_at", "")) or now
             results.append({
                 "id": make_id(normalize_title_for_dedup(title)),
                 "cat": classify_category(haystack, "etc"),
