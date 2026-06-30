@@ -130,7 +130,7 @@
     "url": "https://note.com/",
     "cat": "koy",
     "method": "note-api",
-    "status": "check",
+    "status": "active",
     "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&size=20&start=0",
     "note": "note.com公式の検索APIを直接呼び出し、直近に限らず最大5ページ(100件)を毎回遡って取得する。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。"
   },
@@ -139,7 +139,7 @@
     "url": "https://note.com/",
     "cat": "koy",
     "method": "note-api",
-    "status": "check",
+    "status": "active",
     "endpoint": "https://note.com/api/v3/searches?context=note&q=SF6&size=20&start=0",
     "note": "同上。略称表記での検索カバレッジを補う。"
   },
@@ -148,7 +148,7 @@
     "url": "https://note.com/",
     "cat": "dev",
     "method": "note-api",
-    "status": "check",
+    "status": "active",
     "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9&size=20&start=0",
     "note": "同上。レバーレスコントローラー関連のnote記事を収集。"
   }
