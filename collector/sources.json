@@ -14,5 +14,8 @@
   { "type": "search", "name": "検索: SF6 アップデート・パッチ", "query": "(ストリートファイター6 OR SF6) (アップデート OR パッチ OR バランス調整 OR Ver.) when:3d", "category": "kyo",   "method": "search", "status": "active", "note": "バージョンアップ・バランス調整関連のニュースを収集。" },
   { "type": "search", "name": "検索: 大分 格闘ゲーム",         "query": "大分 (格闘ゲーム OR ストリートファイター OR ゲームセンター) when:7d", "category": "eve",   "method": "search", "status": "active", "note": "大分県内の格闘ゲームコミュニティ・店舗イベント情報を収集。" },
   { "type": "search", "name": "検索: カプコン公式 SF6情報",    "query": "ストリートファイター6 site:capcom.co.jp when:3d", "category": "etc",   "method": "search", "status": "active", "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。" },
-  { "type": "search", "name": "検索: note.com SF6キャラ攻略",  "query": "(ストリートファイター6 OR SF6) (攻略 OR コンボ OR 立ち回り OR キャラ攻略 OR 対策) site:note.com when:7d", "category": "koy",   "method": "search", "status": "active", "note": "note.comのプレイヤーによる個人考察・キャラ攻略記事をGoogleニュース検索RSS経由で収集。" }
+
+  { "type": "note_search", "name": "note検索: ストリートファイター6", "query": "ストリートファイター6", "category": "koy", "method": "note-api", "status": "check", "note": "note.com公式の検索APIを直接呼び出し、直近に限らず最大5ページ(100件)を毎回遡って取得する。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。" },
+  { "type": "note_search", "name": "note検索: SF6",            "query": "SF6", "category": "koy", "method": "note-api", "status": "check", "note": "同上。略称表記での検索カバレッジを補う。" },
+  { "type": "note_search", "name": "note検索: レバーレス",      "query": "レバーレス", "category": "dev", "method": "note-api", "status": "check", "note": "同上。レバーレスコントローラー関連のnote記事を収集。" }
 ]

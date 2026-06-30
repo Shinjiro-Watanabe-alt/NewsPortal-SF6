@@ -29,8 +29,11 @@
       <button id="trendClearBtn" type="button">解除 ✕</button>
     </div>
     <div class="char-filter">
-      <div class="char-filter-label">キャラクターで絞り込み</div>
-      <div class="char-tabs" id="charTabs"></div>
+      <button type="button" id="charFilterToggle" class="char-filter-toggle" aria-expanded="false" aria-controls="charTabs">
+        <span class="label">キャラクターで絞り込み</span>
+        <span class="chev">▾</span>
+      </button>
+      <div class="char-tabs" id="charTabs" hidden></div>
     </div>
   </div>
 
@@ -38,6 +41,11 @@
     <div class="sec-title">新着ニュース ／ NEW ARRIVALS</div>
     <div class="cat-tabs" id="catTabs"></div>
     <div id="newArrivals"></div>
+  </section>
+
+  <section class="sec" id="notePostsSection" hidden>
+    <div class="sec-title">note記事まとめ ／ NOTE POSTS</div>
+    <div class="note-post-grid" id="notePostsGrid"></div>
   </section>
 
   <section class="sec" id="xPostsSection" hidden>

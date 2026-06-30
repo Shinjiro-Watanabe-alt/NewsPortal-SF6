@@ -69,11 +69,27 @@ GOOGLE_NEWS_RSS = "https://news.google.com/rss/search"
 # Googleニュース検索RSSのタイトルは「本文 - 配信元」の形式になっている
 TITLE_SOURCE_SUFFIX_RE = re.compile(r"^(?P<title>.+?)\s+-\s+(?P<source>[^-]+)$")
 
+# note.com自体の検索ページが内部で呼んでいる検索API。RSSと違いstart/sizeで
+# ページングできるため、直近の記事に限らず過去の記事もまとめて遡って取得できる。
+# 非公式エンドポイントのためレスポンス構造が変わる可能性があり、collect_note_posts側で
+# 想定外の構造を検知した場合はログに出して打ち切る防御的な実装にしている。
+NOTE_SEARCH_API = "https://note.com/api/v3/searches"
+NOTE_SEARCH_PAGE_SIZE = 20
+NOTE_SEARCH_MAX_PAGES = 5  # 1クエリあたり最大5ページ(=100件)を毎回遡って取得する
+
 
 def build_search_url(query: str) -> str:
     """検索キーワードから Google ニュース検索RSSのURLを組み立てる"""
     params = urllib.parse.urlencode({"q": query, "hl": "ja", "gl": "JP", "ceid": "JP:ja"})
     return f"{GOOGLE_NEWS_RSS}?{params}"
+
+
+def build_note_search_url(query: str, start: int = 0) -> str:
+    """検索キーワードから note.com 検索APIのURLを組み立てる"""
+    params = urllib.parse.urlencode({
+        "context": "note", "q": query, "size": NOTE_SEARCH_PAGE_SIZE, "start": start,
+    })
+    return f"{NOTE_SEARCH_API}?{params}"
 
 
 def split_title_source(raw_title: str, fallback: str):
@@ -87,6 +103,10 @@ def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as res:
         return res.read()
+
+
+def fetch_json(url: str):
+    return json.loads(fetch(url))
 
 
 def strip_html(text: str) -> str:
@@ -305,6 +325,60 @@ def collect_one_source(source: dict, now: datetime):
     return results
 
 
+def collect_note_posts(source: dict, now: datetime):
+    """note.com検索APIを直接ページングして記事を収集する。RSSの「直近N日」制限を
+    受けないため、過去に遡って投稿された記事もまとめて拾える。専用の「note記事まとめ」
+    枠にのみ表示し、site/data/articles.json(ニュース一覧)には混在させない"""
+    results = []
+    query = source["query"]
+    for page in range(NOTE_SEARCH_MAX_PAGES):
+        url = build_note_search_url(query, start=page * NOTE_SEARCH_PAGE_SIZE)
+        try:
+            payload = fetch_json(url)
+        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+            print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
+            break
+
+        try:
+            notes = payload["data"]["notes"]
+            contents = notes["contents"]
+        except (KeyError, TypeError):
+            print(f"[skip] {source['name']}: 想定外のレスポンス構造 ({json.dumps(payload, ensure_ascii=False)[:300]})", file=sys.stderr)
+            break
+
+        if not contents:
+            break
+
+        for item in contents:
+            title = strip_html(item.get("name", ""))
+            excerpt = strip_html(item.get("excerpt", ""))
+            urlname = (item.get("user") or {}).get("urlname", "")
+            key = item.get("key", "")
+            if not title or not urlname or not key:
+                continue
+
+            haystack = title + " " + excerpt
+            if not KEYWORD_RE.search(haystack):
+                continue  # SF6・レバーレスに無関係な記事は除外
+
+            dt = parse_date(item.get("publishAt", "")) or now
+            results.append({
+                "id": make_id(normalize_title_for_dedup(title)),
+                "cat": classify_category(haystack, "etc"),
+                "title": title,
+                "summary": (excerpt[:120] + "…") if len(excerpt) > 120 else excerpt,
+                "source": "note",
+                "source_url": f"https://note.com/{urlname}/n/{key}",
+                "time": dt.isoformat(),
+                "collected": True,
+            })
+
+        if notes.get("isLastPage"):
+            break
+
+    return results
+
+
 # 「急上昇ワード」ランキング専用の特化辞書。記事の関連性判定(KEYWORDS)用の
 # 広い語とは別に、キャラクター名・システム用語・デバイス名・大会シリーズ名のみを
 # 集めている。ランキングの語彙はこれに加えて、下のパターンベース抽出で一定の
@@ -409,6 +483,9 @@ def build_sources_view(sources: list):
         if s.get("type") == "search":
             endpoint = build_search_url(s["query"])
             url = "https://news.google.com/"
+        elif s.get("type") == "note_search":
+            endpoint = build_note_search_url(s["query"])
+            url = "https://note.com/"
         else:
             endpoint = s["url"]
             parts = urllib.parse.urlsplit(s["url"])
@@ -452,7 +529,12 @@ def main():
 
     collected = dict(carried_over)
     new_ids = set()
+    note_found = {}
     for source in sources:
+        if source.get("type") == "note_search":
+            for post in collect_note_posts(source, now):
+                note_found[post["id"]] = post
+            continue
         for article in collect_one_source(source, now):
             if article["id"] not in collected:
                 new_ids.add(article["id"])
@@ -482,14 +564,24 @@ def main():
     x_post_ids = sorted(x_posts_by_id, key=lambda k: x_posts_by_id[k]["time"], reverse=True)[:MAX_ARTICLES]
     x_posts = [x_posts_by_id[pid] for pid in x_post_ids]
 
+    # note記事はXと同様、site/data/articles.json(ニュース一覧)には混在させず
+    # 専用ファイルとして保持する。過去に収集済みの分も引き継いでマージする
+    existing_note_posts = load_json("note_posts.json", [])
+    carried_note_posts = {p["id"]: p for p in existing_note_posts if p.get("collected")}
+    note_posts_by_id = dedupe_by_title({**carried_note_posts, **note_found})
+    note_post_ids = sorted(note_posts_by_id, key=lambda k: note_posts_by_id[k]["time"], reverse=True)[:MAX_ARTICLES]
+    note_posts = [note_posts_by_id[pid] for pid in note_post_ids]
+
     save_json("articles.json", articles)
     save_json("ranks.json", ranks)
     save_json("meta.json", {"updated_at": now.isoformat(), "total_count": len(articles)})
     save_json("sources.json", build_sources_view(sources))
     save_json("x_posts.json", x_posts)
+    save_json("note_posts.json", note_posts)
 
     print(f"収集完了: 新規 {new_count} 件 / 合計 {len(articles)} 件 ({now.isoformat()})")
     print(f"X投稿: 合計 {len(x_posts)} 件")
+    print(f"note記事: 合計 {len(note_posts)} 件")
 
 
 if __name__ == "__main__":

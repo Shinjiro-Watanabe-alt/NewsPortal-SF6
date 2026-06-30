@@ -154,12 +154,26 @@ input::placeholder { color: #5b616b; }
 }
 
 .char-filter { margin-top: 13px; }
-.char-filter-label {
-  font: 700 11px 'Noto Sans JP', sans-serif;
-  color: #7c818b;
-  margin-bottom: 7px;
+.char-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 6px 0;
+  margin: 0;
+  cursor: pointer;
+  color: #cfd2d8;
+  font: 700 14px 'Noto Sans JP', sans-serif;
 }
-.char-tabs { display: flex; flex-wrap: wrap; gap: 7px; }
+.char-filter-toggle .chev {
+  color: #E8412E;
+  font-size: 11px;
+  transition: transform .15s ease;
+}
+.char-filter-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.char-filter-toggle[aria-expanded="true"] { color: #fff; }
+.char-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 7px; }
 .char-tabs button {
   display: inline-flex;
   align-items: center;
@@ -233,6 +247,37 @@ input::placeholder { color: #5b616b; }
   width: 22.75px;
   height: 15.17px;
   pointer-events: none;
+}
+
+/* ===== note post results ===== */
+.note-post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(440px, 100%), 1fr));
+  gap: 0 32px;
+  background: #161616;
+  border-radius: 12px;
+  padding: 10px 18px 6px;
+}
+.note-post-card {
+  display: flex;
+  gap: 14px;
+  padding: 7.5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+.note-post-card .thumb { flex: 0 0 104px; height: 78px; border-radius: 4px; position: relative; overflow: hidden; }
+.note-post-card .body { flex: 1; min-width: 0; }
+.note-post-card .meta { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.note-post-card .meta .cat { font: 700 10px 'Noto Sans JP', sans-serif; }
+.note-post-card .meta .time { font: 500 9px 'Roboto Mono', monospace; color: #7c818b; }
+.note-post-card .message {
+  font: 500 13px/1.6 'Noto Sans JP', sans-serif;
+  color: #cfd2d8;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ===== X post results ===== */

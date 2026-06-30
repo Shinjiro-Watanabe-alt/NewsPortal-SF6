@@ -11,6 +11,7 @@
   let ARTICLES = [];
   let RANKS = [];
   let X_POSTS = [];
+  let NOTE_POSTS = [];
 
   function relTime(d) {
     const min = Math.floor((Date.now() - d.getTime()) / 60000);
@@ -168,6 +169,29 @@
     root.innerHTML = X_POSTS.slice().sort((a, b) => b.ts - a.ts).map(xPostCardHtml).join('');
   }
 
+  function notePostCardHtml(it) {
+    const message = it.summary ? `${it.title}\n${it.summary}` : it.title;
+    return `
+      <a class="note-post-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
+        <div class="thumb" style="${thumbStyle(it)}"></div>
+        <div class="body">
+          <div class="meta">
+            <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>
+            <span class="time">${DN.esc(it.full)}</span>
+          </div>
+          <div class="message">${DN.esc(message)}</div>
+        </div>
+      </a>`;
+  }
+
+  function renderNotePosts() {
+    const section = document.getElementById('notePostsSection');
+    const root = document.getElementById('notePostsGrid');
+    if (!section || !root) return;
+    section.hidden = NOTE_POSTS.length === 0;
+    root.innerHTML = NOTE_POSTS.slice().sort((a, b) => b.ts - a.ts).map(notePostCardHtml).join('');
+  }
+
   function renderTrendGrid() {
     const root = document.getElementById('trendGrid');
     if (!root) return;
@@ -255,12 +279,24 @@
 
   function renderAll() {
     renderNewArrivals();
+    renderNotePosts();
     renderXPosts();
     renderTrendGrid();
     renderNewsList();
     renderSortControls();
     renderTrendFilterChip();
     renderSearchClearBtn();
+  }
+
+  function wireCharFilterToggle() {
+    const toggle = document.getElementById('charFilterToggle');
+    const panel = document.getElementById('charTabs');
+    if (!toggle || !panel) return;
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
   }
 
   function wireControls() {
@@ -338,8 +374,15 @@
       console.error('[news] failed to load x_posts', err);
       X_POSTS = [];
     }
+    try {
+      NOTE_POSTS = (await DN.fetchJSON('note_posts.json')).map(decorate);
+    } catch (err) {
+      console.error('[news] failed to load note_posts', err);
+      NOTE_POSTS = [];
+    }
     renderCatTabs();
     renderCharTabs();
+    wireCharFilterToggle();
     wireControls();
     renderAll();
   }
