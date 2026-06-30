@@ -349,6 +349,9 @@ def collect_note_posts(source: dict, now: datetime):
         if not contents:
             break
 
+        if page == 0:
+            print(f"[debug] {source['name']}: sample item keys = {json.dumps(contents[0], ensure_ascii=False)[:500]}", file=sys.stderr)
+
         for item in contents:
             title = strip_html(item.get("name", ""))
             excerpt = strip_html(item.get("excerpt", ""))
