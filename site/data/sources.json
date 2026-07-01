@@ -1,5 +1,14 @@
 [
   {
+    "name": "SF6公式サイト ニュース",
+    "url": "https://www.streetfighter.com/",
+    "cat": "official",
+    "method": "html-scrape",
+    "status": "check",
+    "endpoint": "https://www.streetfighter.com/6/ja-jp/news/all/1",
+    "note": "カプコン公式サイトのSF6ニュース一覧ページ(HTML)を直接取得。内容によらず常に「公式」カテゴリに固定する。現在は実際のHTML構造を調査中の暫定実装。"
+  },
+  {
     "name": "はてなブックマーク キーワード:ストリートファイター6",
     "url": "https://b.hatena.ne.jp/",
     "cat": "etc",
