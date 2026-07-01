@@ -5,8 +5,11 @@ window.DN = window.DN || {};
 
 DN.DATA_BASE = 'data/';
 
+// cache: 'no-store' で毎回サーバーへ再検証させる。articles/note_posts/x_posts/meta
+// は互いに独立したfetchなので、ブラウザキャッシュ経由で別々の世代が混ざって
+// 件数の不一致(例: データ総数とセクションの件数がズレる)が起きるのを防ぐ
 DN.fetchJSON = async function fetchJSON(name) {
-  const res = await fetch(DN.DATA_BASE + name);
+  const res = await fetch(DN.DATA_BASE + name, { cache: 'no-store' });
   if (!res.ok) throw new Error('Failed to load ' + name + ' (' + res.status + ')');
   return res.json();
 };

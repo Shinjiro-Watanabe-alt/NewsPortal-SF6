@@ -18,7 +18,7 @@
       const mm = String(d.getMinutes()).padStart(2, '0');
       const newCount = (meta?.new_count ?? 0).toLocaleString('ja-JP');
       const total = (meta?.combined_total_count ?? meta?.total_count ?? 0).toLocaleString('ja-JP');
-      node.textContent = `LIVE ・ ${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${hh}時${mm}分更新（${newCount}件追加）　データ総数 ${total}件`;
+      node.textContent = `LIVE ・ ${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()} ${hh}:${mm}更新（${newCount}件追加） 総数${total}件`;
     } catch {
       node.textContent = 'LIVE';
     }
