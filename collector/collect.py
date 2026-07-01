@@ -366,6 +366,25 @@ def collect_one_source(source: dict, now: datetime):
     return results
 
 
+def collect_official_news(source: dict, now: datetime):
+    """カプコン公式サイトのSF6ニュース一覧ページ(HTML)を直接取得する。
+    非公式にHTML構造へ依存するため、想定外の形式を検知した場合はログに出して
+    打ち切る。公式発表はKEYWORDS不一致でも常に関連ありとして扱い、
+    カテゴリはsourceのforce_categoryで固定する(内容によらず「公式」に分類)"""
+    results = []
+    try:
+        raw = fetch(source["url"]).decode("utf-8", errors="replace")
+    except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+        print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
+        return results
+
+    # TODO: 実際のHTML構造を確認してパーサを実装する。まずは調査用に
+    # 生HTMLの長さと先頭部分をログへ出力するだけに留める。
+    print(f"[debug] {source['name']}: HTML length={len(raw)}", file=sys.stderr)
+    print(f"[debug] {source['name']}: snippet={raw[:2000]!r}", file=sys.stderr)
+    return results
+
+
 def collect_note_posts(source: dict, now: datetime):
     """note.com検索APIを直接ページングして記事を収集する。RSSの「直近N日」制限を
     受けないため、過去に遡って投稿された記事もまとめて拾える。専用の「note記事まとめ」
@@ -579,6 +598,12 @@ def main():
         if source.get("type") == "note_search":
             for post in collect_note_posts(source, now):
                 note_found[post["id"]] = post
+            continue
+        if source.get("type") == "official_html":
+            for article in collect_official_news(source, now):
+                if article["id"] not in collected:
+                    new_ids.add(article["id"])
+                collected[article["id"]] = article
             continue
         for article in collect_one_source(source, now):
             if article["id"] not in collected:

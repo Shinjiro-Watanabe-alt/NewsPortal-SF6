@@ -117,6 +117,7 @@ input::placeholder { color: #5b616b; }
   text-decoration: none;
 }
 .nav a:hover { color: #fff; }
+.nav-settings-row { border-top: 1px solid rgba(255, 255, 255, 0.06); }
 
 /* ===== Display settings (font size / theme color) ===== */
 .display-settings { position: relative; margin-left: auto; }

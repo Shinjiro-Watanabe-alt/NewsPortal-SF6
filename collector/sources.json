@@ -1,4 +1,6 @@
 [
+  { "type": "official_html", "name": "SF6公式サイト ニュース", "url": "https://www.streetfighter.com/6/ja-jp/news/all/1", "category": "official", "force_category": "official", "default_source_label": "STREET FIGHTER 6 公式サイト", "method": "html-scrape", "status": "check", "note": "カプコン公式サイトのSF6ニュース一覧ページ(HTML)を直接取得。内容によらず常に「公式」カテゴリに固定する。現在は実際のHTML構造を調査中の暫定実装。" },
+
   { "type": "feed",   "name": "はてなブックマーク キーワード:ストリートファイター6", "url": "https://b.hatena.ne.jp/keyword/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6?mode=rss", "category": "etc", "default_source_label": "はてなブックマーク", "method": "rss", "status": "check", "note": "はてなブックマークの「ストリートファイター6」キーワードページのRSS。話題になった記事を横断的に拾える。" },
   { "type": "feed",   "name": "はてなブックマーク キーワード:レバーレス",       "url": "https://b.hatena.ne.jp/keyword/%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9?mode=rss",                            "category": "dev", "default_source_label": "はてなブックマーク", "method": "rss", "status": "check", "note": "レバーレスコントローラー関連の話題を拾うキーワードRSS。" },
   { "type": "feed",   "name": "4Gamer.net 総合RSS",  "url": "https://www.4gamer.net/rss/index.xml",   "category": "etc", "default_source_label": "4Gamer", "method": "rss", "status": "check", "note": "4Gamer.net全体のRSS。タイトル・概要にSF6関連キーワードを含む記事のみ自動抽出する。" },

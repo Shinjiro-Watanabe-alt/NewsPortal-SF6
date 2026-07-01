@@ -26,6 +26,7 @@ DN.esc = function esc(s) {
 DN.IMG_BASE = 'assets/img/';
 
 DN.CATEGORY_META = {
+  official: { label: '公式', color: '#F2C744', thumb: 'common_thumb_clean.png' },
   kyo: { label: 'キャラ共通攻略', color: '#6FA8DC', thumb: 'common_thumb_clean.png' },
   koy: { label: 'キャラ固有攻略', color: '#E8615A', thumb: 'character_thumb_clean.png' },
   dev: { label: 'デバイス', color: '#4FB286', thumb: 'device_thumb_clean.png' },
@@ -35,7 +36,7 @@ DN.CATEGORY_META = {
   etc: { label: 'その他', color: '#9AA0AA', thumb: 'misc_thumb_clean.png' },
 };
 
-DN.CATEGORY_ORDER = ['all', 'kyo', 'koy', 'dev', 'eve', 'goods', 'ent', 'etc'];
+DN.CATEGORY_ORDER = ['all', 'official', 'kyo', 'koy', 'dev', 'eve', 'goods', 'ent', 'etc'];
 
 DN.catMeta = function catMeta(key) {
   return DN.CATEGORY_META[key] || DN.CATEGORY_META.etc;
