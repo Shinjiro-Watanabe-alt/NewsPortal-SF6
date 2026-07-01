@@ -366,34 +366,72 @@ def collect_one_source(source: dict, now: datetime):
     return results
 
 
-def collect_official_news(source: dict, now: datetime):
-    """カプコン公式サイトのSF6ニュース一覧ページ(HTML)を直接取得する。
-    非公式にHTML構造へ依存するため、想定外の形式を検知した場合はログに出して
-    打ち切る。公式発表はKEYWORDS不一致でも常に関連ありとして扱い、
-    カテゴリはsourceのforce_categoryで固定する(内容によらず「公式」に分類)"""
-    results = []
-    try:
-        raw = fetch(source["url"]).decode("utf-8", errors="replace")
-    except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-        print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
-        return results
+OFFICIAL_NEWS_MAX_PAGES = 10  # 1ページ12件 x 10 = 最大120件を毎回遡って取得する
 
-    # TODO: 実際のフィールド名(特に日付)を確認してパーサを実装する。
-    # __NEXT_DATA__(Next.jsのページ構造化データ)内のnews_list配列に記事一覧が
-    # 入っていることは確認済みなので、1件分を整形して全フィールドを出力する。
-    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.DOTALL)
-    if not m:
-        print(f"[debug] {source['name']}: __NEXT_DATA__ not found", file=sys.stderr)
-        return results
-    try:
-        data = json.loads(m.group(1))
-        news_list = data["props"]["pageProps"]["news_list"]
-        page_props = data["props"]["pageProps"]
-        print(f"[debug] {source['name']}: page_props keys(除news_list)={[k for k in page_props if k != 'news_list']}", file=sys.stderr)
-        print(f"[debug] {source['name']}: news_list length={len(news_list)}", file=sys.stderr)
-        print(f"[debug] {source['name']}: first item full={json.dumps(news_list[0], ensure_ascii=False)}", file=sys.stderr)
-    except (KeyError, TypeError, json.JSONDecodeError, IndexError) as exc:
-        print(f"[debug] {source['name']}: __NEXT_DATA__ 構造が想定と異なる ({exc})", file=sys.stderr)
+
+def collect_official_news(source: dict, now: datetime):
+    """カプコン公式サイトのSF6ニュース一覧ページ(Next.js)を取得する。ページ本体の
+    HTMLをスクレイピングするのではなく、Next.jsが埋め込む__NEXT_DATA__(ページの
+    構造化データそのもの)をJSONとして読み取るため、レイアウト変更の影響を受けにくい。
+    公式発表はKEYWORDS不一致でも常に関連ありとして扱い、カテゴリはsourceの
+    force_categoryで固定する(内容によらず「公式」に分類)"""
+    results = []
+    force_category = source.get("force_category", "etc")
+    source_label = source.get("default_source_label", source["name"])
+    # 例: https://www.streetfighter.com/6/ja-jp/news/all/1 -> 末尾の"1"がページ番号
+    url_prefix = re.sub(r"/\d+$", "", source["url"])
+
+    for page in range(1, OFFICIAL_NEWS_MAX_PAGES + 1):
+        try:
+            raw = fetch(f"{url_prefix}/{page}").decode("utf-8", errors="replace")
+        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+            print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
+            break
+
+        m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.DOTALL)
+        if not m:
+            print(f"[skip] {source['name']}: __NEXT_DATA__が見つからない", file=sys.stderr)
+            break
+
+        try:
+            page_props = json.loads(m.group(1))["props"]["pageProps"]
+            news_list = page_props["news_list"]
+            max_page = int(page_props.get("max_page", page))
+        except (KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
+            print(f"[skip] {source['name']}: 想定外のレスポンス構造 ({exc})", file=sys.stderr)
+            break
+
+        if not news_list:
+            break
+
+        for item in news_list:
+            title = strip_html(item.get("title", ""))
+            slug = item.get("slug", "")
+            if not title or not slug:
+                continue
+
+            summary = strip_html(item.get("seoDescription", "") or "")
+            release_ts = item.get("releaseDate")
+            dt = datetime.fromtimestamp(release_ts, JST) if release_ts else now
+
+            article = {
+                "id": make_id(normalize_title_for_dedup(title)),
+                "cat": force_category,
+                "title": title,
+                "summary": (summary[:120] + "…") if len(summary) > 120 else summary,
+                "source": source_label,
+                "source_url": f"https://www.streetfighter.com/6/ja-jp/news/{slug}",
+                "time": dt.isoformat(),
+                "collected": True,
+            }
+            thumb = sanitize_image_url(item.get("eyecatch"))
+            if thumb:
+                article["thumb"] = thumb
+            results.append(article)
+
+        if page >= max_page:
+            break
+
     return results
 
 
