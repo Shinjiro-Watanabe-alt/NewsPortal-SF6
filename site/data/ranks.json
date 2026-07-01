@@ -1,13 +1,13 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 19,
-    "arrow": "flat"
+    "score": 21,
+    "arrow": "up"
   },
   {
     "keyword": "キャミィ",
     "score": 9,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "EVO2026",
@@ -16,8 +16,8 @@
   },
   {
     "keyword": "ベガ",
-    "score": 5,
-    "arrow": "flat"
+    "score": 6,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -40,12 +40,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "Capcom Cup",
-    "score": 2,
-    "arrow": "flat"
+    "keyword": "リリー",
+    "score": 3,
+    "arrow": "up"
   },
   {
-    "keyword": "ザンギエフ",
+    "keyword": "Capcom Cup",
     "score": 2,
     "arrow": "flat"
   }
