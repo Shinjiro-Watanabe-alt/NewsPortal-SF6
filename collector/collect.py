@@ -604,7 +604,10 @@ def main():
     existing_x_posts = load_json("x_posts.json", [])
     carried_x_posts = {p["id"]: p for p in existing_x_posts if p.get("collected")}
     x_posts_by_id = dict(carried_x_posts)
+    x_new_ids = set()
     for post in collect_x_posts(now):
+        if post["id"] not in x_posts_by_id:
+            x_new_ids.add(post["id"])
         x_posts_by_id[post["id"]] = post
     x_post_ids = sorted(x_posts_by_id, key=lambda k: x_posts_by_id[k]["time"], reverse=True)[:MAX_ARTICLES]
     x_posts = [x_posts_by_id[pid] for pid in x_post_ids]
@@ -613,13 +616,23 @@ def main():
     # 専用ファイルとして保持する。過去に収集済みの分も引き継いでマージする
     existing_note_posts = load_json("note_posts.json", [])
     carried_note_posts = {p["id"]: p for p in existing_note_posts if p.get("collected")}
+    note_new_ids = set(note_found) - set(carried_note_posts)
     note_posts_by_id = dedupe_by_title({**carried_note_posts, **note_found})
     note_post_ids = sorted(note_posts_by_id, key=lambda k: note_posts_by_id[k]["time"], reverse=True)[:MAX_ARTICLES]
     note_posts = [note_posts_by_id[pid] for pid in note_post_ids]
 
+    # LIVE表示用: articles/note/X投稿を横断した「今回の新規追加件数」「全体件数」
+    combined_new_count = new_count + len(note_new_ids) + len(x_new_ids)
+    combined_total_count = len(articles) + len(note_posts) + len(x_posts)
+
     save_json("articles.json", articles)
     save_json("ranks.json", ranks)
-    save_json("meta.json", {"updated_at": now.isoformat(), "total_count": len(articles)})
+    save_json("meta.json", {
+        "updated_at": now.isoformat(),
+        "total_count": len(articles),
+        "new_count": combined_new_count,
+        "combined_total_count": combined_total_count,
+    })
     save_json("sources.json", build_sources_view(sources))
     save_json("x_posts.json", x_posts)
     save_json("note_posts.json", note_posts)

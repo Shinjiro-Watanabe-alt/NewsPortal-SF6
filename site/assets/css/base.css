@@ -211,6 +211,11 @@ input::placeholder { color: #5b616b; }
 }
 .sec-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 
+/* 新着ニュース／note記事まとめ／X投稿まとめの見出しのみ、他のセクションより
+   フォントを2px大きく、アイコンはその半分(1px)大きくする */
+.sec-title-big { font-size: 16px; }
+.sec-title-big .sec-icon { width: 21px; height: 21px; }
+
 .sec-title-row {
   display: flex;
   align-items: center;
