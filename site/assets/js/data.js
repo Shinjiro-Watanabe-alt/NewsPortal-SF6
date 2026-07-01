@@ -74,6 +74,14 @@ DN.thumbBg = function thumbBg(catKey) {
   return `repeating-linear-gradient(135deg, ${DN.hexA(m.color, 0.24)} 0 8px, ${DN.hexA(m.color, 0.07)} 8px 16px)`;
 };
 
+// 記事側に実サムネイル(it.thumb)があればそれを最優先で使い、読み込み失敗時や
+// 未設定時はカテゴリ別の固定画像/パターンにフォールバックする(背景レイヤーの
+// 下敷きとして常に重ねておくため、上の画像が404でも透けて表示される)。
+DN.thumbBgFor = function thumbBgFor(it) {
+  const fallback = DN.thumbBg(it.cat);
+  return it.thumb ? `url('${it.thumb}') center/cover no-repeat, ${fallback}` : fallback;
+};
+
 DN.isYouTubeUrl = function isYouTubeUrl(url) {
   return /(?:youtube\.com|youtu\.be)/i.test(url || '');
 };

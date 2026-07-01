@@ -29,14 +29,14 @@
       full: fullTime(d),
       catLabel: meta.label,
       catColor: meta.color,
-      thumbBg: DN.thumbBg(it.cat),
+      thumbBg: DN.thumbBgFor(it),
     });
   }
 
   function cardHtml(it, feed) {
     return `
       <a class="${feed.cardClass}" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="background:${it.thumbBg}"></div>
+        <div class="thumb" style="${DN.esc('background:' + it.thumbBg)}"></div>
         <div class="body">
           <div class="meta">
             <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>

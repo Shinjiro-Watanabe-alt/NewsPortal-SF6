@@ -44,7 +44,7 @@
       full: fullTime(d),
       catLabel: meta.label,
       catColor: meta.color,
-      thumbBg: DN.thumbBg(it.cat),
+      thumbBg: DN.thumbBgFor(it),
       isYouTube: DN.isYouTubeArticle(it),
     });
   }
@@ -57,7 +57,7 @@
       full: fullTime(d),
       catLabel: meta.label,
       catColor: meta.color,
-      thumbBg: DN.thumbBg(it.cat),
+      thumbBg: DN.thumbBgFor(it),
     });
   }
 
@@ -184,7 +184,7 @@
   function xPostCardHtml(it) {
     return `
       <a class="x-post-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}"></div>
+        <div class="thumb" style="${DN.esc(thumbStyle(it))}"></div>
         <div class="body">
           <div class="meta">
             <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>
@@ -213,7 +213,7 @@
     const message = it.summary ? `${it.title}\n${it.summary}` : it.title;
     return `
       <a class="note-post-card" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}"></div>
+        <div class="thumb" style="${DN.esc(thumbStyle(it))}"></div>
         <div class="body">
           <div class="meta">
             <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>
@@ -290,7 +290,7 @@
     const showExcerpt = !!it.summary;
     return `
       <a class="list-item" href="${DN.esc(it.source_url)}" target="_blank" rel="noopener">
-        <div class="thumb" style="${thumbStyle(it)}">${it.isYouTube ? DN.YT_BADGE_HTML : ''}</div>
+        <div class="thumb" style="${DN.esc(thumbStyle(it))}">${it.isYouTube ? DN.YT_BADGE_HTML : ''}</div>
         <div class="body">
           <div class="meta">
             <span class="cat" style="color:${it.catColor}">${DN.esc(it.catLabel)}</span>

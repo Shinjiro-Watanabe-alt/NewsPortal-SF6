@@ -114,8 +114,34 @@ def strip_html(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+# 記事本文(description/summary)のHTML内に埋め込まれたサムネイル画像を拾うための
+# 簡易抽出。多くのRSS(はてなブックマーク・WordPress系フィード等)は本文HTML中に
+# <img>タグでサムネイルを埋め込んでいるため、strip_htmlで捨てる前に拾っておく
+IMG_SRC_RE = re.compile(r'<img[^>]+src=["\']([^"\']+)["\']', re.IGNORECASE)
+
+
+def sanitize_image_url(url: str):
+    """サムネイルURLとして安全に使えるものだけを通す。style属性へ直接埋め込むため、
+    CSSのurl()を抜け出せる引用符や制御文字を含むものは採用しない"""
+    if not url:
+        return None
+    url = url.strip()
+    if not url or "'" in url or '"' in url or any(c.isspace() for c in url):
+        return None
+    parts = urllib.parse.urlsplit(url)
+    if parts.scheme not in ("http", "https") or not parts.netloc:
+        return None
+    return url
+
+
+def extract_image(desc_raw: str):
+    m = IMG_SRC_RE.search(desc_raw or "")
+    return sanitize_image_url(m.group(1)) if m else None
+
+
 def parse_feed(xml_bytes: bytes):
-    """RSS2.0 / RDF(RSS1.0) / Atom を雑にまとめてパースし (title, link, desc, pubdate) を返す"""
+    """RSS2.0 / RDF(RSS1.0) / Atom を雑にまとめてパースし (title, link, desc, pubdate, image) を返す。
+    imageは<enclosure>や本文HTML内の<img>から拾えた場合のみ設定され、無ければNone"""
     items = []
     try:
         root = ElementTree.fromstring(xml_bytes)
@@ -130,7 +156,7 @@ def parse_feed(xml_bytes: bytes):
             link = item.findtext("rss1:link", default="", namespaces=XML_NS)
             desc = item.findtext("rss1:description", default="", namespaces=XML_NS)
             date = item.findtext("dc:date", default="", namespaces=XML_NS)
-            items.append((title, link, desc, date))
+            items.append((title, link, desc, date, extract_image(desc)))
     elif tag.endswith("feed"):  # Atom
         for entry in root.findall("atom:entry", XML_NS):
             title = entry.findtext("atom:title", default="", namespaces=XML_NS)
@@ -138,14 +164,20 @@ def parse_feed(xml_bytes: bytes):
             link = link_el.get("href") if link_el is not None else ""
             desc = entry.findtext("atom:summary", default="", namespaces=XML_NS)
             date = entry.findtext("atom:updated", default="", namespaces=XML_NS)
-            items.append((title, link, desc, date))
+            items.append((title, link, desc, date, extract_image(desc)))
     else:  # RSS 2.0
         for item in root.iter("item"):
             title = item.findtext("title", default="")
             link = item.findtext("link", default="")
             desc = item.findtext("description", default="")
             date = item.findtext("pubDate", default="")
-            items.append((title, link, desc, date))
+            image = None
+            enclosure = item.find("enclosure")
+            if enclosure is not None and (enclosure.get("type") or "").startswith("image/"):
+                image = sanitize_image_url(enclosure.get("url"))
+            if not image:
+                image = extract_image(desc)
+            items.append((title, link, desc, date, image))
 
     return items
 
@@ -214,16 +246,17 @@ def classify_category(text: str, fallback: str) -> str:
 #   ### Post 1
 #   更新日時: 2026-06-29 12:00      (Date: の表記も可。省略時は実行時刻扱い)
 #   投稿メッセージ: 投稿本文(複数行可)  (Content: の表記も可。必須)
-#   画像URL: (今回のスコープ外のため未使用)
+#   画像URL: https://pbs.twimg.com/... (Image: の表記も可。省略可、あればサムネイルに使う)
 #   投稿URL: https://x.com/...      (URL: の表記も可。必須)
 #
 # 「投稿URL」「投稿メッセージ」が欠けているブロックは取り込まない。
 # Author相当の項目が含まれていても、対応するキーを定義していないため無視される。
 X_POST_BLOCK_RE = re.compile(r"^###\s*Post\s*\d+", re.MULTILINE)
-X_POST_FIELD_RE = re.compile(r"^(更新日時|投稿メッセージ|画像URL|投稿URL|Date|URL|Content)\s*[:：]\s*(.*)$")
+X_POST_FIELD_RE = re.compile(r"^(更新日時|投稿メッセージ|画像URL|投稿URL|Date|URL|Content|Image)\s*[:：]\s*(.*)$")
 X_POST_DATE_KEYS = ("更新日時", "Date")
 X_POST_URL_KEYS = ("投稿URL", "URL")
 X_POST_CONTENT_KEYS = ("投稿メッセージ", "Content")
+X_POST_IMAGE_KEYS = ("画像URL", "Image")
 
 
 def parse_x_post_block(block: str):
@@ -245,7 +278,7 @@ def parse_x_post_block(block: str):
                 return "\n".join(fields[key]).strip()
         return ""
 
-    return pick(X_POST_URL_KEYS), pick(X_POST_CONTENT_KEYS), pick(X_POST_DATE_KEYS)
+    return pick(X_POST_URL_KEYS), pick(X_POST_CONTENT_KEYS), pick(X_POST_DATE_KEYS), pick(X_POST_IMAGE_KEYS)
 
 
 def parse_x_post_date(raw: str):
@@ -265,18 +298,22 @@ def collect_x_posts(now: datetime):
         text = path.read_text(encoding="utf-8")
         starts = [m.start() for m in X_POST_BLOCK_RE.finditer(text)] + [len(text)]
         for i in range(len(starts) - 1):
-            url, content, date_raw = parse_x_post_block(text[starts[i]:starts[i + 1]])
+            url, content, date_raw, image_raw = parse_x_post_block(text[starts[i]:starts[i + 1]])
             if not url or not content:
                 continue
             dt = parse_x_post_date(date_raw) or now
-            results.append({
+            post = {
                 "id": make_id(url),
                 "cat": classify_category(content, "etc"),
                 "message": content,
                 "source_url": url,
                 "time": dt.isoformat(),
                 "collected": True,
-            })
+            }
+            thumb = sanitize_image_url(image_raw)
+            if thumb:
+                post["thumb"] = thumb
+            results.append(post)
     return results
 
 
@@ -291,9 +328,9 @@ def collect_one_source(source: dict, now: datetime):
         print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
         return results
 
-    for raw_title, link, desc, date_raw in parse_feed(raw):
+    for raw_title, link, desc_raw, date_raw, image in parse_feed(raw):
         raw_title = strip_html(raw_title)
-        desc = strip_html(desc)
+        desc = strip_html(desc_raw)
         if not raw_title or not link:
             continue
 
@@ -312,7 +349,7 @@ def collect_one_source(source: dict, now: datetime):
         # ソースのcategoryは「どの検索クエリ/キーワードフィードで見つかったか」を
         # 表すだけで、記事内容と無関係な場合がある(はてなブックマークのキーワード
         # ページ等も同様)。キーワード不一致時のフォールバックには使わず常に"etc"にする。
-        results.append({
+        article = {
             "id": make_id(normalize_title_for_dedup(title)),
             "cat": classify_category(haystack, "etc"),
             "title": title,
@@ -321,7 +358,10 @@ def collect_one_source(source: dict, now: datetime):
             "source_url": link,
             "time": dt.isoformat(),
             "collected": True,
-        })
+        }
+        if image:
+            article["thumb"] = image
+        results.append(article)
 
     return results
 
@@ -363,7 +403,7 @@ def collect_note_posts(source: dict, now: datetime):
                 continue  # SF6・レバーレスに無関係な記事は除外
 
             dt = parse_date(item.get("publish_at", "")) or now
-            results.append({
+            post = {
                 "id": make_id(normalize_title_for_dedup(title)),
                 "cat": classify_category(haystack, "etc"),
                 "title": title,
@@ -372,7 +412,11 @@ def collect_note_posts(source: dict, now: datetime):
                 "source_url": f"https://note.com/{urlname}/n/{key}",
                 "time": dt.isoformat(),
                 "collected": True,
-            })
+            }
+            thumb = sanitize_image_url(item.get("eyecatch"))
+            if thumb:
+                post["thumb"] = thumb
+            results.append(post)
 
         if notes.get("isLastPage"):
             break
