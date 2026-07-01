@@ -5,8 +5,8 @@
    search + category-tab + trend-filter + sort + pagination logic. */
 (function () {
   const PAGE_SIZE = 8;
-  const NEW_COUNT = 6;
-  const SHOW_INITIAL = 10;
+  const NEW_COUNT = 20;
+  const SHOW_INITIAL = 20;
   const SHOW_STEP = 20;
   const SHOW_MAX = 100;
 

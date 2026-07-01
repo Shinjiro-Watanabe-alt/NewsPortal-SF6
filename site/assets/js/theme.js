@@ -36,7 +36,7 @@
     const fsGroup = panel.querySelector('[data-ds="fontsize"]');
     const colorGroup = panel.querySelector('[data-ds="color"]');
 
-    const savedFs = localStorage.getItem(FS_KEY) || 'small';
+    const savedFs = localStorage.getItem(FS_KEY) || 'standard';
     applyFontSize(savedFs);
     if (fsGroup) markOn(fsGroup, savedFs);
 

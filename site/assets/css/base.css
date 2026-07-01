@@ -116,7 +116,7 @@ input::placeholder { color: #5b616b; }
   cursor: pointer;
   text-decoration: none;
 }
-.nav a.on { color: #fff; border-bottom-color: var(--accent); }
+.nav a:hover { color: #fff; }
 
 /* ===== Display settings (font size / theme color) ===== */
 .display-settings { position: relative; margin-left: auto; }
@@ -306,6 +306,16 @@ input::placeholder { color: #5b616b; }
   white-space: nowrap;
 }
 .sec-link:hover { color: #fff; }
+
+.back-to-top {
+  display: block;
+  text-align: right;
+  margin-top: 12px;
+  font: 700 0.6875rem 'Noto Sans JP', sans-serif;
+  color: #9097a1;
+  text-decoration: none;
+}
+.back-to-top:hover { color: #fff; }
 
 .show-more-wrap { display: flex; justify-content: center; padding-top: 14px; }
 .show-more-btn {
