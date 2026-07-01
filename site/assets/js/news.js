@@ -5,7 +5,6 @@
    search + category-tab + trend-filter + sort + pagination logic. */
 (function () {
   const PAGE_SIZE = 8;
-  const NEW_COUNT = 20;
   const SHOW_INITIAL = 20;
   const SHOW_STEP = 20;
   const SHOW_MAX = 100;
@@ -15,6 +14,7 @@
   let RANKS = [];
   let X_POSTS = [];
   let NOTE_POSTS = [];
+  let newsShown = SHOW_INITIAL;
   let noteShown = SHOW_INITIAL;
   let xShown = SHOW_INITIAL;
 
@@ -96,7 +96,7 @@
   function newSection() {
     let items = baseFiltered();
     if (state.cat !== 'all') items = items.filter((it) => it.cat === state.cat);
-    return items.slice().sort((a, b) => b.ts - a.ts).slice(0, NEW_COUNT);
+    return items.slice().sort((a, b) => b.ts - a.ts);
   }
 
   // note/Xも含めた「登録情報一覧」用の統合プール。X投稿はtitleを持たないため、
@@ -140,6 +140,7 @@
     root.querySelectorAll('button').forEach((btn) => {
       btn.addEventListener('click', () => {
         state.cat = btn.getAttribute('data-cat');
+        newsShown = SHOW_INITIAL;
         noteShown = SHOW_INITIAL;
         xShown = SHOW_INITIAL;
         renderNewArrivals();
@@ -164,6 +165,7 @@
         const v = btn.getAttribute('data-char');
         state.char = v === 'all' ? null : v;
         state.page = 1;
+        newsShown = SHOW_INITIAL;
         noteShown = SHOW_INITIAL;
         xShown = SHOW_INITIAL;
         renderAll();
@@ -174,11 +176,14 @@
 
   function renderNewArrivals() {
     const root = document.getElementById('newArrivals');
+    const moreBtn = document.getElementById('newsShowMoreBtn');
     if (!root) return;
     const items = newSection();
+    const cap = Math.min(items.length, SHOW_MAX);
     root.innerHTML = items.length
-      ? `<div class="list-grid">${items.map(listItemHtml).join('')}</div>`
+      ? `<div class="list-grid">${items.slice(0, newsShown).map(listItemHtml).join('')}</div>`
       : '<div class="empty-note">該当する記事がありません。</div>';
+    if (moreBtn) moreBtn.hidden = newsShown >= cap;
   }
 
   function xPostCardHtml(it) {
@@ -239,8 +244,15 @@
   }
 
   function wireShowMoreButtons() {
+    const newsBtn = document.getElementById('newsShowMoreBtn');
     const noteBtn = document.getElementById('noteShowMoreBtn');
     const xBtn = document.getElementById('xShowMoreBtn');
+    if (newsBtn) {
+      newsBtn.addEventListener('click', () => {
+        newsShown = Math.min(newsShown + SHOW_STEP, SHOW_MAX);
+        renderNewArrivals();
+      });
+    }
     if (noteBtn) {
       noteBtn.addEventListener('click', () => {
         noteShown = Math.min(noteShown + SHOW_STEP, SHOW_MAX);

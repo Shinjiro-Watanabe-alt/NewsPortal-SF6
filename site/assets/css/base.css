@@ -227,6 +227,13 @@ input::placeholder { color: #5b616b; }
   padding: 3px 9px;
 }
 
+.cat-filter { margin-top: 13px; }
+.cat-filter-label {
+  font: 700 0.6875rem 'Noto Sans JP', sans-serif;
+  color: #7c818b;
+  margin-bottom: 7px;
+}
+
 .char-filter { margin-top: 13px; }
 .char-filter-toggle {
   display: flex;

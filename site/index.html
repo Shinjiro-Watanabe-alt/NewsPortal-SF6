@@ -28,6 +28,10 @@
       <span class="desc">急上昇ワードから絞り込み</span>
       <button id="trendClearBtn" type="button">解除 ✕</button>
     </div>
+    <div class="cat-filter">
+      <div class="cat-filter-label">カテゴリで絞り込み</div>
+      <div class="cat-tabs" id="catTabs"></div>
+    </div>
     <div class="char-filter">
       <button type="button" id="charFilterToggle" class="char-filter-toggle" aria-expanded="false" aria-controls="charTabs">
         <span class="label">キャラクターで絞り込み</span>
@@ -40,10 +44,12 @@
   <section class="sec" id="newArrivalsSection">
     <div class="sec-title sec-title-big">
       <svg class="sec-icon sec-icon-accent" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c0 4.4 3.6 8 8 8-4.4 0-8 3.6-8 8 0-4.4-3.6-8-8-8 4.4 0 8-3.6 8-8z"/></svg>
-      新着ニュース ／ NEW ARRIVALS
+      ニュース ／ NEWS
     </div>
-    <div class="cat-tabs" id="catTabs"></div>
     <div id="newArrivals"></div>
+    <div class="show-more-wrap">
+      <button id="newsShowMoreBtn" type="button" class="show-more-btn" hidden>さらに表示</button>
+    </div>
     <a href="#" class="back-to-top">▲ ページ上部へ</a>
   </section>
 
