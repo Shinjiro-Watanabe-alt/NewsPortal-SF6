@@ -6,16 +6,17 @@
 
   { "type": "search", "name": "検索: ストリートファイター6 総合", "query": "ストリートファイター6 OR SF6 OR スト6 when:1d", "category": "etc",   "method": "search", "status": "active", "note": "Googleニュース検索RSS。SF6全般の最新記事を広く拾う。" },
   { "type": "search", "name": "検索: SF6 攻略・システム",       "query": "(ストリートファイター6 OR SF6 OR スト6) (攻略 OR コンボ OR フレーム OR 立ち回り OR ドライブインパクト OR ドライブパリィ) when:1d", "category": "kyo",   "method": "search", "status": "active", "note": "キャラ共通の攻略・システム解説記事を収集。" },
-  { "type": "search", "name": "検索: SF6 キャラ攻略",           "query": "(ストリートファイター6 OR SF6) (キャラ攻略 OR キャラランク OR 対策 OR コンボ表) when:1d", "category": "koy",   "method": "search", "status": "active", "note": "個別キャラクターの攻略・対策記事を収集。" },
-  { "type": "search", "name": "検索: SF6 レバーレス・デバイス", "query": "(ストリートファイター6 OR SF6) (レバーレス OR ヒットボックス OR アケコン OR コントローラー) when:3d", "category": "dev",   "method": "search", "status": "active", "note": "レバーレス機器・アケコン関連のニュースを収集。" },
-  { "type": "search", "name": "検索: SF6 大会・イベント",       "query": "(ストリートファイター6 OR SF6) (大会 OR トーナメント OR EVO OR カプコンカップ OR オフライン) when:1d", "category": "eve",   "method": "search", "status": "active", "note": "大会・オフラインイベント関連のニュースを収集。" },
-  { "type": "search", "name": "検索: SF6 グッズ・アパレル",     "query": "(ストリートファイター6 OR SF6) (グッズ OR フィギュア OR アパレル OR コラボ商品) when:3d", "category": "goods", "method": "search", "status": "active", "note": "グッズ・アパレル関連のニュースを収集。" },
-  { "type": "search", "name": "検索: SF6 エンタメ",             "query": "(ストリートファイター6 OR SF6) (アニメ OR 配信 OR YouTube OR 実況 OR コラボ) when:1d", "category": "ent",   "method": "search", "status": "active", "note": "アニメ・配信・コラボ等のエンタメ関連ニュースを収集。" },
-  { "type": "search", "name": "検索: SF6 アップデート・パッチ", "query": "(ストリートファイター6 OR SF6) (アップデート OR パッチ OR バランス調整 OR Ver.) when:3d", "category": "kyo",   "method": "search", "status": "active", "note": "バージョンアップ・バランス調整関連のニュースを収集。" },
+  { "type": "search", "name": "検索: SF6 キャラ攻略",           "query": "(ストリートファイター6 OR SF6 OR スト6) (キャラ攻略 OR キャラランク OR 対策 OR コンボ表) when:1d", "category": "koy",   "method": "search", "status": "active", "note": "個別キャラクターの攻略・対策記事を収集。" },
+  { "type": "search", "name": "検索: SF6 レバーレス・デバイス", "query": "(ストリートファイター6 OR SF6 OR スト6) (レバーレス OR ヒットボックス OR アケコン OR コントローラー) when:3d", "category": "dev",   "method": "search", "status": "active", "note": "レバーレス機器・アケコン関連のニュースを収集。" },
+  { "type": "search", "name": "検索: SF6 大会・イベント",       "query": "(ストリートファイター6 OR SF6 OR スト6) (大会 OR トーナメント OR EVO OR カプコンカップ OR オフライン) when:1d", "category": "eve",   "method": "search", "status": "active", "note": "大会・オフラインイベント関連のニュースを収集。" },
+  { "type": "search", "name": "検索: SF6 グッズ・アパレル",     "query": "(ストリートファイター6 OR SF6 OR スト6) (グッズ OR フィギュア OR アパレル OR コラボ商品) when:3d", "category": "goods", "method": "search", "status": "active", "note": "グッズ・アパレル関連のニュースを収集。" },
+  { "type": "search", "name": "検索: SF6 エンタメ",             "query": "(ストリートファイター6 OR SF6 OR スト6) (アニメ OR 配信 OR YouTube OR 実況 OR コラボ) when:1d", "category": "ent",   "method": "search", "status": "active", "note": "アニメ・配信・コラボ等のエンタメ関連ニュースを収集。" },
+  { "type": "search", "name": "検索: SF6 アップデート・パッチ", "query": "(ストリートファイター6 OR SF6 OR スト6) (アップデート OR パッチ OR バランス調整 OR Ver.) when:3d", "category": "kyo",   "method": "search", "status": "active", "note": "バージョンアップ・バランス調整関連のニュースを収集。" },
   { "type": "search", "name": "検索: 大分 格闘ゲーム",         "query": "大分 (格闘ゲーム OR ストリートファイター OR ゲームセンター) when:7d", "category": "eve",   "method": "search", "status": "active", "note": "大分県内の格闘ゲームコミュニティ・店舗イベント情報を収集。" },
   { "type": "search", "name": "検索: カプコン公式 SF6情報",    "query": "ストリートファイター6 site:capcom.co.jp when:3d", "category": "etc",   "method": "search", "status": "active", "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。" },
 
   { "type": "note_search", "name": "note検索: ストリートファイター6", "query": "ストリートファイター6", "category": "koy", "method": "note-api", "status": "active", "note": "note.com公式の検索APIを直接呼び出し、直近に限らず最大5ページ(100件)を毎回遡って取得する。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。" },
   { "type": "note_search", "name": "note検索: SF6",            "query": "SF6", "category": "koy", "method": "note-api", "status": "active", "note": "同上。略称表記での検索カバレッジを補う。" },
-  { "type": "note_search", "name": "note検索: レバーレス",      "query": "レバーレス", "category": "dev", "method": "note-api", "status": "active", "note": "同上。レバーレスコントローラー関連のnote記事を収集。" }
+  { "type": "note_search", "name": "note検索: レバーレス",      "query": "レバーレス", "category": "dev", "method": "note-api", "status": "active", "note": "同上。レバーレスコントローラー関連のnote記事を収集。" },
+  { "type": "note_search", "name": "note検索: スト6",           "query": "スト6", "category": "koy", "method": "note-api", "status": "active", "note": "同上。略称表記(スト6)での検索カバレッジを補う。" }
 ]

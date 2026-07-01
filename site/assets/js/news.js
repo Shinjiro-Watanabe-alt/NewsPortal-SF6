@@ -6,12 +6,16 @@
 (function () {
   const PAGE_SIZE = 8;
   const NEW_COUNT = 6;
+  const SHOW_STEP = 20;
+  const SHOW_MAX = 100;
 
   const state = { q: '', cat: 'all', trend: null, char: null, sort: 'new', page: 1 };
   let ARTICLES = [];
   let RANKS = [];
   let X_POSTS = [];
   let NOTE_POSTS = [];
+  let noteShown = SHOW_STEP;
+  let xShown = SHOW_STEP;
 
   function relTime(d) {
     const min = Math.floor((Date.now() - d.getTime()) / 60000);
@@ -164,9 +168,13 @@
   function renderXPosts() {
     const section = document.getElementById('xPostsSection');
     const root = document.getElementById('xPostsGrid');
+    const moreBtn = document.getElementById('xShowMoreBtn');
     if (!section || !root) return;
-    section.hidden = X_POSTS.length === 0;
-    root.innerHTML = X_POSTS.slice().sort((a, b) => b.ts - a.ts).map(xPostCardHtml).join('');
+    const sorted = X_POSTS.slice().sort((a, b) => b.ts - a.ts);
+    section.hidden = sorted.length === 0;
+    const cap = Math.min(sorted.length, SHOW_MAX);
+    root.innerHTML = sorted.slice(0, xShown).map(xPostCardHtml).join('');
+    if (moreBtn) moreBtn.hidden = xShown >= cap;
   }
 
   function notePostCardHtml(it) {
@@ -187,9 +195,30 @@
   function renderNotePosts() {
     const section = document.getElementById('notePostsSection');
     const root = document.getElementById('notePostsGrid');
+    const moreBtn = document.getElementById('noteShowMoreBtn');
     if (!section || !root) return;
-    section.hidden = NOTE_POSTS.length === 0;
-    root.innerHTML = NOTE_POSTS.slice().sort((a, b) => b.ts - a.ts).map(notePostCardHtml).join('');
+    const sorted = NOTE_POSTS.slice().sort((a, b) => b.ts - a.ts);
+    section.hidden = sorted.length === 0;
+    const cap = Math.min(sorted.length, SHOW_MAX);
+    root.innerHTML = sorted.slice(0, noteShown).map(notePostCardHtml).join('');
+    if (moreBtn) moreBtn.hidden = noteShown >= cap;
+  }
+
+  function wireShowMoreButtons() {
+    const noteBtn = document.getElementById('noteShowMoreBtn');
+    const xBtn = document.getElementById('xShowMoreBtn');
+    if (noteBtn) {
+      noteBtn.addEventListener('click', () => {
+        noteShown = Math.min(noteShown + SHOW_STEP, SHOW_MAX);
+        renderNotePosts();
+      });
+    }
+    if (xBtn) {
+      xBtn.addEventListener('click', () => {
+        xShown = Math.min(xShown + SHOW_STEP, SHOW_MAX);
+        renderXPosts();
+      });
+    }
   }
 
   function renderTrendGrid() {
@@ -383,6 +412,7 @@
     renderCatTabs();
     renderCharTabs();
     wireCharFilterToggle();
+    wireShowMoreButtons();
     wireControls();
     renderAll();
   }

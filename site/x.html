@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X投稿一覧 ・ SF6 NEWS PORTAL</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Saira+Condensed:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<div data-include="partials/masthead.html"></div>
+
+<main id="main" class="wrap" data-feed="x">
+
+  <section class="sec" style="padding-top:26px;">
+    <div class="list-head">
+      <div class="label">X投稿一覧 ／ ALL X POSTS <span class="count"><span id="feedCount">0</span>件</span></div>
+    </div>
+    <div class="list-grid" id="feedGrid"></div>
+    <div class="pagination">
+      <button id="feedPrevBtn" type="button">前へ</button>
+      <span class="info" id="feedPageInfo">1 / 1</span>
+      <button id="feedNextBtn" type="button">次へ</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/include.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/feed-list.js"></script>
+</body>
+</html>
