@@ -16,8 +16,8 @@
   },
   {
     "keyword": "ベガ",
-    "score": 6,
-    "arrow": "flat"
+    "score": 5,
+    "arrow": "down"
   },
   {
     "keyword": "リュウ",
@@ -25,9 +25,19 @@
     "arrow": "flat"
   },
   {
+    "keyword": "リリー",
+    "score": 5,
+    "arrow": "up"
+  },
+  {
     "keyword": "カプコンカップ",
     "score": 4,
     "arrow": "flat"
+  },
+  {
+    "keyword": "バトルハブ",
+    "score": 4,
+    "arrow": "up"
   },
   {
     "keyword": "マリーザ",
@@ -35,18 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ジュリ",
-    "score": 3,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "リリー",
-    "score": 3,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "Capcom Cup",
-    "score": 2,
-    "arrow": "flat"
+    "keyword": "ルーク",
+    "score": 4,
+    "arrow": "up"
   }
 ]
