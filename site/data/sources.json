@@ -59,7 +59,7 @@
     "cat": "koy",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E3%82%AD%E3%83%A3%E3%83%A9%E6%94%BB%E7%95%A5+OR+%E3%82%AD%E3%83%A3%E3%83%A9%E3%83%A9%E3%83%B3%E3%82%AF+OR+%E5%AF%BE%E7%AD%96+OR+%E3%82%B3%E3%83%B3%E3%83%9C%E8%A1%A8%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%82%AD%E3%83%A3%E3%83%A9%E6%94%BB%E7%95%A5+OR+%E3%82%AD%E3%83%A3%E3%83%A9%E3%83%A9%E3%83%B3%E3%82%AF+OR+%E5%AF%BE%E7%AD%96+OR+%E3%82%B3%E3%83%B3%E3%83%9C%E8%A1%A8%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "個別キャラクターの攻略・対策記事を収集。"
   },
   {
@@ -68,7 +68,7 @@
     "cat": "dev",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9+OR+%E3%83%92%E3%83%83%E3%83%88%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9+OR+%E3%82%A2%E3%82%B1%E3%82%B3%E3%83%B3+OR+%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9+OR+%E3%83%92%E3%83%83%E3%83%88%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9+OR+%E3%82%A2%E3%82%B1%E3%82%B3%E3%83%B3+OR+%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "レバーレス機器・アケコン関連のニュースを収集。"
   },
   {
@@ -77,7 +77,7 @@
     "cat": "eve",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E5%A4%A7%E4%BC%9A+OR+%E3%83%88%E3%83%BC%E3%83%8A%E3%83%A1%E3%83%B3%E3%83%88+OR+EVO+OR+%E3%82%AB%E3%83%97%E3%82%B3%E3%83%B3%E3%82%AB%E3%83%83%E3%83%97+OR+%E3%82%AA%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E5%A4%A7%E4%BC%9A+OR+%E3%83%88%E3%83%BC%E3%83%8A%E3%83%A1%E3%83%B3%E3%83%88+OR+EVO+OR+%E3%82%AB%E3%83%97%E3%82%B3%E3%83%B3%E3%82%AB%E3%83%83%E3%83%97+OR+%E3%82%AA%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "大会・オフラインイベント関連のニュースを収集。"
   },
   {
@@ -86,7 +86,7 @@
     "cat": "goods",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E3%82%B0%E3%83%83%E3%82%BA+OR+%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%82%A2+OR+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB+OR+%E3%82%B3%E3%83%A9%E3%83%9C%E5%95%86%E5%93%81%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%82%B0%E3%83%83%E3%82%BA+OR+%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%82%A2+OR+%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB+OR+%E3%82%B3%E3%83%A9%E3%83%9C%E5%95%86%E5%93%81%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "グッズ・アパレル関連のニュースを収集。"
   },
   {
@@ -95,7 +95,7 @@
     "cat": "ent",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E3%82%A2%E3%83%8B%E3%83%A1+OR+%E9%85%8D%E4%BF%A1+OR+YouTube+OR+%E5%AE%9F%E6%B3%81+OR+%E3%82%B3%E3%83%A9%E3%83%9C%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%82%A2%E3%83%8B%E3%83%A1+OR+%E9%85%8D%E4%BF%A1+OR+YouTube+OR+%E5%AE%9F%E6%B3%81+OR+%E3%82%B3%E3%83%A9%E3%83%9C%29+when%3A1d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "アニメ・配信・コラボ等のエンタメ関連ニュースを収集。"
   },
   {
@@ -104,7 +104,7 @@
     "cat": "kyo",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6%29+%28%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88+OR+%E3%83%91%E3%83%83%E3%83%81+OR+%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9%E8%AA%BF%E6%95%B4+OR+Ver.%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88+OR+%E3%83%91%E3%83%83%E3%83%81+OR+%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9%E8%AA%BF%E6%95%B4+OR+Ver.%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
     "note": "バージョンアップ・バランス調整関連のニュースを収集。"
   },
   {
@@ -151,5 +151,14 @@
     "status": "active",
     "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9&size=20&start=0",
     "note": "同上。レバーレスコントローラー関連のnote記事を収集。"
+  },
+  {
+    "name": "note検索: スト6",
+    "url": "https://note.com/",
+    "cat": "koy",
+    "method": "note-api",
+    "status": "active",
+    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%82%B9%E3%83%886&size=20&start=0",
+    "note": "同上。略称表記(スト6)での検索カバレッジを補う。"
   }
 ]

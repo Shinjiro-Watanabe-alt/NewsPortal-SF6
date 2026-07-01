@@ -6,8 +6,18 @@
   },
   {
     "keyword": "EVO2026",
-    "score": 7,
-    "arrow": "flat"
+    "score": 8,
+    "arrow": "up"
+  },
+  {
+    "keyword": "キャミィ",
+    "score": 5,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ベガ",
+    "score": 5,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -16,16 +26,6 @@
   },
   {
     "keyword": "カプコンカップ",
-    "score": 4,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "キャミィ",
-    "score": 4,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ベガ",
     "score": 4,
     "arrow": "flat"
   },
