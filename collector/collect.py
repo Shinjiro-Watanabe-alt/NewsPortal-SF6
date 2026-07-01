@@ -378,10 +378,22 @@ def collect_official_news(source: dict, now: datetime):
         print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
         return results
 
-    # TODO: 実際のHTML構造を確認してパーサを実装する。まずは調査用に
-    # 生HTMLの長さと先頭部分をログへ出力するだけに留める。
-    print(f"[debug] {source['name']}: HTML length={len(raw)}", file=sys.stderr)
-    print(f"[debug] {source['name']}: snippet={raw[:2000]!r}", file=sys.stderr)
+    # TODO: 実際のHTML構造を確認してパーサを実装する。まずは調査用に、
+    # Next.jsサイトによくある__NEXT_DATA__(ページの構造化データをJSONで
+    # 埋め込んだscriptタグ)の有無と、ニュース記事らしきリンクパターンの
+    # 周辺をログへ出力するだけに留める。
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.DOTALL)
+    if m:
+        print(f"[debug] {source['name']}: __NEXT_DATA__ found, length={len(m.group(1))}", file=sys.stderr)
+        print(f"[debug] {source['name']}: __NEXT_DATA__ snippet={m.group(1)[:3000]!r}", file=sys.stderr)
+    else:
+        print(f"[debug] {source['name']}: __NEXT_DATA__ not found", file=sys.stderr)
+
+    news_link_matches = list(re.finditer(r'href="(/6/ja-jp/news/[^"]*)"', raw))
+    print(f"[debug] {source['name']}: news link count={len(news_link_matches)}", file=sys.stderr)
+    if news_link_matches:
+        i = news_link_matches[0].start()
+        print(f"[debug] {source['name']}: context around first news link={raw[max(0, i-300):i+500]!r}", file=sys.stderr)
     return results
 
 
