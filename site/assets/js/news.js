@@ -6,6 +6,7 @@
 (function () {
   const PAGE_SIZE = 8;
   const NEW_COUNT = 6;
+  const SHOW_INITIAL = 10;
   const SHOW_STEP = 20;
   const SHOW_MAX = 100;
 
@@ -14,8 +15,8 @@
   let RANKS = [];
   let X_POSTS = [];
   let NOTE_POSTS = [];
-  let noteShown = SHOW_STEP;
-  let xShown = SHOW_STEP;
+  let noteShown = SHOW_INITIAL;
+  let xShown = SHOW_INITIAL;
 
   function relTime(d) {
     const min = Math.floor((Date.now() - d.getTime()) / 60000);
@@ -72,10 +73,20 @@
     return hay.includes(trend);
   }
 
+  function itemText(it) {
+    return `${it.title || ''} ${it.summary || ''} ${it.message || ''}`;
+  }
+
   function matchesCharacter(it, char) {
     if (!char) return true;
-    const hay = it.title + ' ' + (it.summary || '');
-    return hay.includes(char);
+    return itemText(it).includes(char);
+  }
+
+  function filterCatChar(items) {
+    let out = items;
+    if (state.cat !== 'all') out = out.filter((it) => it.cat === state.cat);
+    if (state.char) out = out.filter((it) => matchesCharacter(it, state.char));
+    return out;
   }
 
   function baseFiltered() {
@@ -88,9 +99,22 @@
     return items.slice().sort((a, b) => b.ts - a.ts).slice(0, NEW_COUNT);
   }
 
+  // note/Xも含めた「登録情報一覧」用の統合プール。X投稿はtitleを持たないため、
+  // listItemHtml()で表示できるようmessageをtitle相当として補う
+  function toListItem(it) {
+    return it.title !== undefined
+      ? it
+      : Object.assign({}, it, { title: it.message, summary: '', source: it.source || 'X', isYouTube: false });
+  }
+
+  function registryPool() {
+    return ARTICLES.concat(NOTE_POSTS, X_POSTS.map(toListItem));
+  }
+
   function listAll() {
-    const items = baseFiltered();
-    return items.slice().sort((a, b) => (state.sort === 'old' ? a.ts - b.ts : b.ts - a.ts));
+    const items = registryPool().filter((it) => matchesQuery(it, state.q) && matchesTrend(it, state.trend) && matchesCharacter(it, state.char));
+    const filtered = state.cat !== 'all' ? items.filter((it) => it.cat === state.cat) : items;
+    return filtered.slice().sort((a, b) => (state.sort === 'old' ? a.ts - b.ts : b.ts - a.ts));
   }
 
   function pageItems() {
@@ -116,7 +140,11 @@
     root.querySelectorAll('button').forEach((btn) => {
       btn.addEventListener('click', () => {
         state.cat = btn.getAttribute('data-cat');
+        noteShown = SHOW_INITIAL;
+        xShown = SHOW_INITIAL;
         renderNewArrivals();
+        renderNotePosts();
+        renderXPosts();
         renderCatTabs();
       });
     });
@@ -136,6 +164,8 @@
         const v = btn.getAttribute('data-char');
         state.char = v === 'all' ? null : v;
         state.page = 1;
+        noteShown = SHOW_INITIAL;
+        xShown = SHOW_INITIAL;
         renderAll();
         renderCharTabs();
       });
@@ -170,10 +200,12 @@
     const root = document.getElementById('xPostsGrid');
     const moreBtn = document.getElementById('xShowMoreBtn');
     if (!section || !root) return;
-    const sorted = X_POSTS.slice().sort((a, b) => b.ts - a.ts);
-    section.hidden = sorted.length === 0;
+    const sorted = filterCatChar(X_POSTS).slice().sort((a, b) => b.ts - a.ts);
+    section.hidden = X_POSTS.length === 0;
     const cap = Math.min(sorted.length, SHOW_MAX);
-    root.innerHTML = sorted.slice(0, xShown).map(xPostCardHtml).join('');
+    root.innerHTML = sorted.length
+      ? sorted.slice(0, xShown).map(xPostCardHtml).join('')
+      : '<div class="empty-note">該当する投稿がありません。</div>';
     if (moreBtn) moreBtn.hidden = xShown >= cap;
   }
 
@@ -197,10 +229,12 @@
     const root = document.getElementById('notePostsGrid');
     const moreBtn = document.getElementById('noteShowMoreBtn');
     if (!section || !root) return;
-    const sorted = NOTE_POSTS.slice().sort((a, b) => b.ts - a.ts);
-    section.hidden = sorted.length === 0;
+    const sorted = filterCatChar(NOTE_POSTS).slice().sort((a, b) => b.ts - a.ts);
+    section.hidden = NOTE_POSTS.length === 0;
     const cap = Math.min(sorted.length, SHOW_MAX);
-    root.innerHTML = sorted.slice(0, noteShown).map(notePostCardHtml).join('');
+    root.innerHTML = sorted.length
+      ? sorted.slice(0, noteShown).map(notePostCardHtml).join('')
+      : '<div class="empty-note">該当する記事がありません。</div>';
     if (moreBtn) moreBtn.hidden = noteShown >= cap;
   }
 

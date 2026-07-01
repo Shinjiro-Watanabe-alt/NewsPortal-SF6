@@ -201,15 +201,19 @@ input::placeholder { color: #5b616b; }
 /* ===== Section heading ===== */
 .sec { padding: 30px 0 0; }
 .sec-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font: 800 14px 'Saira Condensed', sans-serif;
   letter-spacing: .16em;
   color: #E8412E;
   margin-bottom: 12px;
 }
+.sec-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 
 .sec-title-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 12px;
