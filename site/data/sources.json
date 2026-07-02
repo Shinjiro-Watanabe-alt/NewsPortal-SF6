@@ -135,39 +135,39 @@
     "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。"
   },
   {
-    "name": "note検索: ストリートファイター6",
+    "name": "noteハッシュタグ: ストリートファイター6",
     "url": "https://note.com/",
     "cat": "koy",
-    "method": "note-api",
+    "method": "note-hashtag-rss",
     "status": "active",
-    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6&size=20&start=0",
-    "note": "note.com公式の検索APIを直接呼び出し、直近に限らず最大5ページ(100件)を毎回遡って取得する。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。"
+    "endpoint": "https://note.com/hashtag/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6/rss",
+    "note": "note.comの公開ハッシュタグRSS(/hashtag/{タグ}/rss)を取得する。以前使用していた検索API(/api/v3/searches)は2026-07-02にアクセス元IPを問わずAccess Deniedを返すようになったため、公開RSSに切り替えた。著者が明示的に#タグを付けた記事のみが対象のため、本文中の言及も拾えていた検索APIより収集範囲は狭い。専用の「note記事まとめ」枠にのみ表示し、ニュース一覧には混在させない。"
   },
   {
-    "name": "note検索: SF6",
+    "name": "noteハッシュタグ: SF6",
     "url": "https://note.com/",
     "cat": "koy",
-    "method": "note-api",
+    "method": "note-hashtag-rss",
     "status": "active",
-    "endpoint": "https://note.com/api/v3/searches?context=note&q=SF6&size=20&start=0",
-    "note": "同上。略称表記での検索カバレッジを補う。"
+    "endpoint": "https://note.com/hashtag/SF6/rss",
+    "note": "同上。略称表記のハッシュタグでカバレッジを補う。"
   },
   {
-    "name": "note検索: レバーレス",
+    "name": "noteハッシュタグ: レバーレス",
     "url": "https://note.com/",
     "cat": "dev",
-    "method": "note-api",
+    "method": "note-hashtag-rss",
     "status": "active",
-    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9&size=20&start=0",
+    "endpoint": "https://note.com/hashtag/%E3%83%AC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9/rss",
     "note": "同上。レバーレスコントローラー関連のnote記事を収集。"
   },
   {
-    "name": "note検索: スト6",
+    "name": "noteハッシュタグ: スト6",
     "url": "https://note.com/",
     "cat": "koy",
-    "method": "note-api",
+    "method": "note-hashtag-rss",
     "status": "active",
-    "endpoint": "https://note.com/api/v3/searches?context=note&q=%E3%82%B9%E3%83%886&size=20&start=0",
-    "note": "同上。略称表記(スト6)での検索カバレッジを補う。"
+    "endpoint": "https://note.com/hashtag/%E3%82%B9%E3%83%886/rss",
+    "note": "同上。略称表記(スト6)のハッシュタグでカバレッジを補う。"
   }
 ]
