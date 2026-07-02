@@ -26,7 +26,7 @@ DN.esc = function esc(s) {
 DN.IMG_BASE = 'assets/img/';
 
 DN.CATEGORY_META = {
-  official: { label: '公式', color: '#F2C744', thumb: 'common_thumb_clean.png' },
+  official: { label: '公式', color: '#F2C744', thumb: 'official_thumb_clean.png' },
   kyo: { label: 'キャラ共通攻略', color: '#6FA8DC', thumb: 'common_thumb_clean.png' },
   koy: { label: 'キャラ固有攻略', color: '#E8615A', thumb: 'character_thumb_clean.png' },
   dev: { label: 'デバイス', color: '#4FB286', thumb: 'device_thumb_clean.png' },
