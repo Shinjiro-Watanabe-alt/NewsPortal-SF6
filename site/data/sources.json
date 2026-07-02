@@ -140,8 +140,8 @@
     "cat": "koy",
     "method": "search",
     "status": "active",
-    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%E3%82%A8%E3%83%89+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E5%AF%BE%E7%AD%96+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%29+-%E3%82%A8%E3%83%89%E3%83%A2%E3%83%B3%E3%83%89+-%E6%9C%AC%E7%94%B0+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
-    "note": "エド個別の攻略記事を収集。「エドモンド本田」との誤マッチを避けるため-エドモンド -本田で除外している(エドとエドモンド本田両方に言及する記事は除外される点はトレードオフとして許容)。"
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%28%E3%82%A8%E3%83%89+OR+ED%29+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E5%AF%BE%E7%AD%96+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%29+-%E3%82%A8%E3%83%89%E3%83%A2%E3%83%B3%E3%83%89+-%E6%9C%AC%E7%94%B0+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "note": "エド個別の攻略記事を収集。半角表記「ED」も対象に含める。「エドモンド本田」との誤マッチを避けるため-エドモンド -本田で除外している(エドとエドモンド本田両方に言及する記事は除外される点はトレードオフとして許容)。"
   },
   {
     "name": "検索: SF6 ガイル攻略",
@@ -223,6 +223,15 @@
     "status": "active",
     "endpoint": "https://note.com/hashtag/%E3%82%A8%E3%83%89/rss",
     "note": "エド個別の攻略note記事を収集。ハッシュタグは完全一致のため「エドモンド本田」タグとは混同しない。"
+  },
+  {
+    "name": "noteハッシュタグ: ED",
+    "url": "https://note.com/",
+    "cat": "koy",
+    "method": "note-hashtag-rss",
+    "status": "active",
+    "endpoint": "https://note.com/hashtag/ED/rss",
+    "note": "エドの半角英字表記(#ED)のnote記事を収集。ハッシュタグ完全一致+本文のSF6関連キーワード必須のフィルタがあるため、無関係な「ED」タグとの混同は起きにくい。"
   },
   {
     "name": "noteハッシュタグ: ガイル",
