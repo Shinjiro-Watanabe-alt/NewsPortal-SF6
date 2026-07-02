@@ -153,22 +153,31 @@
     "note": "ガイル個別の攻略記事を収集。"
   },
   {
-    "name": "かくぶろ",
-    "url": "https://takukakugamer.com/",
-    "cat": "koy",
-    "method": "rss",
-    "status": "check",
-    "endpoint": "https://takukakugamer.com/feed/",
-    "note": "SF6キャラ攻略専門ブログ。エド等の個別キャラ攻略記事あり。RSS未確認のためstatus:check。"
-  },
-  {
     "name": "ハクのブログ",
     "url": "https://hakuno-blog.com/",
     "cat": "koy",
     "method": "rss",
-    "status": "check",
+    "status": "active",
     "endpoint": "https://hakuno-blog.com/feed/",
-    "note": "SF6キャラ攻略ブログ。エド等の個別キャラ攻略記事あり。RSS未確認のためstatus:check。"
+    "note": "SF6キャラ攻略ブログ。エド等の個別キャラ攻略記事あり。動作確認済み。"
+  },
+  {
+    "name": "ゴジライン",
+    "url": "https://goziline.com/",
+    "cat": "koy",
+    "method": "rss",
+    "status": "check",
+    "endpoint": "https://goziline.com/feed/",
+    "note": "SF6攻略ブログ。エドの基本戦術・コンボ記事あり。かくぶろ(takukakugamer.com、サイト全体がボット対策で403/タイムアウトのため削除)の代替候補。RSS未確認のためstatus:check。"
+  },
+  {
+    "name": "スコルル",
+    "url": "https://www.sukoreru.com/",
+    "cat": "koy",
+    "method": "rss",
+    "status": "check",
+    "endpoint": "https://www.sukoreru.com/feed/",
+    "note": "SF6攻略ブログ。モダンエドの立ち回り・コンボを動画付きで解説。RSS未確認のためstatus:check。"
   },
   {
     "name": "noteハッシュタグ: ストリートファイター6",
