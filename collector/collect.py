@@ -99,8 +99,19 @@ def split_title_source(raw_title: str, fallback: str):
     return raw_title.strip(), fallback
 
 
-def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+# note.comの検索APIは非公式エンドポイントで、ブラウザから叩かれることしか想定されて
+# いないため、ブラウザ的なUser-Agent/Referer/Acceptを付けないとボット判定でAccess
+# Deniedになる(2026-07-02に確認)。ここだけ通常のUSER_AGENTと別のヘッダーを送る。
+NOTE_BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://note.com/",
+    "X-Requested-With": "XMLHttpRequest",
+}
+
+
+def fetch(url: str, headers: dict | None = None) -> bytes:
+    req = urllib.request.Request(url, headers=headers or {"User-Agent": USER_AGENT})
     try:
         with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as res:
             return res.read()
@@ -111,8 +122,8 @@ def fetch(url: str) -> bytes:
         raise
 
 
-def fetch_json(url: str):
-    return json.loads(fetch(url))
+def fetch_json(url: str, headers: dict | None = None):
+    return json.loads(fetch(url, headers=headers))
 
 
 def strip_html(text: str) -> str:
@@ -450,7 +461,7 @@ def collect_note_posts(source: dict, now: datetime):
     for page in range(NOTE_SEARCH_MAX_PAGES):
         url = build_note_search_url(query, start=page * NOTE_SEARCH_PAGE_SIZE)
         try:
-            payload = fetch_json(url)
+            payload = fetch_json(url, headers=NOTE_BROWSER_HEADERS)
         except (urllib.error.URLError, TimeoutError, ValueError) as exc:
             print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
             break
