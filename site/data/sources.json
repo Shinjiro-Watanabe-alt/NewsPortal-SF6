@@ -135,6 +135,42 @@
     "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。"
   },
   {
+    "name": "検索: SF6 エド攻略",
+    "url": "https://news.google.com/",
+    "cat": "koy",
+    "method": "search",
+    "status": "active",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%E3%82%A8%E3%83%89+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E5%AF%BE%E7%AD%96+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%29+-%E3%82%A8%E3%83%89%E3%83%A2%E3%83%B3%E3%83%89+-%E6%9C%AC%E7%94%B0+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "note": "エド個別の攻略記事を収集。「エドモンド本田」との誤マッチを避けるため-エドモンド -本田で除外している(エドとエドモンド本田両方に言及する記事は除外される点はトレードオフとして許容)。"
+  },
+  {
+    "name": "検索: SF6 ガイル攻略",
+    "url": "https://news.google.com/",
+    "cat": "koy",
+    "method": "search",
+    "status": "active",
+    "endpoint": "https://news.google.com/rss/search?q=%28%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC6+OR+SF6+OR+%E3%82%B9%E3%83%886%29+%E3%82%AC%E3%82%A4%E3%83%AB+%28%E6%94%BB%E7%95%A5+OR+%E3%82%B3%E3%83%B3%E3%83%9C+OR+%E5%AF%BE%E7%AD%96+OR+%E7%AB%8B%E3%81%A1%E5%9B%9E%E3%82%8A+OR+%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%29+when%3A3d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "note": "ガイル個別の攻略記事を収集。"
+  },
+  {
+    "name": "かくぶろ",
+    "url": "https://takukakugamer.com/",
+    "cat": "koy",
+    "method": "rss",
+    "status": "check",
+    "endpoint": "https://takukakugamer.com/feed/",
+    "note": "SF6キャラ攻略専門ブログ。エド等の個別キャラ攻略記事あり。RSS未確認のためstatus:check。"
+  },
+  {
+    "name": "ハクのブログ",
+    "url": "https://hakuno-blog.com/",
+    "cat": "koy",
+    "method": "rss",
+    "status": "check",
+    "endpoint": "https://hakuno-blog.com/feed/",
+    "note": "SF6キャラ攻略ブログ。エド等の個別キャラ攻略記事あり。RSS未確認のためstatus:check。"
+  },
+  {
     "name": "noteハッシュタグ: ストリートファイター6",
     "url": "https://note.com/",
     "cat": "koy",
@@ -169,5 +205,23 @@
     "status": "active",
     "endpoint": "https://note.com/hashtag/%E3%82%B9%E3%83%886/rss",
     "note": "同上。略称表記(スト6)のハッシュタグでカバレッジを補う。"
+  },
+  {
+    "name": "noteハッシュタグ: エド",
+    "url": "https://note.com/",
+    "cat": "koy",
+    "method": "note-hashtag-rss",
+    "status": "active",
+    "endpoint": "https://note.com/hashtag/%E3%82%A8%E3%83%89/rss",
+    "note": "エド個別の攻略note記事を収集。ハッシュタグは完全一致のため「エドモンド本田」タグとは混同しない。"
+  },
+  {
+    "name": "noteハッシュタグ: ガイル",
+    "url": "https://note.com/",
+    "cat": "koy",
+    "method": "note-hashtag-rss",
+    "status": "active",
+    "endpoint": "https://note.com/hashtag/%E3%82%AC%E3%82%A4%E3%83%AB/rss",
+    "note": "ガイル個別の攻略note記事を収集。"
   }
 ]
