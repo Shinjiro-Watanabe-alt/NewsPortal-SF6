@@ -6,8 +6,8 @@
   },
   {
     "keyword": "キャミィ",
-    "score": 10,
-    "arrow": "flat"
+    "score": 11,
+    "arrow": "up"
   },
   {
     "keyword": "EVO2026",
@@ -25,12 +25,17 @@
     "arrow": "flat"
   },
   {
-    "keyword": "マリーザ",
-    "score": 5,
+    "keyword": "リリー",
+    "score": 6,
     "arrow": "flat"
   },
   {
-    "keyword": "リリー",
+    "keyword": "バトルハブ",
+    "score": 5,
+    "arrow": "up"
+  },
+  {
+    "keyword": "マリーザ",
     "score": 5,
     "arrow": "flat"
   },
@@ -41,11 +46,6 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 4,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "バトルハブ",
     "score": 4,
     "arrow": "flat"
   }
