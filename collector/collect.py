@@ -101,8 +101,14 @@ def split_title_source(raw_title: str, fallback: str):
 
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as res:
-        return res.read()
+    try:
+        with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as res:
+            return res.read()
+    except urllib.error.HTTPError as exc:
+        if "note.com" in url:
+            body = exc.read()[:500]
+            print(f"[diag] note.com HTTPError {exc.code} {exc.reason} headers={dict(exc.headers)} body={body!r}", file=sys.stderr)
+        raise
 
 
 def fetch_json(url: str):
