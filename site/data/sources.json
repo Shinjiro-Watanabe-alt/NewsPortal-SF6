@@ -3,10 +3,10 @@
     "name": "SF6公式サイト ニュース",
     "url": "https://www.streetfighter.com/",
     "cat": "official",
-    "method": "html-scrape",
-    "status": "check",
+    "method": "next-data-json",
+    "status": "active",
     "endpoint": "https://www.streetfighter.com/6/ja-jp/news/all/1",
-    "note": "カプコン公式サイトのSF6ニュース一覧ページ(HTML)を直接取得。内容によらず常に「公式」カテゴリに固定する。現在は実際のHTML構造を調査中の暫定実装。"
+    "note": "カプコン公式サイトのSF6ニュース一覧ページ。Next.jsの__NEXT_DATA__構造化データから直接取得し、内容によらず常に「公式」カテゴリに固定する。直近10ページ(最大120件)を毎回遡って取得(全364件中)。"
   },
   {
     "name": "はてなブックマーク キーワード:ストリートファイター6",
