@@ -25,12 +25,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "マリーザ",
-    "score": 5,
-    "arrow": "flat"
+    "keyword": "リリー",
+    "score": 6,
+    "arrow": "up"
   },
   {
-    "keyword": "リリー",
+    "keyword": "マリーザ",
     "score": 5,
     "arrow": "flat"
   },
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "バトルハブ",
+    "keyword": "ジュリ",
     "score": 4,
-    "arrow": "flat"
+    "arrow": "up"
   }
 ]
