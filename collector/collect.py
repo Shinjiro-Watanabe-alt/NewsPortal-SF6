@@ -63,19 +63,12 @@ XML_NS = {
     "rss1": "http://purl.org/rss/1.0/",
     "atom": "http://www.w3.org/2005/Atom",
     "dc": "http://purl.org/dc/elements/1.1/",
+    "media": "http://search.yahoo.com/mrss/",
 }
 
 GOOGLE_NEWS_RSS = "https://news.google.com/rss/search"
 # Googleニュース検索RSSのタイトルは「本文 - 配信元」の形式になっている
 TITLE_SOURCE_SUFFIX_RE = re.compile(r"^(?P<title>.+?)\s+-\s+(?P<source>[^-]+)$")
-
-# note.com自体の検索ページが内部で呼んでいる検索API。RSSと違いstart/sizeで
-# ページングできるため、直近の記事に限らず過去の記事もまとめて遡って取得できる。
-# 非公式エンドポイントのためレスポンス構造が変わる可能性があり、collect_note_posts側で
-# 想定外の構造を検知した場合はログに出して打ち切る防御的な実装にしている。
-NOTE_SEARCH_API = "https://note.com/api/v3/searches"
-NOTE_SEARCH_PAGE_SIZE = 20
-NOTE_SEARCH_MAX_PAGES = 5  # 1クエリあたり最大5ページ(=100件)を毎回遡って取得する
 
 
 def build_search_url(query: str) -> str:
@@ -84,12 +77,13 @@ def build_search_url(query: str) -> str:
     return f"{GOOGLE_NEWS_RSS}?{params}"
 
 
-def build_note_search_url(query: str, start: int = 0) -> str:
-    """検索キーワードから note.com 検索APIのURLを組み立てる"""
-    params = urllib.parse.urlencode({
-        "context": "note", "q": query, "size": NOTE_SEARCH_PAGE_SIZE, "start": start,
-    })
-    return f"{NOTE_SEARCH_API}?{params}"
+def build_note_hashtag_rss_url(hashtag: str) -> str:
+    """ハッシュタグからnote.comの公開ハッシュタグRSSのURLを組み立てる。
+    以前使っていた検索API(/api/v3/searches)は2026-07-02時点でアクセス元IPを
+    問わずAccess Deniedを返すようになった(ヘッダーを変えても解消せず)ため、
+    代わりにこの公開RSSを使う。本文中の言及ではなく著者が明示的に付けた
+    #タグの記事のみが対象になるため、以前の全文検索よりは収集範囲が狭くなる"""
+    return f"https://note.com/hashtag/{urllib.parse.quote(hashtag)}/rss"
 
 
 def split_title_source(raw_title: str, fallback: str):
@@ -175,6 +169,10 @@ def parse_feed(xml_bytes: bytes):
             enclosure = item.find("enclosure")
             if enclosure is not None and (enclosure.get("type") or "").startswith("image/"):
                 image = sanitize_image_url(enclosure.get("url"))
+            if not image:
+                thumb_el = item.find("media:thumbnail", XML_NS)
+                if thumb_el is not None and thumb_el.text:
+                    image = sanitize_image_url(thumb_el.text.strip())
             if not image:
                 image = extract_image(desc)
             items.append((title, link, desc, date, image))
@@ -436,59 +434,42 @@ def collect_official_news(source: dict, now: datetime):
 
 
 def collect_note_posts(source: dict, now: datetime):
-    """note.com検索APIを直接ページングして記事を収集する。RSSの「直近N日」制限を
-    受けないため、過去に遡って投稿された記事もまとめて拾える。専用の「note記事まとめ」
-    枠にのみ表示し、site/data/articles.json(ニュース一覧)には混在させない"""
+    """noteのハッシュタグ別公開RSS(/hashtag/{タグ}/rss)から記事を収集する。専用の
+    「note記事まとめ」枠にのみ表示し、site/data/articles.json(ニュース一覧)には
+    混在させない。著者が明示的に付けた#タグの記事のみが対象のため、本文中の言及も
+    拾えていた旧・検索API方式より収集範囲は狭い"""
     results = []
-    query = source["query"]
-    for page in range(NOTE_SEARCH_MAX_PAGES):
-        url = build_note_search_url(query, start=page * NOTE_SEARCH_PAGE_SIZE)
-        try:
-            payload = fetch_json(url)
-        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-            print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
-            break
+    url = build_note_hashtag_rss_url(source["hashtag"])
+    try:
+        raw = fetch(url)
+    except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+        print(f"[skip] {source['name']}: 取得失敗 ({exc})", file=sys.stderr)
+        return results
 
-        try:
-            notes = payload["data"]["notes"]
-            contents = notes["contents"]
-        except (KeyError, TypeError):
-            print(f"[skip] {source['name']}: 想定外のレスポンス構造 ({json.dumps(payload, ensure_ascii=False)[:300]})", file=sys.stderr)
-            break
+    for raw_title, link, desc_raw, date_raw, image in parse_feed(raw):
+        title = strip_html(raw_title)
+        desc = strip_html(desc_raw)
+        if not title or not link:
+            continue
 
-        if not contents:
-            break
+        haystack = title + " " + desc
+        if not KEYWORD_RE.search(haystack):
+            continue  # SF6・レバーレスに無関係な記事は除外
 
-        for item in contents:
-            title = strip_html(item.get("name", ""))
-            excerpt = strip_html(item.get("excerpt", ""))
-            urlname = (item.get("user") or {}).get("urlname", "")
-            key = item.get("key", "")
-            if not title or not urlname or not key:
-                continue
-
-            haystack = title + " " + excerpt
-            if not KEYWORD_RE.search(haystack):
-                continue  # SF6・レバーレスに無関係な記事は除外
-
-            dt = parse_date(item.get("publish_at", "")) or now
-            post = {
-                "id": make_id(normalize_title_for_dedup(title)),
-                "cat": classify_category(haystack, "etc"),
-                "title": title,
-                "summary": (excerpt[:120] + "…") if len(excerpt) > 120 else excerpt,
-                "source": "note",
-                "source_url": f"https://note.com/{urlname}/n/{key}",
-                "time": dt.isoformat(),
-                "collected": True,
-            }
-            thumb = sanitize_image_url(item.get("eyecatch"))
-            if thumb:
-                post["thumb"] = thumb
-            results.append(post)
-
-        if notes.get("isLastPage"):
-            break
+        dt = parse_date(date_raw) or now
+        post = {
+            "id": make_id(normalize_title_for_dedup(title)),
+            "cat": classify_category(haystack, "etc"),
+            "title": title,
+            "summary": (desc[:120] + "…") if len(desc) > 120 else desc,
+            "source": "note",
+            "source_url": link,
+            "time": dt.isoformat(),
+            "collected": True,
+        }
+        if image:
+            post["thumb"] = image
+        results.append(post)
 
     return results
 
@@ -598,7 +579,7 @@ def build_sources_view(sources: list):
             endpoint = build_search_url(s["query"])
             url = "https://news.google.com/"
         elif s.get("type") == "note_search":
-            endpoint = build_note_search_url(s["query"])
+            endpoint = build_note_hashtag_rss_url(s["hashtag"])
             url = "https://note.com/"
         else:
             endpoint = s["url"]

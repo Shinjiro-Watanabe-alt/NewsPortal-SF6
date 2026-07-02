@@ -26,9 +26,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: "[調査用・一時] noteハッシュタグRSSの構造確認"
-        run: python3 collector/diag_note.py
-
       - name: Run collector
         run: python3 collector/collect.py
 
