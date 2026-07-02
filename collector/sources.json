@@ -16,7 +16,7 @@
   { "type": "search", "name": "検索: SF6 アップデート・パッチ", "query": "(ストリートファイター6 OR SF6 OR スト6) (アップデート OR パッチ OR バランス調整 OR Ver.) when:3d", "category": "kyo",   "method": "search", "status": "active", "note": "バージョンアップ・バランス調整関連のニュースを収集。" },
   { "type": "search", "name": "検索: 大分 格闘ゲーム",         "query": "大分 (格闘ゲーム OR ストリートファイター OR ゲームセンター) when:7d", "category": "eve",   "method": "search", "status": "active", "note": "大分県内の格闘ゲームコミュニティ・店舗イベント情報を収集。" },
   { "type": "search", "name": "検索: カプコン公式 SF6情報",    "query": "ストリートファイター6 site:capcom.co.jp when:3d", "category": "etc",   "method": "search", "status": "active", "note": "カプコン公式サイト配下のSF6関連ページをGoogleニュース検索RSS経由で収集。" },
-  { "type": "search", "name": "検索: SF6 エド攻略",             "query": "(ストリートファイター6 OR SF6 OR スト6) エド (攻略 OR コンボ OR 対策 OR 立ち回り OR フレーム) -エドモンド -本田 when:3d", "category": "koy", "method": "search", "status": "active", "note": "エド個別の攻略記事を収集。「エドモンド本田」との誤マッチを避けるため-エドモンド -本田で除外している(エドとエドモンド本田両方に言及する記事は除外される点はトレードオフとして許容)。" },
+  { "type": "search", "name": "検索: SF6 エド攻略",             "query": "(ストリートファイター6 OR SF6 OR スト6) (エド OR ED) (攻略 OR コンボ OR 対策 OR 立ち回り OR フレーム) -エドモンド -本田 when:3d", "category": "koy", "method": "search", "status": "active", "note": "エド個別の攻略記事を収集。半角表記「ED」も対象に含める。「エドモンド本田」との誤マッチを避けるため-エドモンド -本田で除外している(エドとエドモンド本田両方に言及する記事は除外される点はトレードオフとして許容)。" },
   { "type": "search", "name": "検索: SF6 ガイル攻略",           "query": "(ストリートファイター6 OR SF6 OR スト6) ガイル (攻略 OR コンボ OR 対策 OR 立ち回り OR フレーム) when:3d", "category": "koy", "method": "search", "status": "active", "note": "ガイル個別の攻略記事を収集。" },
   { "type": "feed",   "name": "ハクのブログ",                   "url": "https://hakuno-blog.com/feed/",   "category": "koy", "default_source_label": "ハクのブログ", "method": "rss", "status": "active", "note": "SF6キャラ攻略ブログ。エド等の個別キャラ攻略記事あり。動作確認済み。" },
   { "type": "feed",   "name": "ゴジライン",                     "url": "https://goziline.com/feed/",      "category": "koy", "default_source_label": "ゴジライン", "method": "rss", "status": "check", "note": "SF6攻略ブログ。エドの基本戦術・コンボ記事あり。かくぶろ(takukakugamer.com、サイト全体がボット対策で403/タイムアウトのため削除)の代替候補。RSS未確認のためstatus:check。" },
@@ -27,5 +27,6 @@
   { "type": "note_search", "name": "noteハッシュタグ: レバーレス",      "hashtag": "レバーレス", "category": "dev", "method": "note-hashtag-rss", "status": "active", "note": "同上。レバーレスコントローラー関連のnote記事を収集。" },
   { "type": "note_search", "name": "noteハッシュタグ: スト6",           "hashtag": "スト6", "category": "koy", "method": "note-hashtag-rss", "status": "active", "note": "同上。略称表記(スト6)のハッシュタグでカバレッジを補う。" },
   { "type": "note_search", "name": "noteハッシュタグ: エド",            "hashtag": "エド", "category": "koy", "method": "note-hashtag-rss", "status": "active", "note": "エド個別の攻略note記事を収集。ハッシュタグは完全一致のため「エドモンド本田」タグとは混同しない。" },
+  { "type": "note_search", "name": "noteハッシュタグ: ED",             "hashtag": "ED", "category": "koy", "method": "note-hashtag-rss", "status": "active", "note": "エドの半角英字表記(#ED)のnote記事を収集。ハッシュタグ完全一致+本文のSF6関連キーワード必須のフィルタがあるため、無関係な「ED」タグとの混同は起きにくい。" },
   { "type": "note_search", "name": "noteハッシュタグ: ガイル",          "hashtag": "ガイル", "category": "koy", "method": "note-hashtag-rss", "status": "active", "note": "ガイル個別の攻略note記事を収集。" }
 ]
