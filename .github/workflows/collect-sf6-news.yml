@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: "[調査用・一時] note.com代替取得手段の診断"
+        run: python3 collector/diag_note.py
+
       - name: Run collector
         run: python3 collector/collect.py
 
