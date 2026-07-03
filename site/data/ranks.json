@@ -7,30 +7,35 @@
   {
     "keyword": "イングリッド",
     "score": 13,
-    "arrow": "up"
-  },
-  {
-    "keyword": "キャミィ",
-    "score": 11,
     "arrow": "flat"
   },
   {
-    "keyword": "アレックス",
-    "score": 9,
-    "arrow": "up"
-  },
-  {
-    "keyword": "サガット",
-    "score": 9,
+    "keyword": "キャミィ",
+    "score": 12,
     "arrow": "up"
   },
   {
     "keyword": "EVO2026",
-    "score": 8,
+    "score": 9,
+    "arrow": "up"
+  },
+  {
+    "keyword": "アレックス",
+    "score": 9,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "サガット",
+    "score": 9,
     "arrow": "flat"
   },
   {
     "keyword": "JP",
+    "score": 6,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "エレナ",
     "score": 6,
     "arrow": "up"
   },
@@ -41,11 +46,6 @@
   },
   {
     "keyword": "リュウ",
-    "score": 6,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "リリー",
     "score": 6,
     "arrow": "flat"
   }
