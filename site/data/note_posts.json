@@ -1,5 +1,37 @@
 [
   {
+    "id": "auto-9f0ea2a351af",
+    "cat": "eve",
+    "title": "目を背けては前に進めぬと言ふこと",
+    "summary": "先日、わたくしにしては珍しく『SF6の大会』なるものに参加してきた。スイスドロー形式というらしく、何回戦かを経て勝利数に応じて順位を決める方式だったらしい。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/kobake_elena/n/n70cb96b13440",
+    "time": "2026-07-03T18:27:57+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/291068193/rectangle_large_type_2_df93047c52bf82da10f70f950cd1c02c.png?width=800"
+  },
+  {
+    "id": "auto-5b224956bec9",
+    "cat": "ent",
+    "title": "[スト6] 格ゲーおじ、縮こまる。魔女娘の影響なのかも。",
+    "summary": "最近の格ゲーおじ。「あれ？！どうやって触ればいいんだ……。」そんなことを考えているうちに、試合開始から数秒。気づけば、ウロウロして何もしていない。いや、正確には違う。見ている。ものすごく見ている。相手が前に来るか。弾を撃つか。飛ぶか。ラッシ…",
+    "source": "note",
+    "source_url": "https://note.com/famous_robin2046/n/n34c25772b93d",
+    "time": "2026-07-03T13:48:30+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/291029131/rectangle_large_type_2_27c7d15c5f08934f9e14840345e39698.jpg?width=800"
+  },
+  {
+    "id": "auto-8bf03adb8253",
+    "cat": "koy",
+    "title": "スト6を始めてから1年。未だ使いたいキャラが決まらない",
+    "summary": "スト6をちゃんとやり始めて1年くらいたった。キャラは豪鬼→ジェイミー→ルークと来たがどれもしっくりこない。豪鬼は26/03の調整内容、調整理由に萎えてやる気が無くなったし、自分から攻めるリスクリターンが合っていないように感じてキャラ替え。ジ…",
+    "source": "note",
+    "source_url": "https://note.com/sato_g/n/n29d1dac91087",
+    "time": "2026-07-03T11:25:28+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-cfa3a41b448d",
     "cat": "ent",
     "title": "【スト６】ゲーム初心者のジュリ修行ログ【６月振り返り】",
@@ -73,6 +105,17 @@
     "time": "2026-07-02T15:34:21+09:00",
     "collected": true,
     "thumb": "https://assets.st-note.com/production/uploads/images/290759151/rectangle_large_type_2_a970320a7ad3082bcb15becc8ac1a07c.jpg?width=800"
+  },
+  {
+    "id": "auto-a761c2bfee1a",
+    "cat": "eve",
+    "title": "【スト6大会】お気持ちnote杯のお気持ちnote【参加】",
+    "summary": "7/18（土）20:00〜 バトル★スタート！ 続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/nikotarosun/n/nbade86a6d4b8",
+    "time": "2026-07-02T15:13:07+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/290760577/rectangle_large_type_2_a6476ad98ffdbbbcff3e00a583ae4eba.png?width=800"
   },
   {
     "id": "auto-528f0dacd20f",
@@ -583,7 +626,7 @@
   },
   {
     "id": "auto-cd4eb24d9ecd",
-    "cat": "kyo",
+    "cat": "koy",
     "title": "【SF6】イングリッド フレーム消費まとめ",
     "summary": "・はじめに イングリッドの起き攻め時に○○Fのフレーム消費したいけど、どの技でフレーム消費すれば良いのかいちいち思い出すのがめんどくさかったので一覧表を作ります。 大体のキャラがそうですが、12F以下の全体フレームの行動が無いので一覧は13…",
     "source": "note",
@@ -604,7 +647,7 @@
   },
   {
     "id": "auto-0a3b1627b54e",
-    "cat": "etc",
+    "cat": "koy",
     "title": "自分用JPメモ",
     "summary": "1年以上前にJPでマスターに行ってスト6から離れてましたが久々に復帰してハイマスを目指すための自分用メモです。動画やnote、レジェタッチの友人から学んだことをまとめます続きをみる",
     "source": "note",
@@ -812,7 +855,7 @@
   },
   {
     "id": "auto-849c6899d3a3",
-    "cat": "kyo",
+    "cat": "koy",
     "title": "【スト6】己を見直し負けから脱せよ｜勝ために「やめる」べきこと【テクニック】",
     "summary": "みなさん、スト6楽しんでますか！ とものりです。最近ようやくイングリッドでマスターランクに昇格できたのですが、キャラ変したときによく感じるのは、（若干おこがましいですが）かなり勝てる試合を逃してしまうという点です。もちろん、キャラに慣れてな…",
     "source": "note",

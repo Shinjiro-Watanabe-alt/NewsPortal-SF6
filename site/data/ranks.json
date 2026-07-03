@@ -5,14 +5,34 @@
     "arrow": "flat"
   },
   {
+    "keyword": "イングリッド",
+    "score": 13,
+    "arrow": "up"
+  },
+  {
     "keyword": "キャミィ",
     "score": 11,
     "arrow": "flat"
   },
   {
+    "keyword": "アレックス",
+    "score": 9,
+    "arrow": "up"
+  },
+  {
+    "keyword": "サガット",
+    "score": 9,
+    "arrow": "up"
+  },
+  {
     "keyword": "EVO2026",
     "score": 8,
     "arrow": "flat"
+  },
+  {
+    "keyword": "JP",
+    "score": 6,
+    "arrow": "up"
   },
   {
     "keyword": "ベガ",
@@ -27,26 +47,6 @@
   {
     "keyword": "リリー",
     "score": 6,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "バトルハブ",
-    "score": 5,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "マリーザ",
-    "score": 5,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "カプコンカップ",
-    "score": 4,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ザンギエフ",
-    "score": 4,
     "arrow": "flat"
   }
 ]
