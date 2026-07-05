@@ -1,13 +1,13 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 21,
-    "arrow": "flat"
+    "score": 22,
+    "arrow": "up"
   },
   {
     "keyword": "イングリッド",
     "score": 14,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "キャミィ",
@@ -30,22 +30,22 @@
     "arrow": "flat"
   },
   {
+    "keyword": "リュウ",
+    "score": 9,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ベガ",
+    "score": 7,
+    "arrow": "up"
+  },
+  {
     "keyword": "JP",
     "score": 6,
     "arrow": "flat"
   },
   {
     "keyword": "エレナ",
-    "score": 6,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ベガ",
-    "score": 6,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "リュウ",
     "score": 6,
     "arrow": "flat"
   }
