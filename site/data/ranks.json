@@ -5,14 +5,14 @@
     "arrow": "flat"
   },
   {
+    "keyword": "キャミィ",
+    "score": 16,
+    "arrow": "up"
+  },
+  {
     "keyword": "イングリッド",
     "score": 15,
     "arrow": "flat"
-  },
-  {
-    "keyword": "キャミィ",
-    "score": 15,
-    "arrow": "up"
   },
   {
     "keyword": "サガット",
@@ -35,18 +35,18 @@
     "arrow": "flat"
   },
   {
+    "keyword": "エレナ",
+    "score": 7,
+    "arrow": "up"
+  },
+  {
     "keyword": "ベガ",
     "score": 7,
     "arrow": "flat"
   },
   {
-    "keyword": "JP",
-    "score": 6,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "エレナ",
-    "score": 6,
-    "arrow": "flat"
+    "keyword": "リリー",
+    "score": 7,
+    "arrow": "up"
   }
 ]
