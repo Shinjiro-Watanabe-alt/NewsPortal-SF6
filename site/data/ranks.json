@@ -7,7 +7,7 @@
   {
     "keyword": "キャミィ",
     "score": 18,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
@@ -17,7 +17,7 @@
   {
     "keyword": "サガット",
     "score": 12,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "アレックス",
@@ -40,12 +40,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "エレナ",
-    "score": 7,
-    "arrow": "flat"
+    "keyword": "リリー",
+    "score": 8,
+    "arrow": "up"
   },
   {
-    "keyword": "ブランカ",
+    "keyword": "エレナ",
     "score": 7,
     "arrow": "flat"
   }
