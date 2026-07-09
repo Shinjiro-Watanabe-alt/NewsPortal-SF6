@@ -11,17 +11,17 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 15,
-    "arrow": "flat"
+    "score": 16,
+    "arrow": "up"
+  },
+  {
+    "keyword": "アレックス",
+    "score": 12,
+    "arrow": "up"
   },
   {
     "keyword": "サガット",
     "score": 12,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "アレックス",
-    "score": 11,
     "arrow": "flat"
   },
   {
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "エレナ",
+    "keyword": "JP",
     "score": 7,
-    "arrow": "flat"
+    "arrow": "up"
   }
 ]
