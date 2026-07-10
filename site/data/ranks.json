@@ -1,8 +1,8 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 23,
-    "arrow": "flat"
+    "score": 24,
+    "arrow": "up"
   },
   {
     "keyword": "キャミィ",
@@ -12,12 +12,12 @@
   {
     "keyword": "イングリッド",
     "score": 16,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "アレックス",
     "score": 12,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "サガット",
@@ -47,6 +47,6 @@
   {
     "keyword": "JP",
     "score": 7,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
