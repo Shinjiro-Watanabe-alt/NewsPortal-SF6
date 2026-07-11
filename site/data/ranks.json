@@ -1,8 +1,8 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 24,
-    "arrow": "flat"
+    "score": 25,
+    "arrow": "up"
   },
   {
     "keyword": "キャミィ",
@@ -17,6 +17,11 @@
   {
     "keyword": "サガット",
     "score": 13,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "ベガ",
+    "score": 13,
     "arrow": "up"
   },
   {
@@ -28,11 +33,6 @@
     "keyword": "リュウ",
     "score": 12,
     "arrow": "flat"
-  },
-  {
-    "keyword": "ベガ",
-    "score": 11,
-    "arrow": "up"
   },
   {
     "keyword": "EVO2026",
