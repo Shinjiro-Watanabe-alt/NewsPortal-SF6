@@ -15,12 +15,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "アレックス",
-    "score": 12,
-    "arrow": "flat"
+    "keyword": "サガット",
+    "score": 13,
+    "arrow": "up"
   },
   {
-    "keyword": "サガット",
+    "keyword": "アレックス",
     "score": 12,
     "arrow": "flat"
   },
@@ -30,19 +30,19 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ベガ",
+    "score": 11,
+    "arrow": "up"
+  },
+  {
     "keyword": "EVO2026",
     "score": 10,
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
-    "score": 9,
-    "arrow": "flat"
-  },
-  {
     "keyword": "エレナ",
     "score": 8,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "リリー",
