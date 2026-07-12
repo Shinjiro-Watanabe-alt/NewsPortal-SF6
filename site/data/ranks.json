@@ -6,13 +6,13 @@
   },
   {
     "keyword": "キャミィ",
-    "score": 19,
-    "arrow": "flat"
+    "score": 21,
+    "arrow": "up"
   },
   {
     "keyword": "イングリッド",
-    "score": 17,
-    "arrow": "flat"
+    "score": 19,
+    "arrow": "up"
   },
   {
     "keyword": "サガット",
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "リリー",
+    "keyword": "ブランカ",
     "score": 8,
-    "arrow": "flat"
+    "arrow": "up"
   }
 ]
