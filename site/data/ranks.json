@@ -1,8 +1,8 @@
 [
   {
     "keyword": "レバーレス",
-    "score": 27,
-    "arrow": "flat"
+    "score": 28,
+    "arrow": "up"
   },
   {
     "keyword": "キャミィ",
@@ -15,17 +15,17 @@
     "arrow": "flat"
   },
   {
-    "keyword": "リュウ",
+    "keyword": "ベガ",
     "score": 14,
     "arrow": "up"
   },
   {
-    "keyword": "サガット",
-    "score": 13,
+    "keyword": "リュウ",
+    "score": 14,
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
+    "keyword": "サガット",
     "score": 13,
     "arrow": "flat"
   },
@@ -47,6 +47,6 @@
   {
     "keyword": "ジェイミー",
     "score": 8,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
