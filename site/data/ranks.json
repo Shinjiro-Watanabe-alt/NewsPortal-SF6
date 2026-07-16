@@ -1,7 +1,7 @@
 [
   {
     "keyword": "イングリッド",
-    "score": 29,
+    "score": 32,
     "arrow": "up"
   },
   {
@@ -12,7 +12,7 @@
   {
     "keyword": "キャミィ",
     "score": 26,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -40,13 +40,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ジュリ",
+    "keyword": "ジェイミー",
     "score": 10,
     "arrow": "up"
   },
   {
-    "keyword": "ジェイミー",
-    "score": 9,
+    "keyword": "ジュリ",
+    "score": 10,
     "arrow": "flat"
   }
 ]
