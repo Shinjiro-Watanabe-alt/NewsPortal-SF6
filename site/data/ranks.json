@@ -1,18 +1,18 @@
 [
   {
+    "keyword": "イングリッド",
+    "score": 29,
+    "arrow": "up"
+  },
+  {
     "keyword": "レバーレス",
     "score": 28,
     "arrow": "flat"
   },
   {
-    "keyword": "イングリッド",
+    "keyword": "キャミィ",
     "score": 26,
     "arrow": "up"
-  },
-  {
-    "keyword": "キャミィ",
-    "score": 25,
-    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -40,13 +40,13 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ジュリ",
+    "score": 10,
+    "arrow": "up"
+  },
+  {
     "keyword": "ジェイミー",
     "score": 9,
     "arrow": "flat"
-  },
-  {
-    "keyword": "ジュリ",
-    "score": 9,
-    "arrow": "up"
   }
 ]
