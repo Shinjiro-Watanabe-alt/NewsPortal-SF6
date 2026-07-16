@@ -5,13 +5,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "キャミィ",
-    "score": 25,
-    "arrow": "flat"
+    "keyword": "イングリッド",
+    "score": 26,
+    "arrow": "up"
   },
   {
-    "keyword": "イングリッド",
-    "score": 23,
+    "keyword": "キャミィ",
+    "score": 25,
     "arrow": "flat"
   },
   {
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "エレナ",
-    "score": 8,
-    "arrow": "flat"
+    "keyword": "ジュリ",
+    "score": 9,
+    "arrow": "up"
   }
 ]
