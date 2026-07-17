@@ -2,7 +2,7 @@
   {
     "keyword": "イングリッド",
     "score": 34,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
@@ -35,17 +35,17 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ジュリ",
+    "score": 11,
+    "arrow": "up"
+  },
+  {
     "keyword": "EVO2026",
     "score": 10,
     "arrow": "flat"
   },
   {
     "keyword": "ジェイミー",
-    "score": 10,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ジュリ",
     "score": 10,
     "arrow": "flat"
   }
