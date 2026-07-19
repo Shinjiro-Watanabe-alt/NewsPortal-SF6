@@ -1,5 +1,36 @@
 [
   {
+    "id": "auto-424eae07c6ab",
+    "cat": "koy",
+    "title": "20260719 スト6のランクマメモ",
+    "summary": "エレナを使って楽しくランクマしているメモ昨日はやってないけど走ってたからそれどころじゃなかった。炎天下で走るのはやめましょう。MR1480→148721戦 11勝10敗続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/thatson/n/n505df92ffe48",
+    "time": "2026-07-19T23:41:52+09:00",
+    "collected": true
+  },
+  {
+    "id": "auto-9d700c83a888",
+    "cat": "koy",
+    "title": "【スト6】ワールドツアー終了の\"しわ寄せ\"が見えてきた ─ ヤスミンの物語はアーケードのみ、しかも尺は増えていない",
+    "summary": "何が起きたのか（3行まとめ） カプコンがワールドツアーのサポート終了を発表（イングリッドが最後） そのためシーズン4以降のキャラは、ワールドツアーに登場しない 代わりにストーリーはアーケードモードに集約されることに ─ ただし「尺は増えてい…",
+    "source": "note",
+    "source_url": "https://note.com/cattothat/n/n6565b69a7017",
+    "time": "2026-07-19T23:19:51+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/295806312/rectangle_large_type_2_465250afb557f9faa7d8a36e21b07f7a.png?width=800"
+  },
+  {
+    "id": "auto-890f5f34f566",
+    "cat": "ent",
+    "title": "【スト6】格ゲー未経験者がブチ当たった5つの壁【Cジュリ修行中】",
+    "summary": "こんばんは、時報師まるです。スマホゲー以外のゲームをほぼやったことない中、スト6配信を始めて2か月ほどたちました。まだまだ弱いですが、最近は配信中に「格ゲーっぽくなってきた」と言われるようになって嬉しいので、謎挙動から抜け出すまでに大変だっ…",
+    "source": "note",
+    "source_url": "https://note.com/malclock/n/n9633a3c69520",
+    "time": "2026-07-19T22:57:19+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-2b53e43723dd",
     "cat": "dev",
     "title": "SF6の自主トレアプリを作り始めました（公開中）",
