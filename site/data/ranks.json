@@ -15,6 +15,11 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ベガ",
+    "score": 15,
+    "arrow": "up"
+  },
+  {
     "keyword": "リュウ",
     "score": 15,
     "arrow": "flat"
@@ -25,14 +30,9 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
-    "score": 14,
-    "arrow": "flat"
-  },
-  {
     "keyword": "サガット",
-    "score": 13,
-    "arrow": "flat"
+    "score": 14,
+    "arrow": "up"
   },
   {
     "keyword": "ジェイミー",
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "EVO2026",
-    "score": 10,
-    "arrow": "flat"
+    "keyword": "マリーザ",
+    "score": 11,
+    "arrow": "up"
   }
 ]
