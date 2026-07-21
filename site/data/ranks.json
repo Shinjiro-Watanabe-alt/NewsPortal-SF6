@@ -25,6 +25,11 @@
     "arrow": "flat"
   },
   {
+    "keyword": "サガット",
+    "score": 15,
+    "arrow": "up"
+  },
+  {
     "keyword": "ジェイミー",
     "score": 15,
     "arrow": "flat"
@@ -35,18 +40,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "サガット",
-    "score": 14,
-    "arrow": "flat"
+    "keyword": "ジュリ",
+    "score": 12,
+    "arrow": "up"
   },
   {
     "keyword": "マリーザ",
     "score": 12,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ジュリ",
-    "score": 11,
     "arrow": "flat"
   }
 ]
