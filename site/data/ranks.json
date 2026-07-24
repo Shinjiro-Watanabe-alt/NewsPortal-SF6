@@ -11,8 +11,8 @@
   },
   {
     "keyword": "レバーレス",
-    "score": 31,
-    "arrow": "flat"
+    "score": 32,
+    "arrow": "up"
   },
   {
     "keyword": "ベガ",
@@ -26,8 +26,8 @@
   },
   {
     "keyword": "リュウ",
-    "score": 16,
-    "arrow": "flat"
+    "score": 17,
+    "arrow": "up"
   },
   {
     "keyword": "サガット",
@@ -42,11 +42,11 @@
   {
     "keyword": "ジュリ",
     "score": 15,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "マリーザ",
     "score": 14,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
