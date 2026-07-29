@@ -6,7 +6,7 @@
   },
   {
     "keyword": "キャミィ",
-    "score": 40,
+    "score": 42,
     "arrow": "up"
   },
   {
@@ -16,13 +16,18 @@
   },
   {
     "keyword": "ベガ",
-    "score": 20,
-    "arrow": "flat"
+    "score": 21,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
-    "score": 19,
-    "arrow": "flat"
+    "score": 20,
+    "arrow": "up"
+  },
+  {
+    "keyword": "EVO Japan",
+    "score": 17,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
@@ -30,23 +35,18 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ジュリ",
+    "score": 17,
+    "arrow": "up"
+  },
+  {
     "keyword": "マリーザ",
     "score": 17,
     "arrow": "flat"
   },
   {
-    "keyword": "EVO Japan",
-    "score": 16,
-    "arrow": "up"
-  },
-  {
     "keyword": "サガット",
     "score": 16,
     "arrow": "flat"
-  },
-  {
-    "keyword": "ジュリ",
-    "score": 16,
-    "arrow": "up"
   }
 ]
