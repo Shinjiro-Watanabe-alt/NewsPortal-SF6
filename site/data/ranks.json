@@ -7,11 +7,16 @@
   {
     "keyword": "キャミィ",
     "score": 46,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
     "score": 35,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "ザンギエフ",
+    "score": 22,
     "arrow": "up"
   },
   {
@@ -26,11 +31,6 @@
   },
   {
     "keyword": "EVO Japan",
-    "score": 19,
-    "arrow": "up"
-  },
-  {
-    "keyword": "ザンギエフ",
     "score": 19,
     "arrow": "flat"
   },
