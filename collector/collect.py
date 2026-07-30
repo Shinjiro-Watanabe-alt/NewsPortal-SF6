@@ -241,16 +241,17 @@ def classify_category(text: str, fallback: str) -> str:
 # URL・日時・本文のみを抽出してsite/data/x_posts.jsonへ変換する。
 #
 # 想定するファイル形式(Postブロック単位、フィールド名は日本語/英語のどちらでも可):
-#   ### Post 1
+#   ### Post 1                    (見出しの#は2個(##)・3個(###)どちらでも可)
 #   更新日時: 2026-06-29 12:00      (Date: の表記も可。省略時は実行時刻扱い)
 #   投稿メッセージ: 投稿本文(複数行可)  (Content: の表記も可。必須)
 #   画像URL: https://pbs.twimg.com/... (Image: の表記も可。省略可、あればサムネイルに使う)
 #   投稿URL: https://x.com/...      (URL: の表記も可。必須)
+# 各項目行の先頭に"- "(箇条書き)が付いていても付いていなくても対応する。
 #
 # 「投稿URL」「投稿メッセージ」が欠けているブロックは取り込まない。
 # Author相当の項目が含まれていても、対応するキーを定義していないため無視される。
-X_POST_BLOCK_RE = re.compile(r"^###\s*Post\s*\d+", re.MULTILINE)
-X_POST_FIELD_RE = re.compile(r"^(更新日時|投稿メッセージ|画像URL|投稿URL|Date|URL|Content|Image)\s*[:：]\s*(.*)$")
+X_POST_BLOCK_RE = re.compile(r"^#{2,3}\s*Post\s*\d+", re.MULTILINE)
+X_POST_FIELD_RE = re.compile(r"^-?\s*(更新日時|投稿メッセージ|画像URL|投稿URL|Date|URL|Content|Image)\s*[:：]\s*(.*)$")
 X_POST_DATE_KEYS = ("更新日時", "Date")
 X_POST_URL_KEYS = ("投稿URL", "URL")
 X_POST_CONTENT_KEYS = ("投稿メッセージ", "Content")
