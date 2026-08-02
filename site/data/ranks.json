@@ -16,13 +16,18 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 31,
-    "arrow": "flat"
+    "score": 32,
+    "arrow": "up"
   },
   {
     "keyword": "ベガ",
     "score": 21,
     "arrow": "flat"
+  },
+  {
+    "keyword": "ガイル",
+    "score": 20,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -31,11 +36,6 @@
   },
   {
     "keyword": "EVO Japan",
-    "score": 19,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ガイル",
     "score": 19,
     "arrow": "flat"
   },
