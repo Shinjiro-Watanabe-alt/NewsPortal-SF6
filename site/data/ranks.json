@@ -20,13 +20,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
+    "keyword": "ガイル",
     "score": 21,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "ガイル",
-    "score": 20,
+    "keyword": "ベガ",
+    "score": 21,
     "arrow": "flat"
   },
   {
