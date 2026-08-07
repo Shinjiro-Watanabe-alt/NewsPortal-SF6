@@ -1,5 +1,48 @@
 [
   {
+    "id": "auto-9e422b95920d",
+    "cat": "ent",
+    "title": "アレックス激ムズコンボやってみて【スト6】",
+    "summary": "「できるかな」じゃねぇ、やるんだよ。YouTubeでアレックスのコンボを紹介した際、「2タッチで倒せそうなんだけど、どうしてもSAゲージがギリギリ溜まらない」という状況が見つかりました。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/super_chimp7295/n/n6058effa8d55",
+    "time": "2026-08-07T22:02:49+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/301332380/rectangle_large_type_2_5ba1188c746b3873e18ce0d7239e1969.jpeg?width=800"
+  },
+  {
+    "id": "auto-f039287913f1",
+    "cat": "etc",
+    "title": "【スト6】noteの今後の方針について",
+    "summary": "こんにちは！今回はnoteの今後の方針について考えたので報告をさせていただきます。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/ray_fgc/n/nc64478058b1d",
+    "time": "2026-08-07T21:13:27+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/301321655/rectangle_large_type_2_bd4023b359ac40d3276c1c79899615fe.png?width=800"
+  },
+  {
+    "id": "auto-898285ca6fed",
+    "cat": "koy",
+    "title": "リリー研究所：リリーの勝ち筋を整理する[スト6]",
+    "summary": "Year4アプデに伴う調整で強化をもらい、今激アツと噂のリリー。 筆者も新要素を使いつつチマチマ戦っているが、ここで改めてリリーの勝ち筋について整理したいと思う。 ……と言ってみたものの、この記事を書くきっかけになったのは他でもない強化点で…",
+    "source": "note",
+    "source_url": "https://note.com/lacba_mikan/n/n4e4dd1805c0f",
+    "time": "2026-08-07T21:03:35+09:00",
+    "collected": true
+  },
+  {
+    "id": "auto-d70ef6b77789",
+    "cat": "koy",
+    "title": "#172 【スト6】流行りもナーフも関係ない、僕がダルシムとキンバリーを使う理由",
+    "summary": "今スト6界隈は、大型アプデの関係で、一種の祭りみたいな状態になってますね。ところで、note界隈のスト6ユーザー皆さん、キャラ選びの基準は何でしょうか？​「最新のキャラランクで上位だから」「アプデで強化されたから」「以前は使ってなかったけど…",
+    "source": "note",
+    "source_url": "https://note.com/humble_thyme1364/n/nad3c58ce02ea",
+    "time": "2026-08-07T20:57:03+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/301306759/rectangle_large_type_2_4241bdebc44c095ff7d8312e4d9213e6.png?width=800"
+  },
+  {
     "id": "auto-550ff1a77402",
     "cat": "koy",
     "title": "【スト6】調整でマリーザが気になった人向けの簡単な使い方紹介",
@@ -418,6 +461,17 @@
     "thumb": "https://assets.st-note.com/production/uploads/images/300612696/rectangle_large_type_2_d70f1f1f281a33eef11163df1168ae8b.png?width=800"
   },
   {
+    "id": "auto-a8e22e0996c6",
+    "cat": "etc",
+    "title": "【スト6】調整後 キャラ対策まとめ",
+    "summary": "こんにちは！今回は調整後のキャラ対策について考えていきます。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/ray_fgc/n/nbe0222b58e17",
+    "time": "2026-08-05T12:14:45+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/300612696/rectangle_large_type_2_d70f1f1f281a33eef11163df1168ae8b.png?width=800"
+  },
+  {
     "id": "auto-781141729466",
     "cat": "etc",
     "title": "スト6 Act12振り返り",
@@ -595,7 +649,7 @@
     "id": "auto-b883e1c63bf5",
     "cat": "koy",
     "title": "【スト6 】調整後 マリーザ変更点まとめ",
-    "summary": "こんにちは。今回は調整によるマリーザの変更点をまとめていきます！続きをみる",
+    "summary": "こんにちは！今回は調整によるマリーザの変更点をまとめていきます。続きをみる",
     "source": "note",
     "source_url": "https://note.com/ray_fgc/n/n4cc3d401115a",
     "time": "2026-08-04T13:34:44+09:00",
