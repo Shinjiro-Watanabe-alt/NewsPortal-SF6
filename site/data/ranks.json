@@ -7,7 +7,7 @@
   {
     "keyword": "イングリッド",
     "score": 52,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
@@ -30,6 +30,11 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ジェイミー",
+    "score": 20,
+    "arrow": "up"
+  },
+  {
     "keyword": "リュウ",
     "score": 20,
     "arrow": "flat"
@@ -41,11 +46,6 @@
   },
   {
     "keyword": "アレックス",
-    "score": 19,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ジェイミー",
     "score": 19,
     "arrow": "flat"
   }
