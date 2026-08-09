@@ -27,7 +27,7 @@
   {
     "keyword": "ガイル",
     "score": 23,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -40,12 +40,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "EVO Japan",
-    "score": 19,
-    "arrow": "flat"
+    "keyword": "マリーザ",
+    "score": 20,
+    "arrow": "up"
   },
   {
-    "keyword": "アレックス",
+    "keyword": "EVO Japan",
     "score": 19,
     "arrow": "flat"
   }
