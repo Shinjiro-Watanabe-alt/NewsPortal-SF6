@@ -6,8 +6,8 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 52,
-    "arrow": "flat"
+    "score": 53,
+    "arrow": "up"
   },
   {
     "keyword": "レバーレス",
@@ -17,7 +17,7 @@
   {
     "keyword": "ザンギエフ",
     "score": 33,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ベガ",
@@ -31,8 +31,13 @@
   },
   {
     "keyword": "リュウ",
-    "score": 21,
-    "arrow": "flat"
+    "score": 22,
+    "arrow": "up"
+  },
+  {
+    "keyword": "アレックス",
+    "score": 20,
+    "arrow": "up"
   },
   {
     "keyword": "ジェイミー",
@@ -42,11 +47,6 @@
   {
     "keyword": "マリーザ",
     "score": 20,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "EVO Japan",
-    "score": 19,
     "arrow": "flat"
   }
 ]
