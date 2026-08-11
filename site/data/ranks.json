@@ -20,6 +20,11 @@
     "arrow": "flat"
   },
   {
+    "keyword": "リュウ",
+    "score": 25,
+    "arrow": "up"
+  },
+  {
     "keyword": "ガイル",
     "score": 24,
     "arrow": "flat"
@@ -28,11 +33,6 @@
     "keyword": "ベガ",
     "score": 24,
     "arrow": "flat"
-  },
-  {
-    "keyword": "リュウ",
-    "score": 24,
-    "arrow": "up"
   },
   {
     "keyword": "ジェイミー",
