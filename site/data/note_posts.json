@@ -1,5 +1,38 @@
 [
   {
+    "id": "auto-46dff78c993b",
+    "cat": "dev",
+    "title": "電子工作初心者が1ヶ月でレバーレスコントローラを自作した話",
+    "summary": "格闘ゲーム（主にストリートファイター6）用に、基板設計から部品選定まで全部自分でやってレバーレスコントローラを作りました。設計ソフトを触ったこともない状態からのスタートで、道中いろいろ事件もありましたが、なんとか1ヶ月で完成にこぎつけたので…",
+    "source": "note",
+    "source_url": "https://note.com/kiichang/n/n72056f8f63c1",
+    "time": "2026-08-12T11:41:17+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/302470971/rectangle_large_type_2_9d34e53dd7f2a27ba75737343a0c5efc.jpeg?width=800"
+  },
+  {
+    "id": "auto-92f12fcbf2a3",
+    "cat": "koy",
+    "title": "【Cキンバリー】スト6：マスターまでに覚えて使ったコンボをまとめる（26年8月時点）",
+    "summary": "やあ、じぎーもだよ。サブキャラを触る時に毎回コンボ調べるのがだるかったのでマスターくらいまで遊んだキャラのコンボを書きます。基本的に難しいコンボはやらない、起き攻め重視、状況別でもいっぱい書かない、を方針にします。 慣れるまで爆弾起き攻めに…",
+    "source": "note",
+    "source_url": "https://note.com/matsunoki709/n/ncc6937837af7",
+    "time": "2026-08-12T10:33:03+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/302625075/rectangle_large_type_2_3426507d91c27ecd79909637f0b415e4.jpeg?width=800"
+  },
+  {
+    "id": "auto-2214e950a89c",
+    "cat": "koy",
+    "title": "ジェイミー（モダン）編｜Year3版スト6初心者おすすめキャラの練習用動画5選！【基礎コンボ集】",
+    "summary": "格闘ゲームをこれから始める人向け続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/buredon/n/ncabef6836ec5",
+    "time": "2026-08-12T08:15:18+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/286707271/rectangle_large_type_2_3982dbaae6542caa885fde98141b3ec8.png?width=800"
+  },
+  {
     "id": "auto-4bd605ad66ad",
     "cat": "etc",
     "title": "【スト6】Act12(26年5月〜7月)振り返り",
