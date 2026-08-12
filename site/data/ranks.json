@@ -6,17 +6,17 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 56,
-    "arrow": "flat"
+    "score": 57,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ザンギエフ",
+    "score": 35,
+    "arrow": "up"
   },
   {
     "keyword": "レバーレス",
     "score": 35,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ザンギエフ",
-    "score": 34,
     "arrow": "flat"
   },
   {
@@ -35,12 +35,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ジェイミー",
-    "score": 22,
-    "arrow": "flat"
+    "keyword": "マリーザ",
+    "score": 23,
+    "arrow": "up"
   },
   {
-    "keyword": "マリーザ",
+    "keyword": "ジェイミー",
     "score": 22,
     "arrow": "flat"
   },
