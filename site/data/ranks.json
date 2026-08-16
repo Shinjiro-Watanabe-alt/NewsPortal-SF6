@@ -2,11 +2,11 @@
   {
     "keyword": "キャミィ",
     "score": 91,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
-    "score": 62,
+    "score": 63,
     "arrow": "up"
   },
   {
@@ -20,17 +20,17 @@
     "arrow": "flat"
   },
   {
+    "keyword": "リュウ",
+    "score": 27,
+    "arrow": "up"
+  },
+  {
     "keyword": "ガイル",
     "score": 26,
     "arrow": "flat"
   },
   {
     "keyword": "ベガ",
-    "score": 26,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "リュウ",
     "score": 26,
     "arrow": "flat"
   },
