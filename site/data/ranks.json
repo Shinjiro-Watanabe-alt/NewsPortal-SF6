@@ -1,7 +1,7 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 100,
+    "score": 101,
     "arrow": "up"
   },
   {
@@ -20,12 +20,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ガイル",
-    "score": 27,
-    "arrow": "flat"
+    "keyword": "リュウ",
+    "score": 28,
+    "arrow": "up"
   },
   {
-    "keyword": "リュウ",
+    "keyword": "ガイル",
     "score": 27,
     "arrow": "flat"
   },
