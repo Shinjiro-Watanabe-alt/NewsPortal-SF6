@@ -36,16 +36,16 @@
   },
   {
     "keyword": "ジュリ",
+    "score": 25,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ジェイミー",
     "score": 24,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
     "keyword": "ブランカ",
-    "score": 24,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "マリーザ",
     "score": 24,
     "arrow": "flat"
   }
