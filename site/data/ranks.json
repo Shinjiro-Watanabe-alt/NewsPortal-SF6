@@ -21,13 +21,13 @@
   },
   {
     "keyword": "ジュリ",
-    "score": 33,
-    "arrow": "flat"
+    "score": 34,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
     "score": 32,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ベガ",
@@ -40,12 +40,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ジェイミー",
-    "score": 24,
-    "arrow": "flat"
+    "keyword": "マリーザ",
+    "score": 25,
+    "arrow": "up"
   },
   {
-    "keyword": "ブランカ",
+    "keyword": "ジェイミー",
     "score": 24,
     "arrow": "flat"
   }
