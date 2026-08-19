@@ -25,6 +25,11 @@
     "arrow": "flat"
   },
   {
+    "keyword": "ジュリ",
+    "score": 28,
+    "arrow": "up"
+  },
+  {
     "keyword": "ベガ",
     "score": 28,
     "arrow": "flat"
@@ -32,11 +37,6 @@
   {
     "keyword": "ガイル",
     "score": 27,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "ジュリ",
-    "score": 25,
     "arrow": "flat"
   },
   {
