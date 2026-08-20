@@ -2,7 +2,7 @@
   {
     "keyword": "キャミィ",
     "score": 106,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
@@ -10,13 +10,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "レバーレス",
+    "keyword": "ジュリ",
     "score": 39,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "ジュリ",
-    "score": 37,
+    "keyword": "レバーレス",
+    "score": 39,
     "arrow": "flat"
   },
   {
@@ -47,6 +47,6 @@
   {
     "keyword": "アレックス",
     "score": 24,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
