@@ -6,8 +6,8 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 68,
-    "arrow": "flat"
+    "score": 69,
+    "arrow": "up"
   },
   {
     "keyword": "ジュリ",
@@ -26,12 +26,12 @@
   },
   {
     "keyword": "リュウ",
-    "score": 33,
-    "arrow": "flat"
+    "score": 34,
+    "arrow": "up"
   },
   {
     "keyword": "ブランカ",
-    "score": 28,
+    "score": 29,
     "arrow": "up"
   },
   {
@@ -47,6 +47,6 @@
   {
     "keyword": "マリーザ",
     "score": 26,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
