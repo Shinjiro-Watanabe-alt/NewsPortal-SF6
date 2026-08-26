@@ -12,16 +12,16 @@
   {
     "keyword": "ジュリ",
     "score": 46,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
     "score": 41,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ザンギエフ",
-    "score": 37,
+    "score": 38,
     "arrow": "up"
   },
   {
@@ -36,8 +36,8 @@
   },
   {
     "keyword": "マリーザ",
-    "score": 29,
-    "arrow": "flat"
+    "score": 30,
+    "arrow": "up"
   },
   {
     "keyword": "ベガ",
