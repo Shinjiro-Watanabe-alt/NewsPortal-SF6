@@ -22,7 +22,7 @@
   {
     "keyword": "ザンギエフ",
     "score": 38,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -37,16 +37,16 @@
   {
     "keyword": "マリーザ",
     "score": 30,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "アレックス",
+    "score": 28,
     "arrow": "up"
   },
   {
     "keyword": "ベガ",
     "score": 28,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "アレックス",
-    "score": 27,
     "arrow": "flat"
   }
 ]
