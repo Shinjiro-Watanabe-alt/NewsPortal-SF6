@@ -1,5 +1,15 @@
 [
   {
+    "id": "auto-1e2dacc250aa",
+    "cat": "etc",
+    "title": "画像2 / 11＞【スト6を愛するストリーマーの宴だ！】SPYGEA、けんき、 歌広場淳ら人気ストリーマーがFAVCUPに参戦！熱いバトルに期待",
+    "summary": "画像2 / 11＞【スト6を愛するストリーマーの宴だ！】SPYGEA、けんき、 歌広場淳ら人気ストリーマーがFAVCUPに参戦！熱いバトルに期待&nbsp;&nbsp;ウォーカープラス",
+    "source": "ウォーカープラス",
+    "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5BZmdPbUR1XzJCak9oY2owTU5oLXd6WDhfNUhfN0dxd2tNeE5rYVh3MEVKZUloNEdiOWxla0trMnBSWkM0UGhOMUtuNTdLX1VyQ0FmNmRBVXYyaUpHMEFvclFBQ1E0T0ZETUxUYWNqYncxVkY1LUhzcHI4TUdtM0k?oc=5",
+    "time": "2026-08-31T17:48:58+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-af5231fc9fda",
     "cat": "etc",
     "title": "2026年9月イベント開催情報｜ニュース｜STREET FIGHTER 6（ストリートファイター6）｜CAPCOM",
@@ -8,6 +18,17 @@
     "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBId1RsZENNUm9zSFB5UXdVM1lJUDBfeDM4bDZjTlZTTV9OV0k4M2pLbkxBMmt0R2J1UGF1YnNDNXhSOTB3dnA0Y0JiQ0g0WmU3V0Y0RW14Y1paWFduZERwRUlCdVpNNnRSRXVYOWdB?oc=5",
     "time": "2026-08-31T17:39:08+09:00",
     "collected": true
+  },
+  {
+    "id": "auto-7dd6fd3a080a",
+    "cat": "official",
+    "title": "2026年9月イベント開催情報：公式・ストリーマーイベントや対戦会などをご紹介！",
+    "summary": "『ストリートファイター6』イベント・大会・配信の開催情報を掲載しています。",
+    "source": "STREET FIGHTER 6 公式サイト",
+    "source_url": "https://www.streetfighter.com/6/ja-jp/news/event202609",
+    "time": "2026-08-31T17:12:18+09:00",
+    "collected": true,
+    "thumb": "https://www.streetfighter.com/article/sites/2/2024/04/thumb_BattleEventSchedule.jpg"
   },
   {
     "id": "auto-129ca62c3194",
@@ -23,8 +44,8 @@
     "id": "auto-404d1fe25ceb",
     "cat": "etc",
     "title": "NURO×REJECT、「おじリーグ6 Powered by NURO」を9月6日に開催！『ストリートファイター6』で激突",
-    "summary": "NURO×REJECT、「おじリーグ6 Powered by NURO」を9月6日に開催！『ストリートファイター6』で激突&nbsp;&nbsp;news.nicovideo.jp",
-    "source": "news.nicovideo.jp",
+    "summary": "NURO×REJECT、「おじリーグ6 Powered by NURO」を9月6日に開催！『ストリートファイター6』で激突&nbsp;&nbsp;ニコニコニュース",
+    "source": "ニコニコニュース",
     "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1EV093QmlucktieFY2b2FKMDNzdFVDVUcyczZrMTJtclRmUDhqZDYtdVdSZ2NyclJGWFpWR3JwWHRXSU9aTVNxLXcxNnR2eS1MeGp1UmRsa0NGcmlwRzVXZTVGZl9wMnljRTNYcnFNX191SlN3cmlHbzgzOA?oc=5",
     "time": "2026-08-31T12:45:29+09:00",
     "collected": true
@@ -183,8 +204,8 @@
     "id": "auto-18deb3c64022",
     "cat": "ent",
     "title": "【ドスパラ】『スト6』観虐氏描き下ろしコラボゲーミングPCが販売中。RTX5060～5080搭載の全8モデルがラインアップ。ジュリちゃんがいっぱい！",
-    "summary": "【ドスパラ】『スト6』観虐氏描き下ろしコラボゲーミングPCが販売中。RTX5060～5080搭載の全8モデルがラインアップ。ジュリちゃんがいっぱい！&nbsp;&nbsp;ファミ通",
-    "source": "ファミ通",
+    "summary": "【ドスパラ】『スト6』観虐氏描き下ろしコラボゲーミングPCが販売中。RTX5060～5080搭載の全8モデルがラインアップ。ジュリちゃんがいっぱい！&nbsp;&nbsp;ファミ通.com",
+    "source": "ファミ通.com",
     "source_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE93UThKVTFXRWpVbTVadzN1YzBlWVpvTElhQmVUekIyN1g4UEZCaXBuTXM0eVBqMFJQVlhwVHlkNkc1dDZyb1RzSVFUUEoxX1BmbTkzUFBRNA?oc=5",
     "time": "2026-08-30T06:10:00+09:00",
     "collected": true
@@ -337,16 +358,6 @@
     "source": "YouTube",
     "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBNN05tSTByVVRrdklybTh4SVRRNW9oWWhFLUwxZ0NsWWowQ2F5ZE03bGstSTVvZGpPclNoNkotcHl2c0drRXdLdlR0b1VrQXViNWl3Um5iTU41RkZ6?oc=5",
     "time": "2026-08-28T23:00:13+09:00",
-    "collected": true
-  },
-  {
-    "id": "auto-1e2dacc250aa",
-    "cat": "etc",
-    "title": "画像2 / 11＞【スト6を愛するストリーマーの宴だ！】SPYGEA、けんき、 歌広場淳ら人気ストリーマーがFAVCUPに参戦！熱いバトルに期待",
-    "summary": "画像2 / 11＞【スト6を愛するストリーマーの宴だ！】SPYGEA、けんき、 歌広場淳ら人気ストリーマーがFAVCUPに参戦！熱いバトルに期待&nbsp;&nbsp;ウォーカープラス",
-    "source": "ウォーカープラス",
-    "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5BZmdPbUR1XzJCak9oY2owTU5oLXd6WDhfNUhfN0dxd2tNeE5rYVh3MEVKZUloNEdiOWxla0trMnBSWkM0UGhOMUtuNTdLX1VyQ0FmNmRBVXYyaUpHMEFvclFBQ1E0T0ZETUxUYWNqYncxVkY1LUhzcHI4TUdtM0k?oc=5",
-    "time": "2026-08-28T18:07:19+09:00",
     "collected": true
   },
   {
