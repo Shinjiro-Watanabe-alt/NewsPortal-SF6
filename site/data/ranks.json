@@ -21,8 +21,8 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 39,
-    "arrow": "flat"
+    "score": 40,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -40,13 +40,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
+    "keyword": "アレックス",
     "score": 30,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "アレックス",
-    "score": 29,
+    "keyword": "ベガ",
+    "score": 30,
     "arrow": "flat"
   }
 ]
