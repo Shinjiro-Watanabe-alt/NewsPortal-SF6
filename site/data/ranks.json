@@ -7,17 +7,17 @@
   {
     "keyword": "イングリッド",
     "score": 73,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "レバーレス",
+    "score": 51,
     "arrow": "up"
   },
   {
     "keyword": "ジュリ",
     "score": 49,
     "arrow": "flat"
-  },
-  {
-    "keyword": "レバーレス",
-    "score": 48,
-    "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
@@ -27,7 +27,7 @@
   {
     "keyword": "リュウ",
     "score": 40,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ブランカ",
