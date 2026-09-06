@@ -1,5 +1,48 @@
 [
   {
+    "id": "auto-ebea19903bc5",
+    "cat": "koy",
+    "title": "スト6目指せハイマス日記6日目(MR1422)",
+    "summary": "MR1,480の信じらんないくらい強い豪鬼と当たった。地上に行くにはアレを倒さないといけないのかと思うと大変だ。やはり長時間やるとリーサルミスが増える。2,3回発生したら終わるべきなんだろうなぁといつも思っている。やめらんねぇ～課題続きをみ…",
+    "source": "note",
+    "source_url": "https://note.com/syuidoru/n/neea271aea525",
+    "time": "2026-09-07T00:14:21+09:00",
+    "collected": true
+  },
+  {
+    "id": "auto-4f16764c5120",
+    "cat": "etc",
+    "title": "最高の愉悦を味わえる【おじリーグ6】の話",
+    "summary": "お金も名誉もかかっていない、何の意味もないデスゲーム。そんな地獄みたいな戦いに、ただのおじさんたちがプライドだけを賭けて挑む。あの最高の企画が、ストリートファイター6に舞台を変えて返ってきた。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/bonkotsu_design/n/ncf82d0336cbe",
+    "time": "2026-09-06T22:28:49+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311000588/rectangle_large_type_2_d592352d7377095dd18da915d3df3f84.png?width=800"
+  },
+  {
+    "id": "auto-d3bba217c56a",
+    "cat": "koy",
+    "title": "連敗沼から劇的復活！LPを元通りに戻せた2つの「成功体験」",
+    "summary": "先週は連敗が続き、LPも大きく削られて悔しい思いをしました。しかし、「勝敗」ではなく「テーマの徹底」に意識を切り替えてプレイを続けた結果、無事に連敗沼を脱出し、削られたLPをすべて取り戻すことができました！今回は、復調の決定打となった2つの…",
+    "source": "note",
+    "source_url": "https://note.com/waya_sf6_coach/n/nf40cc15b2deb",
+    "time": "2026-09-06T21:29:29+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/310980714/rectangle_large_type_2_4a7f1bf53e2d4eb838dc019fabb62995.jpg?width=800"
+  },
+  {
+    "id": "auto-8ee81289b4ec",
+    "cat": "koy",
+    "title": "【スト6】エレナ コンボとセットアップ(2026.08.03 update)",
+    "summary": "コマンド・用語表記について続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/good_lion2040/n/nca1c61c7fe69",
+    "time": "2026-09-06T21:10:09+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/310914085/rectangle_large_type_2_9841a4b684395778cbcd8ef8f8d35029.jpeg?width=800"
+  },
+  {
     "id": "auto-90ba2a1cff0a",
     "cat": "koy",
     "title": "ディージェイ（モダン）編｜Year4版スト6初心者おすすめキャラの練習用動画5選！【基礎コンボ集】",
@@ -141,6 +184,17 @@
     "id": "auto-941f134c4f85",
     "cat": "dev",
     "title": "「ZENAIM ARCADE CONTROLLER BUTTON MODULE KIT」を購入したので使用感などをレビュー",
+    "summary": "久々に、自作レバーレスの話を。デバイス自作において、避けられないことといえばデバイストラブルなのだが、最近、自分の自作レバーレスを使ってるときに、誤作動と思われる挙動が増えているように感じていた。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/khide/n/nd317d64661a0",
+    "time": "2026-09-04T23:04:06+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/310306471/rectangle_large_type_2_d4b3faed41e54add6ab36729add99896.jpeg?width=800"
+  },
+  {
+    "id": "auto-21041521fee8",
+    "cat": "dev",
+    "title": "自作レバーレスでラピトリが使えるZETA監修のアケコンボタン＋基板セットを買ったのでレビュー",
     "summary": "久々に、自作レバーレスの話を。デバイス自作において、避けられないことといえばデバイストラブルなのだが、最近、自分の自作レバーレスを使ってるときに、誤作動と思われる挙動が増えているように感じていた。続きをみる",
     "source": "note",
     "source_url": "https://note.com/khide/n/nd317d64661a0",
