@@ -1,5 +1,82 @@
 [
   {
+    "id": "auto-e25dffd82d96",
+    "cat": "etc",
+    "title": "【スト6】負けた試合を分析してみる",
+    "summary": "こんにちは。のらくまです。負けた試合のダメージ割合を分析すると自分の欠点や優先して見直すところがわかりそうな気がしたので分析してみました。データ分けが大変だったので、分析第一弾の分類はざっくりにしています。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/white_note856/n/n4178b997a5c8",
+    "time": "2026-09-07T19:43:49+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311286952/rectangle_large_type_2_ab1793baea1e3804dcacacd9bc7f0a3f.png?width=800"
+  },
+  {
+    "id": "auto-a0917b8dca85",
+    "cat": "koy",
+    "title": "【日記02】キミも明日は我が身🫵！ 40代を超えたゲーマーの健康管理01 眼👀",
+    "summary": "今回は、アラフォーどころかアラフィフに足を踏み入れている僕のお話し。ストリートファイター6でマノンというキャラをMR2000まで使いこなしているから、それなりに長時間格ゲーに取り組んでいることになる。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/super_chimp7295/n/ndc8511d15630",
+    "time": "2026-09-07T19:14:12+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311092561/rectangle_large_type_2_b5514b08e4b1dd643abcbcba47b086d9.jpeg?width=800"
+  },
+  {
+    "id": "auto-c41648dc86d9",
+    "cat": "dev",
+    "title": "RushBox miniを購入してみて ～理学療法士の意見を交えて考えたこと～",
+    "summary": "どうも僕です。上記の通り、買ってみたのでそれについて残していきます。対戦よろしくお願いします。自分にとっての最適解レバーレスを追う続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/orangecrush_963/n/n1c3e67b31704",
+    "time": "2026-09-07T18:59:25+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311026184/rectangle_large_type_2_b274f941d7b657247c021b0d533c9bd9.jpeg?width=800"
+  },
+  {
+    "id": "auto-355543a3ca7d",
+    "cat": "etc",
+    "title": "【スト6】進むんだ、我がヤスミン！｜ランクマ戦果報告（Act13：9月初）",
+    "summary": "みなさん、スト6楽しんでますか！ とものりです。世間では夏休みも終わり、9月が始まって年末へのカウントダウンを早くも感じざるを得ない今日この頃。スト6プレイヤーの方々、いかがお過ごしでしょうか。私はこれまで3年以上もの間、放置していた問題を…",
+    "source": "note",
+    "source_url": "https://note.com/nawonsale/n/nb64aaa85278b",
+    "time": "2026-09-07T18:40:07+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311155253/rectangle_large_type_2_a418c99dbe1f56ef812f5b241c318dbc.jpeg?width=800"
+  },
+  {
+    "id": "auto-356283042e7d",
+    "cat": "eve",
+    "title": "リリーとは無限である[スト6]",
+    "summary": "特に大会に出るつもりなどは今のところないが、ダルシム・JPへの対策枠として現在Mベガをサブキャラで練習している。 前回のテリーの時もそうだったが、サブキャラをやっているとそのキャラとの対比でメインキャラの強みも浮き彫りになってくる。 ベガは…",
+    "source": "note",
+    "source_url": "https://note.com/lacba_mikan/n/n065e89172f2d",
+    "time": "2026-09-07T18:25:54+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/310633554/rectangle_large_type_2_16864038d8f80f16ae0c1bf3b8862b45.png?width=800"
+  },
+  {
+    "id": "auto-995d1376a4af",
+    "cat": "etc",
+    "title": "スト6 ヤスミン予想の答え合わせ＆キャラストーリー感想",
+    "summary": "以前にYEAR4のキャラ発表と初期情報だけで色々と性能を予想してみたけれど、さっそくヤスミンの情報が出揃い始めたので、答え合わせならびにキャラストーリーの感想を書くことにした。続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/musubi_236p/n/n953e1f5d2c3f",
+    "time": "2026-09-07T14:55:40+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311200736/rectangle_large_type_2_93b7723cb1c87b068f44bafc0d8c7ec2.png?width=800"
+  },
+  {
+    "id": "auto-c10ceaec91da",
+    "cat": "etc",
+    "title": "完全新台のスマスロ\"ストリートファイター6\"を、AIと一緒に900G天井から18連荘・4,800枚まで追いかけた話",
+    "summary": "前回、スマスロSAO2の実戦をAIに相談しながら打った話を記事にしましたが、同じ流れでもう一台、スマスロ「ストリートファイター6」の実戦もAIに報告しながら打っていました。こちらは「一回転も回されていない完全新台」に座るという、なかなか経験…",
+    "source": "note",
+    "source_url": "https://note.com/hyouga_2000/n/nbc6c3ca68c4d",
+    "time": "2026-09-07T13:58:24+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/311183084/rectangle_large_type_2_e6a70713fe3894265d020a1193824f67.png?width=800"
+  },
+  {
     "id": "auto-87bfbfa67219",
     "cat": "koy",
     "title": "【スト6】なんだよこのポーズ",

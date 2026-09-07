@@ -26,8 +26,8 @@
   },
   {
     "keyword": "リュウ",
-    "score": 45,
-    "arrow": "flat"
+    "score": 46,
+    "arrow": "up"
   },
   {
     "keyword": "ブランカ",
@@ -47,6 +47,6 @@
   {
     "keyword": "ベガ",
     "score": 31,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
