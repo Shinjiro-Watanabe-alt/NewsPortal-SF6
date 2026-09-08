@@ -110,6 +110,16 @@
     "collected": true
   },
   {
+    "id": "auto-c9d7d23fb03f",
+    "cat": "ent",
+    "title": "「ストリートファイター6」，Year 4第2弾「アルジュン」が10月13日に参戦。リカバリアブルダメージを蓄積させて追い詰める",
+    "summary": "カプコンは本日，「ストリートファイター6」のYear4キャラクター第2弾として「アルジュン」を2026年10月13日に配信すると発表した。アルジュンは，ヨガの呼吸法を用いた飛び道具や設置技などを操り，相手に時間経過で回復するリカバリアブルダ…",
+    "source": "4Gamer",
+    "source_url": "https://www.4gamer.net/games/635/G063504/20260908007/",
+    "time": "2026-09-08T11:46:17+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-a8e75667541d",
     "cat": "etc",
     "title": "『ストリートファイター6』新キャラ「アルジュン」参戦！ ヨガの呼吸法で闘うファイター、10月13日デビュー",
@@ -138,6 +148,17 @@
     "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE43akVNSHN6dUpNOW1UT1ZXWEVZeWotcGxKQWlacTlVX3dWY20tYWQzRVI2RGxrWGkwcVVka3R5dG5NbUJrWEVYSDh2NmNxNjV4N2MzUlF1WUs?oc=5",
     "time": "2026-09-08T09:37:57+09:00",
     "collected": true
+  },
+  {
+    "id": "auto-4e7859afe49f",
+    "cat": "ent",
+    "title": "『ストリートファイター6』新キャラ「アルジュン」10月13日実装へ。突進や当身、コマンド投げなんでもありの、“白ゲージ大量生産”ファイター",
+    "summary": "『STREET FIGHTER 6（ストリートファイター6）』のYear 4追加キャラクター第2弾「アルジュン」は10月13日に配信予定だ。トレイラーなども公開されている。",
+    "source": "AUTOMATON",
+    "source_url": "https://automaton-media.com/articles/newsjp/20260908-465664/",
+    "time": "2026-09-08T08:43:58+09:00",
+    "collected": true,
+    "thumb": "https://automaton-media.com/wp-content/uploads/2026/09/20260908-465664-header.jpg"
   },
   {
     "id": "auto-06c9f7b23c6e",
@@ -347,16 +368,6 @@
     "source": "Game*Spark",
     "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA0LVlobjlvNm5QR0tJNGs2SlpXWUpDc05CSy1XYkw5OVlQeWVWTTBOeXppUVdGQWlPd0h2NDhnQmZHU0tKNWdTdHQwdnZCNy01Y3kzZmVLeDJ0QWpISHJEQm9ZMnpGeE1VRlYxdlpYdjRFa3FYblE?oc=5",
     "time": "2026-09-08T02:48:45+09:00",
-    "collected": true
-  },
-  {
-    "id": "auto-c9d7d23fb03f",
-    "cat": "etc",
-    "title": "「ストリートファイター6」，Year 4第2弾「アルジュン」が10月13日に参戦。リカバリアブルダメージを蓄積させて追い詰める",
-    "summary": "「ストリートファイター6」，Year 4第2弾「アルジュン」が10月13日に参戦。リカバリアブルダメージを蓄積させて追い詰める&nbsp;&nbsp;4Gamer.net",
-    "source": "4Gamer.net",
-    "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9yaXd6TWstZUpTeHZGSzRZMHozTU45bndJcGxvbmE5RFJpd1N2dlR4bzZJeUJqUk9LcV94Y0JybEI1SGFUTXI5dVRyTU5aS0VtS1FwR19rRmRrbnByUmo4UkM4bw?oc=5",
-    "time": "2026-09-08T02:46:17+09:00",
     "collected": true
   },
   {
@@ -717,16 +728,6 @@
     "source": "doope!",
     "source_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE51RzBkZGZ4ZkpTVXRvQ2ZjNlFfNTFNY2drWmpfY0M4cE9MWWdLOGFFSl9oMEVfR2NHa1hRSHpQLWdzUmI3SkJURkxPVQ?oc=5",
     "time": "2026-09-07T23:59:15+09:00",
-    "collected": true
-  },
-  {
-    "id": "auto-4e7859afe49f",
-    "cat": "etc",
-    "title": "『ストリートファイター6』新キャラ「アルジュン」10月13日実装へ。突進や当身、コマンド投げなんでもありの、“白ゲージ大量生産”ファイター",
-    "summary": "『ストリートファイター6』新キャラ「アルジュン」10月13日実装へ。突進や当身、コマンド投げなんでもありの、“白ゲージ大量生産”ファイター&nbsp;&nbsp;AUTOMATON",
-    "source": "AUTOMATON",
-    "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mOFF2LXlYdWEtZE9Wckd3T2lSeTd0amFRb2RTR25aa3FPTnFvdU9SZGJoQmw2cW1rb3pSUG4xRU9OZjFLUUN6ZDRoZnRBYWhhcUlpbUVEdXZseEF1MlhnVjdKQUMwUHNiVHdMeA?oc=5",
-    "time": "2026-09-07T23:43:58+09:00",
     "collected": true
   },
   {
