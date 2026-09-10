@@ -16,8 +16,8 @@
   },
   {
     "keyword": "レバーレス",
-    "score": 58,
-    "arrow": "flat"
+    "score": 59,
+    "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
@@ -40,13 +40,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "マリーザ",
+    "keyword": "ベガ",
     "score": 32,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "ベガ",
-    "score": 31,
+    "keyword": "マリーザ",
+    "score": 32,
     "arrow": "flat"
   }
 ]
