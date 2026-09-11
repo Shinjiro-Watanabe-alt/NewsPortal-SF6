@@ -12,7 +12,7 @@
   {
     "keyword": "ジュリ",
     "score": 73,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
@@ -21,8 +21,8 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 48,
-    "arrow": "flat"
+    "score": 49,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -32,20 +32,20 @@
   {
     "keyword": "ブランカ",
     "score": 36,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "アレックス",
     "score": 34,
-    "arrow": "up"
-  },
-  {
-    "keyword": "ベガ",
-    "score": 32,
     "arrow": "flat"
   },
   {
     "keyword": "マリーザ",
+    "score": 33,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ベガ",
     "score": 32,
     "arrow": "flat"
   }
