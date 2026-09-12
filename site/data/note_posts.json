@@ -1,5 +1,37 @@
 [
   {
+    "id": "auto-3b005651b45c",
+    "cat": "etc",
+    "title": "【スト6】ランクマの上振れ・下振れについて統計で考えてみた",
+    "summary": "はじめに続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/kimumu9973/n/ndbd418ec889b",
+    "time": "2026-09-13T00:07:23+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/313043638/rectangle_large_type_2_29dad76ab145a0a7a8380f4d54ead219.png?width=800"
+  },
+  {
+    "id": "auto-426ca275b2ae",
+    "cat": "etc",
+    "title": "【SF6】AMD Radeon環境（RX 7900 XTX等のRDNA3）で入力遅延を極限まで無くす最適化設定まとめ",
+    "summary": "最近、PCのグラフィックボードをNVIDIAからAMDに換装したのですが、以前の環境と設定の勝手が全く違って非常に戸惑いました。そこで今回は、AI（Gemini）に相談しながら徹底的に原因を洗い出し、遅延対策を構築しました。ストリートファイ…",
+    "source": "note",
+    "source_url": "https://note.com/kugimiya_03/n/n0e9c100ae1a8",
+    "time": "2026-09-12T22:44:32+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/313028074/rectangle_large_type_2_8223399721041c1544212ee24df0069b.png?width=800"
+  },
+  {
+    "id": "auto-3a62afe99573",
+    "cat": "etc",
+    "title": "スト6目指せハイマス日記10日目(MR1509)",
+    "summary": "地上に戻したぞって、運じゃねえんだぞって舐めるなよ！！うれしっでもまだ上振れで行ってる感はあるので、安定させていきたい。課題続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/syuidoru/n/n21eca98ca7e3",
+    "time": "2026-09-12T22:25:39+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-a081660b18ec",
     "cat": "eve",
     "title": "[スト6] 格ゲーおじさん、ついにMASTERになる。だが、その道は敗北と独り言でできていた。",
