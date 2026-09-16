@@ -1,5 +1,15 @@
 [
   {
+    "id": "auto-0b7458b9ed92",
+    "cat": "etc",
+    "title": "スト6 Dリバを使いこなしたい",
+    "summary": "先日の投稿続きをみる",
+    "source": "note",
+    "source_url": "https://note.com/cantguard_chudan/n/nd29a57d56f04",
+    "time": "2026-09-16T10:45:22+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-7856e6863101",
     "cat": "ent",
     "title": "【スト6】面白すぎるだろ",
@@ -144,7 +154,8 @@
     "source": "note",
     "source_url": "https://note.com/happy_sloth8662/n/n086555763f8d",
     "time": "2026-09-14T14:46:45+09:00",
-    "collected": true
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/314206531/rectangle_large_type_2_0ebf7e39dd29fd529443fb8fe6cfd84b.jpeg?width=800"
   },
   {
     "id": "auto-fe6057fc3f0b",
