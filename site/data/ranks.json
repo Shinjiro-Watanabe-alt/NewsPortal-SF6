@@ -6,7 +6,7 @@
   },
   {
     "keyword": "ジュリ",
-    "score": 85,
+    "score": 89,
     "arrow": "up"
   },
   {
@@ -31,8 +31,13 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 38,
-    "arrow": "flat"
+    "score": 39,
+    "arrow": "up"
+  },
+  {
+    "keyword": "TGS2026",
+    "score": 37,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
@@ -43,10 +48,5 @@
     "keyword": "マリーザ",
     "score": 33,
     "arrow": "flat"
-  },
-  {
-    "keyword": "豪鬼",
-    "score": 33,
-    "arrow": "up"
   }
 ]
