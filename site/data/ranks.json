@@ -7,7 +7,7 @@
   {
     "keyword": "ジュリ",
     "score": 95,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
@@ -17,17 +17,17 @@
   {
     "keyword": "レバーレス",
     "score": 61,
+    "arrow": "flat"
+  },
+  {
+    "keyword": "TGS2026",
+    "score": 51,
     "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
     "score": 51,
     "arrow": "flat"
-  },
-  {
-    "keyword": "TGS2026",
-    "score": 50,
-    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "マリーザ",
+    "keyword": "C.ヴァイパー",
     "score": 33,
-    "arrow": "flat"
+    "arrow": "up"
   }
 ]
