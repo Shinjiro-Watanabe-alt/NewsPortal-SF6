@@ -2,11 +2,11 @@
   {
     "keyword": "キャミィ",
     "score": 121,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ジュリ",
-    "score": 82,
+    "score": 85,
     "arrow": "up"
   },
   {
@@ -45,8 +45,8 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ベガ",
-    "score": 32,
-    "arrow": "flat"
+    "keyword": "豪鬼",
+    "score": 33,
+    "arrow": "up"
   }
 ]
