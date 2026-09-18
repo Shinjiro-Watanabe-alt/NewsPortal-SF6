@@ -2,12 +2,12 @@
   {
     "keyword": "キャミィ",
     "score": 124,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ジュリ",
-    "score": 96,
-    "arrow": "flat"
+    "score": 97,
+    "arrow": "up"
   },
   {
     "keyword": "イングリッド",
@@ -15,13 +15,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "レバーレス",
+    "keyword": "TGS2026",
     "score": 62,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "TGS2026",
-    "score": 60,
+    "keyword": "レバーレス",
+    "score": 62,
     "arrow": "flat"
   },
   {
