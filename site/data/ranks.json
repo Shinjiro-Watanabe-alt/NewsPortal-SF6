@@ -1,13 +1,13 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 124,
-    "arrow": "flat"
+    "score": 126,
+    "arrow": "up"
   },
   {
     "keyword": "ジュリ",
     "score": 100,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
@@ -17,7 +17,7 @@
   {
     "keyword": "TGS2026",
     "score": 67,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "レバーレス",
@@ -37,12 +37,12 @@
   {
     "keyword": "ブランカ",
     "score": 44,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "C.ヴァイパー",
-    "score": 35,
-    "arrow": "flat"
+    "score": 37,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
