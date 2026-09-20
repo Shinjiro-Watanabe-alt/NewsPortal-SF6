@@ -1,5 +1,16 @@
 [
   {
+    "id": "auto-0cd557126a3a",
+    "cat": "etc",
+    "title": "自分専用のスト6戦績分析サイトをCodexで作った",
+    "summary": "こんにちは、しろねこラボです🐾今回は、私がストリートファイター6のために作った自分専用のWebアプリ「SF6 Dashboard」について書いてみます。最初は「公式サイトのデータをもっと見やすくしたい」というだけだったのですが、少しずつ機能…",
+    "source": "note",
+    "source_url": "https://note.com/sironeko_life/n/n8b35b4321b5b",
+    "time": "2026-09-21T05:15:25+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/315776935/rectangle_large_type_2_744257f147a13bd27984fd1cdd4f5f5f.png?width=800"
+  },
+  {
     "id": "auto-c13c3727c56f",
     "cat": "dev",
     "title": "レバーレスを買いました(2台目)",
