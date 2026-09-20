@@ -10,14 +10,14 @@
     "arrow": "flat"
   },
   {
+    "keyword": "TGS2026",
+    "score": 76,
+    "arrow": "up"
+  },
+  {
     "keyword": "イングリッド",
     "score": 76,
     "arrow": "flat"
-  },
-  {
-    "keyword": "TGS2026",
-    "score": 75,
-    "arrow": "up"
   },
   {
     "keyword": "レバーレス",
@@ -37,16 +37,16 @@
   {
     "keyword": "ブランカ",
     "score": 46,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "C.ヴァイパー",
-    "score": 39,
+    "score": 40,
     "arrow": "up"
   },
   {
     "keyword": "豪鬼",
     "score": 37,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
