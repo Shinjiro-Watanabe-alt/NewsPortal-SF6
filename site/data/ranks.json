@@ -12,7 +12,7 @@
   {
     "keyword": "TGS2026",
     "score": 102,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
@@ -32,7 +32,7 @@
   {
     "keyword": "リュウ",
     "score": 53,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ブランカ",
@@ -47,6 +47,6 @@
   {
     "keyword": "C.ヴァイパー",
     "score": 42,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
