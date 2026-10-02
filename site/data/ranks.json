@@ -1,12 +1,12 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 163,
+    "score": 165,
     "arrow": "up"
   },
   {
     "keyword": "ジュリ",
-    "score": 115,
+    "score": 117,
     "arrow": "up"
   },
   {
@@ -35,18 +35,18 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ブランカ",
-    "score": 52,
-    "arrow": "flat"
+    "keyword": "豪鬼",
+    "score": 53,
+    "arrow": "up"
   },
   {
-    "keyword": "豪鬼",
+    "keyword": "ブランカ",
     "score": 52,
     "arrow": "flat"
   },
   {
     "keyword": "アレックス",
     "score": 44,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
