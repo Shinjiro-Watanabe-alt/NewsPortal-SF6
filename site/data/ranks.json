@@ -1,12 +1,12 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 172,
+    "score": 176,
     "arrow": "up"
   },
   {
     "keyword": "ジュリ",
-    "score": 124,
+    "score": 128,
     "arrow": "up"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 87,
+    "score": 89,
     "arrow": "up"
   },
   {
@@ -30,14 +30,14 @@
     "arrow": "flat"
   },
   {
+    "keyword": "豪鬼",
+    "score": 57,
+    "arrow": "up"
+  },
+  {
     "keyword": "ザンギエフ",
     "score": 56,
     "arrow": "flat"
-  },
-  {
-    "keyword": "豪鬼",
-    "score": 56,
-    "arrow": "up"
   },
   {
     "keyword": "ブランカ",
@@ -47,6 +47,6 @@
   {
     "keyword": "アレックス",
     "score": 45,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
