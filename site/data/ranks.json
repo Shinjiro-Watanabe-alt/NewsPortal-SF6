@@ -25,13 +25,13 @@
     "arrow": "flat"
   },
   {
-    "keyword": "豪鬼",
+    "keyword": "リュウ",
     "score": 63,
     "arrow": "up"
   },
   {
-    "keyword": "リュウ",
-    "score": 62,
+    "keyword": "豪鬼",
+    "score": 63,
     "arrow": "flat"
   },
   {
@@ -41,8 +41,8 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 54,
-    "arrow": "flat"
+    "score": 55,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
