@@ -1,5 +1,15 @@
 [
   {
+    "id": "auto-a36045961b18",
+    "cat": "ent",
+    "title": "スト6対戦会で新人をわからせるラクシャーナ達【ラクシャーナ / カプラ・リブラス / REJECT / 切り抜き】",
+    "summary": "スト6対戦会で新人をわからせるラクシャーナ達【ラクシャーナ / カプラ・リブラス / REJECT / 切り抜き】&nbsp;&nbsp;YouTube",
+    "source": "YouTube",
+    "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBCMURVQ3U3czJQaU85QWhJc0RDOHZWY05ZdmhtMnQ4NjJ4TEIyX3dOSEsyeGlXQnduV3B0MUE4SDYxNkZRdmh0d0VleEdlX0FwaUJ5R2MxUjluZVFZ?oc=5",
+    "time": "2026-10-11T12:00:21+09:00",
+    "collected": true
+  },
+  {
     "id": "auto-eb473e1de19e",
     "cat": "koy",
     "title": "【スト6】Mダルシム(MR1870スタート)でランクマ。",
@@ -11,11 +21,11 @@
   },
   {
     "id": "auto-6b41ffa3f4ad",
-    "cat": "etc",
+    "cat": "ent",
     "title": "格ゲーの毒ダメージって実際効く？毒の専門家に作ってもらって確かめてみた~オマケでSCARZ毒見会【くられ先生/薬理凶室】【スト6/ストーム久保】",
-    "summary": "格ゲーの毒ダメージって実際効く？毒の専門家に作ってもらって確かめてみた~オマケでSCARZ毒見会【くられ先生/薬理凶室】【スト6/ストーム久保】&nbsp;&nbsp;Howl.link",
-    "source": "Howl.link",
-    "source_url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9IUmlaRVJTOTlLQ1RmTlF3UGNjMFV2YzR6V25MM3VnbjY5LUlNQTZCcjR1bG1fenBQUEpV?oc=5",
+    "summary": "格ゲーの毒ダメージって実際効く？毒の専門家に作ってもらって確かめてみた~オマケでSCARZ毒見会【くられ先生/薬理凶室】【スト6/ストーム久保】&nbsp;&nbsp;YouTube",
+    "source": "YouTube",
+    "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAtaEhMc0VJZGcyOEoxVmhPMktxdzNQRnhQZFNaYW83dk52SU5VNUtTVXBKMWRjNVVlV25vT29CWkdkTkJCdGg2WUlLSG4yNWJHMmVFZjZLMmdVOWhw?oc=5",
     "time": "2026-10-11T03:00:11+09:00",
     "collected": true
   },
@@ -130,16 +140,6 @@
     "collected": true
   },
   {
-    "id": "auto-283027ffa887",
-    "cat": "etc",
-    "title": "FRONTIER「FREX∀R」1周年記念キャンペーン開催！「モンハンワイルズ」「スト6」など好きなゲーム1本をプレゼント",
-    "summary": "FRONTIER「FREX∀R」1周年記念キャンペーン開催！「モンハンワイルズ」「スト6」など好きなゲーム1本をプレゼント&nbsp;&nbsp;Gamer",
-    "source": "Gamer",
-    "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Edkprck5aX2VXMXJMRXpfVWNOQWh4NDhyd1kydzQ4cHhPVzQxR3BMY0ZrTDIzSk5INy1oYl8yNmNVTVZ1eXpsbmxzOXN2ZG51Zl9UUUxRVldib1F0SlU4?oc=5",
-    "time": "2026-10-10T05:05:30+09:00",
-    "collected": true
-  },
-  {
     "id": "auto-ca4a2a6a908a",
     "cat": "ent",
     "title": "【スト6】GANAKENマノンのランクマ日誌🦢 Act13 #3｜MR2,159~",
@@ -157,6 +157,16 @@
     "source": "YouTube",
     "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MelptQjdrY1NNOGh0Zk0zZDVmRWM3VlhYV0NSMUoxTkxscE5JUFN2VzYtQ1JVU3BLbzRLcVY5UGtxOERSalRkY1hxNWJKb2ViOXplMWk0VEVBMERN?oc=5",
     "time": "2026-10-10T03:00:08+09:00",
+    "collected": true
+  },
+  {
+    "id": "auto-283027ffa887",
+    "cat": "etc",
+    "title": "FRONTIER「FREX∀R」1周年記念キャンペーン開催！「モンハンワイルズ」「スト6」など好きなゲーム1本をプレゼント",
+    "summary": "FRONTIER「FREX∀R」1周年記念キャンペーン開催！「モンハンワイルズ」「スト6」など好きなゲーム1本をプレゼント&nbsp;&nbsp;Gamer",
+    "source": "Gamer",
+    "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE44OHRDdU1VaVJscEQxbkpsZnJrY1F4eFBNRHNQZ3NhZ0EtSjFQTWRlcDdnMTlZRC1qWk1qQkIwakRGUVA0ZHpLb1hoSFB0UGZZWFB0SA?oc=5",
+    "time": "2026-10-10T02:58:00+09:00",
     "collected": true
   },
   {
