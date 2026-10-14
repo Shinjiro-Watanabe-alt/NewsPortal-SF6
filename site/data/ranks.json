@@ -6,8 +6,8 @@
   },
   {
     "keyword": "ジュリ",
-    "score": 138,
-    "arrow": "flat"
+    "score": 139,
+    "arrow": "up"
   },
   {
     "keyword": "TGS2026",
@@ -20,12 +20,12 @@
     "arrow": "flat"
   },
   {
-    "keyword": "レバーレス",
-    "score": 68,
+    "keyword": "豪鬼",
+    "score": 69,
     "arrow": "up"
   },
   {
-    "keyword": "豪鬼",
+    "keyword": "レバーレス",
     "score": 68,
     "arrow": "flat"
   },
@@ -41,12 +41,12 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 57,
-    "arrow": "flat"
+    "score": 58,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
-    "score": 51,
-    "arrow": "flat"
+    "score": 52,
+    "arrow": "up"
   }
 ]
