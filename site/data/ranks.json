@@ -17,7 +17,7 @@
   {
     "keyword": "イングリッド",
     "score": 105,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "豪鬼",
@@ -36,13 +36,13 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 61,
+    "score": 62,
     "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
-    "score": 60,
-    "arrow": "flat"
+    "score": 61,
+    "arrow": "up"
   },
   {
     "keyword": "アレックス",
