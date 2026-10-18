@@ -21,13 +21,13 @@
   },
   {
     "keyword": "豪鬼",
-    "score": 73,
-    "arrow": "flat"
+    "score": 74,
+    "arrow": "up"
   },
   {
     "keyword": "レバーレス",
     "score": 68,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -47,6 +47,6 @@
   {
     "keyword": "アレックス",
     "score": 50,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
