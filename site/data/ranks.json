@@ -6,8 +6,8 @@
   },
   {
     "keyword": "ジュリ",
-    "score": 139,
-    "arrow": "flat"
+    "score": 140,
+    "arrow": "up"
   },
   {
     "keyword": "TGS2026",
@@ -16,8 +16,8 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 104,
-    "arrow": "flat"
+    "score": 101,
+    "arrow": "down"
   },
   {
     "keyword": "豪鬼",
@@ -27,7 +27,7 @@
   {
     "keyword": "レバーレス",
     "score": 67,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
