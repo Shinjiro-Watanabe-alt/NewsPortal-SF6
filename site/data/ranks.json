@@ -2,12 +2,12 @@
   {
     "keyword": "キャミィ",
     "score": 186,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ジュリ",
     "score": 139,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "TGS2026",
@@ -36,8 +36,8 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 62,
-    "arrow": "flat"
+    "score": 63,
+    "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
