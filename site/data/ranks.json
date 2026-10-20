@@ -25,11 +25,6 @@
     "arrow": "flat"
   },
   {
-    "keyword": "レバーレス",
-    "score": 65,
-    "arrow": "flat"
-  },
-  {
     "keyword": "リュウ",
     "score": 64,
     "arrow": "flat"
@@ -40,13 +35,18 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ザンギエフ",
-    "score": 60,
+    "keyword": "レバーレス",
+    "score": 63,
     "arrow": "down"
   },
   {
-    "keyword": "アレックス",
-    "score": 50,
+    "keyword": "ザンギエフ",
+    "score": 60,
     "arrow": "flat"
+  },
+  {
+    "keyword": "アレックス",
+    "score": 49,
+    "arrow": "down"
   }
 ]
