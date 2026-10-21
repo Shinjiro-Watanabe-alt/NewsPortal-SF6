@@ -1,7 +1,7 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 186,
+    "score": 185,
     "arrow": "down"
   },
   {
@@ -37,7 +37,7 @@
   {
     "keyword": "レバーレス",
     "score": 61,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "ザンギエフ",
@@ -47,6 +47,6 @@
   {
     "keyword": "アレックス",
     "score": 48,
-    "arrow": "down"
+    "arrow": "flat"
   }
 ]
