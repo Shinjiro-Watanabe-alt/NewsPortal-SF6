@@ -25,19 +25,19 @@
     "arrow": "flat"
   },
   {
-    "keyword": "リュウ",
+    "keyword": "ブランカ",
     "score": 64,
-    "arrow": "flat"
+    "arrow": "up"
   },
   {
-    "keyword": "ブランカ",
+    "keyword": "リュウ",
     "score": 63,
-    "arrow": "flat"
+    "arrow": "down"
   },
   {
     "keyword": "レバーレス",
-    "score": 61,
-    "arrow": "flat"
+    "score": 60,
+    "arrow": "down"
   },
   {
     "keyword": "ザンギエフ",
