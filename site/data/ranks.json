@@ -27,22 +27,22 @@
   {
     "keyword": "ブランカ",
     "score": 64,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
-    "score": 63,
-    "arrow": "down"
-  },
-  {
-    "keyword": "レバーレス",
-    "score": 60,
+    "score": 62,
     "arrow": "down"
   },
   {
     "keyword": "ザンギエフ",
     "score": 59,
     "arrow": "flat"
+  },
+  {
+    "keyword": "レバーレス",
+    "score": 59,
+    "arrow": "down"
   },
   {
     "keyword": "C.ヴァイパー",
