@@ -16,8 +16,8 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 99,
-    "arrow": "down"
+    "score": 100,
+    "arrow": "up"
   },
   {
     "keyword": "豪鬼",
@@ -41,12 +41,12 @@
   },
   {
     "keyword": "レバーレス",
-    "score": 59,
-    "arrow": "flat"
+    "score": 58,
+    "arrow": "down"
   },
   {
     "keyword": "C.ヴァイパー",
     "score": 48,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
