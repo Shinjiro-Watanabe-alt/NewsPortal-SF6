@@ -16,13 +16,13 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 100,
-    "arrow": "flat"
+    "score": 99,
+    "arrow": "down"
   },
   {
     "keyword": "豪鬼",
     "score": 79,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ブランカ",
@@ -46,7 +46,7 @@
   },
   {
     "keyword": "春麗",
-    "score": 50,
+    "score": 51,
     "arrow": "up"
   }
 ]
