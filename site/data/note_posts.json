@@ -1,5 +1,16 @@
 [
   {
+    "id": "auto-84428cf44c68",
+    "cat": "etc",
+    "title": "脆弱性対応に追われて、アルジュンのランクマに戻れない",
+    "summary": "スト6のアルジュンでマスターを目指そうと、起き攻めを試しながらランクマに戻るつもりでした。ところが、先週から仕事でセキュリティ対応に追われ、ランクマに参加できていません。PHPの脆弱性対応をきっかけに、私の担当するシステムでは、後回しになっ…",
+    "source": "note",
+    "source_url": "https://note.com/edonack/n/n33a0413af07e",
+    "time": "2026-10-28T17:50:01+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/329460230/rectangle_large_type_2_3e73e2ba322b0a3a466fc94bb33a907d.png?width=800"
+  },
+  {
     "id": "auto-518467dd8f62",
     "cat": "koy",
     "title": "マスター",
