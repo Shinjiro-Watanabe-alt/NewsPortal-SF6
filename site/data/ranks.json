@@ -1,13 +1,13 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 178,
-    "arrow": "flat"
+    "score": 177,
+    "arrow": "down"
   },
   {
     "keyword": "ジュリ",
-    "score": 136,
-    "arrow": "flat"
+    "score": 135,
+    "arrow": "down"
   },
   {
     "keyword": "TGS2026",
@@ -31,22 +31,22 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 60,
-    "arrow": "flat"
+    "score": 61,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
-    "score": 60,
+    "score": 58,
     "arrow": "down"
   },
   {
     "keyword": "レバーレス",
-    "score": 59,
-    "arrow": "flat"
+    "score": 58,
+    "arrow": "down"
   },
   {
     "keyword": "春麗",
-    "score": 52,
-    "arrow": "flat"
+    "score": 51,
+    "arrow": "down"
   }
 ]
