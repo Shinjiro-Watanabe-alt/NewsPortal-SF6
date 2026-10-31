@@ -2,7 +2,7 @@
   {
     "keyword": "キャミィ",
     "score": 175,
-    "arrow": "up"
+    "arrow": "flat"
   },
   {
     "keyword": "ジュリ",
@@ -17,7 +17,7 @@
   {
     "keyword": "イングリッド",
     "score": 98,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "豪鬼",
@@ -41,12 +41,12 @@
   },
   {
     "keyword": "リュウ",
-    "score": 57,
-    "arrow": "flat"
+    "score": 56,
+    "arrow": "down"
   },
   {
     "keyword": "春麗",
     "score": 52,
-    "arrow": "up"
+    "arrow": "flat"
   }
 ]
