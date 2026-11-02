@@ -1,5 +1,16 @@
 [
   {
+    "id": "auto-1eacd0fa9cea",
+    "cat": "etc",
+    "title": "AIに開発を任せている間、スト6を一試合遊ぶ",
+    "summary": "PHPの脆弱性への対応は完了し、根本的な対応として進めていたサポート切れのPHPのバージョンアップ作業も、1本分を半日で終えました。Node.jsの対応はまだ残っています。半日で終えたのはPHPのバージョンアップ作業で、全機能のテストはこれ…",
+    "source": "note",
+    "source_url": "https://note.com/edonack/n/n1f719a37df6d",
+    "time": "2026-11-02T10:27:30+09:00",
+    "collected": true,
+    "thumb": "https://assets.st-note.com/production/uploads/images/331194227/rectangle_large_type_2_218ab8f3614a7e439fada820824478c5.png?width=800"
+  },
+  {
     "id": "auto-40f845ffc393",
     "cat": "etc",
     "title": "SF6 2026.09φ(..)めもめも",
