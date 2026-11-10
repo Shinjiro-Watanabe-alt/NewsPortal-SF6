@@ -16,8 +16,8 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 84,
-    "arrow": "flat"
+    "score": 83,
+    "arrow": "down"
   },
   {
     "keyword": "豪鬼",
@@ -26,8 +26,13 @@
   },
   {
     "keyword": "ブランカ",
-    "score": 68,
-    "arrow": "flat"
+    "score": 69,
+    "arrow": "up"
+  },
+  {
+    "keyword": "ザンギエフ",
+    "score": 63,
+    "arrow": "up"
   },
   {
     "keyword": "リュウ",
@@ -35,14 +40,9 @@
     "arrow": "flat"
   },
   {
-    "keyword": "ザンギエフ",
-    "score": 62,
-    "arrow": "up"
-  },
-  {
     "keyword": "春麗",
     "score": 59,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "ケン",
