@@ -21,23 +21,23 @@
   },
   {
     "keyword": "イングリッド",
-    "score": 81,
-    "arrow": "flat"
+    "score": 80,
+    "arrow": "down"
   },
   {
     "keyword": "リュウ",
-    "score": 72,
+    "score": 74,
+    "arrow": "up"
+  },
+  {
+    "keyword": "春麗",
+    "score": 70,
     "arrow": "up"
   },
   {
     "keyword": "ブランカ",
     "score": 69,
     "arrow": "flat"
-  },
-  {
-    "keyword": "春麗",
-    "score": 68,
-    "arrow": "up"
   },
   {
     "keyword": "ザンギエフ",
