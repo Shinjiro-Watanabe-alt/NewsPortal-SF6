@@ -1,13 +1,13 @@
 [
   {
     "keyword": "キャミィ",
-    "score": 161,
+    "score": 160,
     "arrow": "down"
   },
   {
     "keyword": "ジュリ",
-    "score": 133,
-    "arrow": "flat"
+    "score": 134,
+    "arrow": "up"
   },
   {
     "keyword": "TGS2026",
@@ -16,8 +16,8 @@
   },
   {
     "keyword": "豪鬼",
-    "score": 83,
-    "arrow": "flat"
+    "score": 84,
+    "arrow": "up"
   },
   {
     "keyword": "イングリッド",
@@ -46,7 +46,7 @@
   },
   {
     "keyword": "ケン",
-    "score": 58,
-    "arrow": "flat"
+    "score": 57,
+    "arrow": "down"
   }
 ]
