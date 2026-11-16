@@ -22,7 +22,7 @@
   {
     "keyword": "イングリッド",
     "score": 75,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "リュウ",
@@ -41,8 +41,8 @@
   },
   {
     "keyword": "ザンギエフ",
-    "score": 63,
-    "arrow": "flat"
+    "score": 64,
+    "arrow": "up"
   },
   {
     "keyword": "ケン",
