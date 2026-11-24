@@ -17,7 +17,7 @@
   {
     "keyword": "豪鬼",
     "score": 102,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "春麗",
@@ -27,12 +27,12 @@
   {
     "keyword": "リュウ",
     "score": 73,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "イングリッド",
     "score": 69,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "ブランカ",
@@ -47,6 +47,6 @@
   {
     "keyword": "ケン",
     "score": 56,
-    "arrow": "down"
+    "arrow": "flat"
   }
 ]
