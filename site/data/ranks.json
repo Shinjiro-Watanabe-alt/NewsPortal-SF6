@@ -7,7 +7,7 @@
   {
     "keyword": "ジュリ",
     "score": 138,
-    "arrow": "down"
+    "arrow": "flat"
   },
   {
     "keyword": "TGS2026",
@@ -16,13 +16,8 @@
   },
   {
     "keyword": "豪鬼",
-    "score": 103,
-    "arrow": "flat"
-  },
-  {
-    "keyword": "リュウ",
-    "score": 74,
-    "arrow": "flat"
+    "score": 102,
+    "arrow": "down"
   },
   {
     "keyword": "春麗",
@@ -30,9 +25,14 @@
     "arrow": "flat"
   },
   {
+    "keyword": "リュウ",
+    "score": 73,
+    "arrow": "down"
+  },
+  {
     "keyword": "イングリッド",
-    "score": 70,
-    "arrow": "flat"
+    "score": 69,
+    "arrow": "down"
   },
   {
     "keyword": "ブランカ",
@@ -46,7 +46,7 @@
   },
   {
     "keyword": "ケン",
-    "score": 57,
-    "arrow": "flat"
+    "score": 56,
+    "arrow": "down"
   }
 ]
