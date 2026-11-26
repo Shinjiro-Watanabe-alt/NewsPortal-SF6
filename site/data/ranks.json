@@ -6,7 +6,7 @@
   },
   {
     "keyword": "ジュリ",
-    "score": 144,
+    "score": 148,
     "arrow": "up"
   },
   {
@@ -26,23 +26,23 @@
   },
   {
     "keyword": "リュウ",
-    "score": 73,
-    "arrow": "flat"
+    "score": 72,
+    "arrow": "down"
+  },
+  {
+    "keyword": "ザンギエフ",
+    "score": 70,
+    "arrow": "up"
   },
   {
     "keyword": "イングリッド",
     "score": 69,
-    "arrow": "up"
-  },
-  {
-    "keyword": "ブランカ",
-    "score": 69,
     "arrow": "flat"
   },
   {
-    "keyword": "ザンギエフ",
-    "score": 67,
-    "arrow": "up"
+    "keyword": "ブランカ",
+    "score": 68,
+    "arrow": "down"
   },
   {
     "keyword": "ケン",
